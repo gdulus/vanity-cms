@@ -40,8 +40,8 @@
         // on mouse out
         function () {
             // unbind click, remove all classes and remove form
-//            $(this).removeClass('selected loader').find('.data').empty();
-//            $(this).find('.name span').unbind('click');
+            $(this).removeClass('selected loader').find('.data').empty();
+            $(this).find('.name span').unbind('click');
         }
     );
 
