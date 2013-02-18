@@ -1,0 +1,15 @@
+table.table tbody tr.selected td {
+    background-color: #FFCCCC;
+}
+
+.loader .data {
+    background: url("../images/review-loader.gif") no-repeat center center;
+}
+
+.loader .data {
+    background: url("../images/review-loader.gif") no-repeat center center;
+}
+
+#activate span.help-block  {
+    margin: 10px 0px 5px 0px;
+}

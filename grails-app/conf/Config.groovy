@@ -1,5 +1,11 @@
 // locations to search for config files that get merged into the main config;
-grails.config.locations = [ "file:${userHome}/.grails/vanity-cms-config.properties"]
+def configFilePath = "${userHome}/.grails/vanity-cms-config.groovy"
+
+if (!(new File(configFilePath).exists())){
+    throw new IllegalArgumentException("Cant find config file: ${configFilePath}")
+}
+
+grails.config.locations = ["file:${configFilePath}"]
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
