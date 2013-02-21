@@ -6,24 +6,6 @@
         <title><g:layoutTitle default="Vanity cms"/></title>
       	<g:layoutHead/>
         <r:layoutResources />
-        <style type="text/css">
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-            .sidebar-nav {
-                padding: 9px 0;
-            }
-
-            @media (max-width: 980px) {
-                /* Enable use of floated navbar text */
-                .navbar-text.pull-right {
-                float: none;
-                padding-left: 5px;
-                padding-right: 5px;
-                }
-            }
-        </style>
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
