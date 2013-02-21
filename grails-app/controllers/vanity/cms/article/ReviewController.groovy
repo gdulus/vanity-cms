@@ -1,6 +1,6 @@
 package vanity.cms.article
 
-import vanity.cms.utils.AjaxUtils
+import vanity.utils.AjaxUtils
 
 class ReviewController {
 
