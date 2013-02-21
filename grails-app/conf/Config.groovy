@@ -1,12 +1,15 @@
-// locations to search for config files that get merged into the main config;
-def configFilePath = "${userHome}/.grails/vanity-cms-config.groovy"
+import vanity.utils.ConfigUtils
 
-if (!(new File(configFilePath).exists())){
-    throw new IllegalArgumentException("Cant find config file: ${configFilePath}")
+/**
+ * set up all external config file
+ */
+ConfigUtils.instance.externalConfig(grails, userHome) {
+    file 'cms-config.properties'
 }
 
-grails.config.locations = ["file:${configFilePath}"]
-
+/**
+ * Basic setup
+ */
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
@@ -72,7 +75,6 @@ log4j = {
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
-
     info   'vanity'
 
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers

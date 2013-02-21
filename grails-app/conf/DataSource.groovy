@@ -1,5 +1,3 @@
-grails {
-    mongo {
-        databaseName = "vanity-crawler"
-    }
-}
+/**
+ * externalized to "${userHome}/.grails/vanity/${ENV}/cms-config.properties"
+ */
