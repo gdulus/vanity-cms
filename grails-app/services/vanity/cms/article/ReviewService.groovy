@@ -4,7 +4,7 @@ import org.apache.commons.lang.StringUtils
 import org.apache.commons.lang.Validate
 import vanity.article.Tag
 import vanity.article.TagService
-import vanity.article.review.TagReveiewHint
+import vanity.cms.article.review.TagReveiewHint
 
 class ReviewService {
 
@@ -26,7 +26,8 @@ class ReviewService {
         List<Tag> parentTags = tagService.getAllReviewedParentTags()
         // find similar tags
         List<Tag> similarTags = tagService.getAllTags().findAll({
-            it != tag && StringUtils.getLevenshteinDistance(tag.name, it.name) <= 5
+            it != tag && (it.name.toLowerCase().contains(tag.name.toLowerCase()) || tag.name.toLowerCase().contains(it.name.toLowerCase()) || StringUtils.getLevenshteinDistance(tag.name, it.name) <= 5)
+
         })
         // prepare hint bean and return it
         return new TagReveiewHint(tag, similarTags, parentTags)

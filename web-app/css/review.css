@@ -1,15 +1,24 @@
 table.table tbody tr.selected td {
-    background-color: #FFCCCC;
+    cursor: pointer;
+}
+
+table.table tbody tr.selected td.name {
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .loader .data {
     background: url("../images/review-loader.gif") no-repeat center center;
 }
 
-.loader .data {
-    background: url("../images/review-loader.gif") no-repeat center center;
-}
-
-#activate span.help-block  {
+#activate label.radio  {
     margin: 10px 0px 5px 0px;
+}
+
+#activate button {
+    margin-top: 20px;
+}
+
+#error {
+    display: none;
 }

@@ -1,4 +1,4 @@
-package vanity.article.review
+package vanity.cms.article.review
 
 import vanity.article.Tag
 
