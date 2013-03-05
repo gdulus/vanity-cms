@@ -2,13 +2,20 @@ modules = {
     base {
         resource url:'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
         resource url:'js/bootstrap.min.js'
+        resource url:'js/cms.js'
         resource url:'css/bootstrap.min.css'
+        resource url:'css/base.css'
     }
 
-    review {
+    reviewTag {
         dependsOn 'base'
-        resource url: 'css/base.css'
-        resource url: 'css/review.css'
-        resource url: 'js/review.js'
+        resource url: 'css/reviewTag.css'
+        resource url: 'js/reviewTag.js'
+    }
+
+    promoteTag {
+        dependsOn 'base'
+        resource url: 'css/promoteTag.css'
+        resource url: 'js/promoteTag.js'
     }
 }

@@ -13,28 +13,32 @@ class ConfirmTagReviewCmd {
 
     Long id
 
+    Long duplicatedTagId
+
+    String serializedParentTagIds
+
     Strategy strategy
-
-    String parentTagId
-
-    String duplicatedTagId
 
     static constraints = {
         id(nullable: false)
         strategy(nullable: false)
-        parentTagId(nullable: true, validator: {val, obj ->
-            if(obj.strategy != Strategy.ALIAS || (obj.strategy == Strategy.ALIAS && val)){
-                return true
-            } else {
+        serializedParentTagIds(nullable: true, validator: {val, obj ->
+            if(obj.strategy == Strategy.ALIAS && (!val || !obj.parentTagIds)){
                 return 'confirmTagReviewCmd.alias.noSelection'
-            }
-        })
-        duplicatedTagId(validator: {val, obj ->
-            if(obj.strategy != Strategy.DUPLICATE || (obj.strategy == Strategy.DUPLICATE && val)){
-                return true
             } else {
-                return 'confirmTagReviewCmd.duplicate.noSelection'
+                return true
             }
         })
+        duplicatedTagId(nullable: true, validator: {val, obj ->
+            if(obj.strategy == Strategy.DUPLICATE && !val){
+                return 'confirmTagReviewCmd.duplicate.noSelection'
+            } else {
+                return true
+            }
+        })
+    }
+
+    public List<Long> getParentTagIds(){
+        return serializedParentTagIds.tokenize().collect({it.toLong()})
     }
 }

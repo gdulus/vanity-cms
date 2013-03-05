@@ -5,7 +5,7 @@
         <fieldset id="activate">
             <legend>${element.reviewedTag.name}</legend>
             <input type="hidden" id="tag-id" name="id" value="${element.reviewedTag.id}" />
-            <input type="hidden" id="parent-tag-id" name="parentTagId" />
+            <input type="hidden" id="parent-tag-ids" name="serializedParentTagIds" />
             <input type="hidden" id="duplicated-tag-id" name="duplicatedTagId" />
 
             <g:if test="${element.hasSimilarities()}" >

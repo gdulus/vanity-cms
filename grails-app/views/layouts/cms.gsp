@@ -22,7 +22,7 @@
                     <g:message code="vanity.cms.loggedInAs" /> <a href="#" class="navbar-link">Username</a>
                 </p>
                 <ul class="nav">
-                    <nav:mainMenu controller="tag" code="vanity.portal.mainMenu.tags" />
+                    <nav:mainMenu controller="tag" code="vanity.cms.mainMenu.tags" />
                 </ul>
             </div><!--/.nav-collapse -->
         </div>

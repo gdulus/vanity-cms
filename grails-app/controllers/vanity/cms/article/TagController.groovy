@@ -4,14 +4,16 @@ import vanity.utils.AjaxUtils
 
 class TagController {
 
-    def reviewService
+    def tagReviewService
+
+    def tagPromotionService
 
     def index() {
-        [elements:reviewService.getAllTagsForReview()]
+        [elements:tagReviewService.getAllTagsForReview()]
     }
 
     def ajaxGetTagReviewForm(Long id){
-        [element: reviewService.getTagHint(id)]
+        [element: tagReviewService.getTagHint(id)]
     }
 
     def ajaxConfirmTagReview(ConfirmTagReviewCmd reviewCmd){
@@ -20,27 +22,55 @@ class TagController {
             render AjaxUtils.renderErrors(reviewCmd.errors)
             return
         }
-        // iterate over strategies
+        // perform selected strategy
+        try {
+            if (performTagReviewAction(reviewCmd)){
+                flash.message = 'vanity.cms.tags.review.success'
+                render AjaxUtils.Const.SUCCESS_RESPONSE
+            } else {
+                flash.error = 'vanity.cms.tags.review.error'
+                render AjaxUtils.Const.ERROR_RESPONSE
+            }
+        } catch (IllegalArgumentException exc) {
+            flash.error = 'vanity.cms.tags.review.error'
+            render AjaxUtils.Const.ERROR_RESPONSE
+        }
+    }
+
+    private boolean performTagReviewAction(ConfirmTagReviewCmd reviewCmd){
         switch(reviewCmd.strategy){
             case ConfirmTagReviewCmd.Strategy.DUPLICATE:
-                break;
+                return tagReviewService.markAsDuplicateTag(reviewCmd.id, reviewCmd.duplicatedTagId)
             case ConfirmTagReviewCmd.Strategy.ALIAS:
-                break;
+                return tagReviewService.markAsAlisTag(reviewCmd.id, reviewCmd.parentTagIds)
             case ConfirmTagReviewCmd.Strategy.PARENT:
-                reviewService.markAsParentTag(reviewCmd.id)
-                render AjaxUtils.Const.SUCCESS_RESPONSE
-                break;
+                return tagReviewService.markAsParentTag(reviewCmd.id)
             default:
-                throw new IllegalStateException("Not supported ")
+                return false
         }
     }
 
     def promoted(){
+        [elements:tagPromotionService.getTagsValidForPromotion()]
+    }
 
+    def ajaxPromoteTag(Long id){
+        if(tagPromotionService.promoteTag(id)){
+            render AjaxUtils.Const.SUCCESS_RESPONSE
+        } else {
+            render AjaxUtils.Const.ERROR_RESPONSE
+        }
+    }
+
+    def ajaxUnpromoteTag(Long id){
+        if(tagPromotionService.unpromoteTag(id)){
+            render AjaxUtils.Const.SUCCESS_RESPONSE
+        } else {
+            render AjaxUtils.Const.ERROR_RESPONSE
+        }
     }
 
     def list(){
-
     }
 
 }

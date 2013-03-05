@@ -2,7 +2,7 @@
 <head>
     <title></title>
     <meta name="layout" content="cms"/>
-    <r:require module="review"/>
+    <r:require module="reviewTag"/>
 </head>
 <body>
     <div class="row-fluid">
@@ -12,10 +12,20 @@
             </div>
         </div>
         <div class="span9">
+            <g:if test="${flash.message}" >
+                <div class="alert alert-success">
+                    <g:message code="${flash.message}" />
+                </div>
+            </g:if>
+            <g:if test="${flash.error}" >
+                <div class="alert alert-error">
+                    <g:message code="${flash.error}" />
+                </div>
+            </g:if>
             <table class="table table-striped">
                 <tr>
                     <th width="50px">#</th>
-                    <th width="250px"><g:message code="cms.tag.name" /></th>
+                    <th width="350px"><g:message code="vanity.cms.tag.name" /></th>
                     <th></th>
                 </tr>
 
@@ -26,7 +36,6 @@
                         <td class="data"></td>
                     </tr>
                 </g:each>
-
             </table>
         </div>
     </div>

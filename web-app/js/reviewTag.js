@@ -24,7 +24,7 @@
         });
     }
     // allows to bind quick search action for parent tags
-    function activateTagCloud(tagContainer, targetInputField){
+    function activateSingleTagCloud(tagContainer, targetInputField){
         tagContainer.find('.tags span').hover(
             function(){
                 var that = $(this);
@@ -53,6 +53,41 @@
             }
         });
     }
+    // allows to bind quick search action for parent tags
+    function activateMultipleTagCloud(tagContainer, targetInputField){
+        var serializeSelected = function(){
+            var listOfIds = tagContainer.find('.tags span.label-success').map(function() {
+                return $(this).attr('id');
+            }).get();
+            var val = V.CMS.Ajax.serializeForSingleInputBinding(listOfIds);
+            console.log(val);
+            return val;
+        }
+        // prepare action on cloud
+        tagContainer.find('.tags span').hover(
+            function(){
+                var that = $(this);
+                if (!that.hasClass('label-success')){
+                    that.removeClass('label-info').addClass('label-warning');
+                }
+            },
+            function(){
+                var that = $(this);
+                if (!that.hasClass('label-success')){
+                    that.removeClass('label-warning').addClass('label-info');
+                }
+            }
+        ).click(function(){
+            var that = $(this);
+            if (!that.hasClass('label-success')){
+                that.removeClass('label-info').removeClass('label-warning').addClass('label-success');
+                targetInputField.val(serializeSelected());
+            } else {
+                that.removeClass('label-success').addClass('label-warning');
+                targetInputField.val(serializeSelected());
+            }
+        });
+    }
     // validate
     function validate(form){
         return !!form.find('input[name=strategy]:checked').val()
@@ -76,15 +111,15 @@
                     var container = row.removeClass('loader').find('.data').html(data).find('#container');
                     var form = container.find('form');
                     activateParentQuickSearch(form);
-                    activateTagCloud(form.find('#duplicates'), form.find('#duplicated-tag-id'));
-                    activateTagCloud(form.find('#parents'), form.find('#parent-tag-id'));
+                    activateSingleTagCloud(form.find('#duplicates'), form.find('#duplicated-tag-id'));
+                    activateMultipleTagCloud(form.find('#parents'), form.find('#parent-tag-ids'));
                     form.submit(function(){
                         // find all elements
                         var form = $(this);
                         var submitButton = form.find('button[type=submit]');
                         // validate
                         if (!validate(form)){
-                            container.find('#error').text('Please select at last one strategy').show();
+                            container.find('#error').text(V.CMS.I18n.get('vanity.cms.tags.review.selectOneStrategy')).show();
                             return false;
                         }
                         // hide submit button
@@ -94,12 +129,12 @@
                         console.log(postData);
                         // execute ajax call
                         $.post(form.attr('action'), postData, function(data) {
-                            if (data.status == 'error'){
-                                var errorMessage = "Errors while saving data\n";
-                                container.find('#error').empty().text(errorMessage).show();
+                            // we reload page - error message is set up in flash
+                            if (V.CMS.Ajax.isSuccessResponse(data)){
+                                location.reload();
+                            } else {
+                                container.find('#error').empty().html(V.CMS.Ajax.deserializeErrors(data)).show();
                             }
-                            //location.reload();
-                            submitButton.removeAttr("disabled");
                         }, 'json');
                         return false;
                     });
