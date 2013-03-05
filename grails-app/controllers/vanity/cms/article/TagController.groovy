@@ -4,11 +4,13 @@ import vanity.utils.AjaxUtils
 
 class TagController {
 
+    static defaultAction = 'review'
+
     def tagReviewService
 
     def tagPromotionService
 
-    def index() {
+    def review() {
         [elements:tagReviewService.getAllTagsForReview()]
     }
 
@@ -17,12 +19,11 @@ class TagController {
     }
 
     def ajaxConfirmTagReview(ConfirmTagReviewCmd reviewCmd){
-        // data valid?
         if (!reviewCmd.validate()){
             render AjaxUtils.renderErrors(reviewCmd.errors)
             return
         }
-        // perform selected strategy
+
         try {
             if (performTagReviewAction(reviewCmd)){
                 flash.message = 'vanity.cms.tags.review.success'
