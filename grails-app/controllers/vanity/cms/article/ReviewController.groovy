@@ -10,8 +10,8 @@ class ReviewController {
         [elements:reviewService.getAllTagsForReview()]
     }
 
-    def ajaxGetTagReviewForm(){
-        [element: reviewService.getTagHint(params.id)]
+    def ajaxGetTagReviewForm(Long id){
+        [element: reviewService.getTagHint(id)]
     }
 
     def ajaxConfirmTagReview(ConfirmTagReviewCmd reviewCmd){

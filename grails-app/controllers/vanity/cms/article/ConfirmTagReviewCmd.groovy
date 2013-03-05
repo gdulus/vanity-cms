@@ -11,9 +11,9 @@ class ConfirmTagReviewCmd {
         PARENT
     }
 
-    Strategy strategy
+    Long id
 
-    String id
+    Strategy strategy
 
     String parentTagId
 
