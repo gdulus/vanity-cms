@@ -2,7 +2,7 @@ package vanity.cms.article
 
 import vanity.utils.AjaxUtils
 
-class ReviewController {
+class TagController {
 
     def reviewService
 
@@ -33,6 +33,14 @@ class ReviewController {
             default:
                 throw new IllegalStateException("Not supported ")
         }
+    }
+
+    def promoted(){
+
+    }
+
+    def list(){
+
     }
 
 }

@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><g:layoutTitle default="Vanity cms"/></title>
+        <title><g:layoutTitle default="${g.message(code:'vanity.cms.title')}"/></title>
       	<g:layoutHead/>
         <r:layoutResources />
     </head>
@@ -16,15 +16,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Vanity CMS</a>
+            <a class="brand" href="#"><g:message code="vanity.cms.title" /></a>
             <div class="nav-collapse collapse">
                 <p class="navbar-text pull-right">
-                    Logged in as <a href="#" class="navbar-link">Username</a>
+                    <g:message code="vanity.cms.loggedInAs" /> <a href="#" class="navbar-link">Username</a>
                 </p>
                 <ul class="nav">
-                    <li class="active"><a href="#">Dashboard</a></li>
-                    <li><a href="#about">Articles</a></li>
-                    <li><a href="#contact">Tags</a></li>
+                    <nav:mainMenu controller="tag" code="vanity.portal.mainMenu.tags" />
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -33,21 +31,9 @@
 
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="span3">
-                <div class="well sidebar-nav">
-                    <ul class="nav nav-list">
-                    <li class="nav-header">Tags</li>
-                    <li class="active"><a href="#">Review stream</a></li>
-                    <li><a href="#">List</a></li>
-                    <li><a href="#">Add new</a></li>
-                </ul>
-            </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
             <g:layoutBody/>
-        </div><!--/span-->
-        </div><!--/row-->
-    </div><!--/.fluid-container-->
+        </div>
+    </div>
 
     <r:layoutResources />
     </body>
