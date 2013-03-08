@@ -28,7 +28,6 @@ grails.project.dependency.resolution = {
 
     dependencies {
         compile('postgresql:postgresql:9.1-901.jdbc4')
-        compile('org.elasticsearch:elasticsearch:0.20.5')
     }
 
     plugins {
