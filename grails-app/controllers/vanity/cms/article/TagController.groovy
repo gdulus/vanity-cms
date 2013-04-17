@@ -4,11 +4,13 @@ import vanity.utils.AjaxUtils
 
 class TagController {
 
-    static defaultAction = 'review'
-
     def tagReviewService
 
     def tagPromotionService
+
+    def index(){
+        redirect(action: 'review')
+    }
 
     def review() {
         [elements:tagReviewService.getAllTagsForReview()]
@@ -26,7 +28,7 @@ class TagController {
 
         try {
             if (performTagReviewAction(reviewCmd)){
-                flash.message = 'vanity.cms.tags.review.success'
+                flash.info = 'vanity.cms.tags.review.success'
                 render AjaxUtils.Const.SUCCESS_RESPONSE
             } else {
                 flash.error = 'vanity.cms.tags.review.error'
@@ -55,20 +57,22 @@ class TagController {
         [elements:tagPromotionService.getTagsValidForPromotion()]
     }
 
-    def ajaxPromoteTag(Long id){
+    def promoteTag(Long id){
         if(tagPromotionService.promoteTag(id)){
-            render AjaxUtils.Const.SUCCESS_RESPONSE
+            flash.info = 'vanity.cms.tags.promote.success'
         } else {
-            render AjaxUtils.Const.ERROR_RESPONSE
+            flash.error = 'vanity.cms.tags.promote.error'
         }
+        redirect(action: 'promoted')
     }
 
-    def ajaxUnpromoteTag(Long id){
-        if(tagPromotionService.unpromoteTag(id)){
-            render AjaxUtils.Const.SUCCESS_RESPONSE
+    def unPromoteTag(Long id){
+        if(tagPromotionService.unPromoteTag(id)){
+            flash.info = 'vanity.cms.tags.unPromote.success'
         } else {
-            render AjaxUtils.Const.ERROR_RESPONSE
+            flash.error = 'vanity.cms.tags.unPromote.error'
         }
+        redirect(action: 'promoted')
     }
 
     def list(){

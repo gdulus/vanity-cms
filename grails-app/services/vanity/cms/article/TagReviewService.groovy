@@ -16,7 +16,7 @@ class TagReviewService {
 
     @Transactional(readOnly = true)
     public List<Tag> getAllTagsForReview(){
-        return Tag.findAllByStatus(Status.TO_BE_REVIEWED, [sort:'name'])
+        return Tag.findAllByStatus(Status.Tag.TO_BE_REVIEWED, [sort:'name'])
     }
 
     @Transactional(readOnly = true)

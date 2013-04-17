@@ -12,11 +12,15 @@
             </div>
         </div>
         <div class="span9">
+
+            <message:flashBased />
+
             <table class="table table-striped">
                 <tr>
-                    <th style="width: 50px">#</th>
-                    <th style="width: 250px"><g:message code="vanity.cms.tag.name" /></th>
-                    <th><g:message code="vanity.cms.tag.status" /></th>
+                    <th style="width: 20px">#</th>
+                    <th style="width: 45%"><g:message code="vanity.cms.tag.name" /></th>
+                    <th style="width: 45%"><g:message code="vanity.cms.tag.status" /></th>
+                    <th></th>
                 </tr>
 
                 <g:each in="${elements}" var="element" status="i">
@@ -29,6 +33,12 @@
                             <td class="name" href="${createLink(action: 'ajaxUnpromoteTag', id:element.id)}">${element.name}</td>
                         </g:else>
                         <td>${element.status}</td>
+                        <g:if test="${element.isPromoted()}">
+                            <td><a href="${createLink(action: 'unPromoteTag', id:element.id)}" class="btn btn-danger">cancel promotion</a></td>
+                        </g:if>
+                        <g:else>
+                            <td><a href="${createLink(action: 'promoteTag', id:element.id)}" class="btn btn-success">promote</a></td>
+                        </g:else>
                     </tr>
                 </g:each>
             </table>

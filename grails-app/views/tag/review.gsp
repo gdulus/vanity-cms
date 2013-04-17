@@ -12,16 +12,9 @@
             </div>
         </div>
         <div class="span9">
-            <g:if test="${flash.message}" >
-                <div class="alert alert-success">
-                    <g:message code="${flash.message}" />
-                </div>
-            </g:if>
-            <g:if test="${flash.error}" >
-                <div class="alert alert-error">
-                    <g:message code="${flash.error}" />
-                </div>
-            </g:if>
+
+            <message:flashBased />
+
             <table class="table table-striped">
                 <tr>
                     <th width="50px">#</th>
