@@ -18,9 +18,9 @@
             <table class="table table-striped">
                 <tr>
                     <th style="width: 20px">#</th>
-                    <th style="width: 45%"><g:message code="vanity.cms.tag.name" /></th>
-                    <th style="width: 45%"><g:message code="vanity.cms.tag.status" /></th>
-                    <th></th>
+                    <th style="width: 500px"><g:message code="vanity.cms.tag.name" /></th>
+                    <th><g:message code="vanity.cms.tag.status" /></th>
+                    <th style="width: 200px"></th>
                 </tr>
 
                 <g:each in="${elements}" var="element" status="i">

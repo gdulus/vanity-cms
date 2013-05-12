@@ -47,7 +47,7 @@ class TagReviewService {
         Validate.notNull(tag, "There is no Tag with id ${id}")
         // mark tag as root one and mark it as published
         tag.root = true
-        tag.status = Status.PUBLISHED
+        tag.status = Status.Tag.PUBLISHED
         return tag.save() != null
     }
 
@@ -91,7 +91,7 @@ class TagReviewService {
             parentTag.save()
         }
         // mark child tag as published
-        reviewedTag.status = Status.PUBLISHED
+        reviewedTag.status = Status.Tag.PUBLISHED
         reviewedTag.save() != null
     }
 
