@@ -23,6 +23,7 @@
                 </p>
                 <ul class="nav">
                     <nav:mainMenu controller="tag" code="vanity.cms.mainMenu.tags" />
+                    <nav:mainMenu controller="celebrity" code="vanity.cms.mainMenu.celebrities" />
                 </ul>
             </div><!--/.nav-collapse -->
         </div>

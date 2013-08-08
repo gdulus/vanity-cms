@@ -12,6 +12,10 @@ class TagController {
         redirect(action: 'review')
     }
 
+    def edit(){
+
+    }
+
     def review() {
         [elements:tagReviewService.getAllTagsForReview()]
     }

@@ -18,3 +18,8 @@ body {
 html {
     overflow-y: scroll;
 }
+
+.options a {
+    float: right;
+    margin-right: 5px;
+}

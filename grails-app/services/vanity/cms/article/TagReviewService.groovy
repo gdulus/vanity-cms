@@ -26,7 +26,7 @@ class TagReviewService {
         Tag tag = Tag.get(id)
         Validate.notNull(tag, "There is no Tag with id ${id}")
         // get all reviewed parent tags
-        List<Tag> parentTags = tagService.getAllValidTags()
+        List<Tag> parentTags = tagService.getAllValidRootTags()
         // find similar tags
         List<Tag> similarTags = tagService.getAllTags().findAll({
             (it != tag

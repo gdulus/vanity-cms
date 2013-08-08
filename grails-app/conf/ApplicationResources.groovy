@@ -18,4 +18,13 @@ modules = {
         resource url: 'css/promoteTag.css'
         resource url: 'js/promoteTag.js'
     }
+
+    celebrityList {
+        dependsOn 'base'
+    }
+
+    celebrityForm {
+        dependsOn 'base'
+        resource url: 'css/celebrityForm.css'
+    }
 }

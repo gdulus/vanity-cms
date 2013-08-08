@@ -6,9 +6,13 @@ class MessageTagLib {
 
     private static final String CSS_CLASS_WARNING = 'alert-warning'
 
-    private static final String CSS_CLASS_INFO = 'alert-info'
+    private static final String CSS_CLASS_INFO = 'alert-success'
 
     static namespace = 'message'
+
+    def nothingToList = { attrs, body ->
+        out << """<div class="alert alert-block"><h4>${g.message(code: 'vanity.cms.ahoy')}</h4>${g.message(code: 'vanity.cms.nothingToList')}</div>"""
+    }
 
     def flashBased = { attrs, body ->
         Message message = getMessageFromFlash()

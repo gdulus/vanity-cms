@@ -12,7 +12,7 @@ class TagPromotionService {
     TagService tagService
 
     public List<Tag> getTagsValidForPromotion() {
-        return tagService.getAllValidTags()
+        return tagService.getAllValidRootTags()
     }
 
     @Transactional
