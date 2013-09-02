@@ -22,8 +22,10 @@
                     <g:message code="vanity.cms.loggedInAs" /> <a href="#" class="navbar-link">Username</a>
                 </p>
                 <ul class="nav">
+                    <nav:mainMenu controller="article" code="vanity.cms.mainMenu.articles" />
                     <nav:mainMenu controller="tag" code="vanity.cms.mainMenu.tags" />
                     <nav:mainMenu controller="celebrity" code="vanity.cms.mainMenu.celebrities" />
+                    <nav:mainMenu controller="search" code="vanity.cms.mainMenu.search" />
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
