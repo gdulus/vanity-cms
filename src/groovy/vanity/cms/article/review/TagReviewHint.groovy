@@ -2,7 +2,7 @@ package vanity.cms.article.review
 
 import vanity.article.Tag
 
-class TagReveiewHint {
+class TagReviewHint {
 
     public final Tag reviewedTag
 
@@ -10,7 +10,7 @@ class TagReveiewHint {
 
     public final List<Tag> parentTags
 
-    TagReveiewHint(Tag reviewedTag, List<Tag> similarTags, List<Tag> parentTags) {
+    TagReviewHint(Tag reviewedTag, List<Tag> similarTags, List<Tag> parentTags) {
         this.reviewedTag = reviewedTag
         this.similarTags = similarTags
         this.parentTags = parentTags
