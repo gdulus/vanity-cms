@@ -2,9 +2,10 @@ package vanity.cms.search
 
 public enum ReIndexingPhase {
 
-    NULL,
+    NONE,
     INITIALIZED,
     PREPARING,
+    CONVERTING,
     CLEARING,
     INDEXING
 

@@ -15,40 +15,69 @@ class ArticleReIndexer implements ReIndexer {
 
     private final Closure articlesProvider
 
-    private volatile ReIndexingPhase phase
+    private ReIndexingPhase phase
 
-    private int processed
+    private Integer processed
 
-    private int toProcess
+    private Integer toProcess
 
-    public ArticleReIndexer(int partitionSize, Closure articlesProvider, SearchEngineIndexer searchEngineIndexer) {
+    private volatile Boolean stop
+
+    public ArticleReIndexer(Integer partitionSize, Closure articlesProvider, SearchEngineIndexer searchEngineIndexer) {
         this.partitionSize = partitionSize
         this.articlesProvider = articlesProvider
         this.searchEngineIndexer = searchEngineIndexer
         this.processed = 0
         this.phase = ReIndexingPhase.INITIALIZED
+        this.stop = false
     }
 
+    @Override
     void start() {
-        phase = ReIndexingPhase.PREPARING
-        List<Article> articles = articlesProvider.call()
-        toProcess = articles.size()
-        log.info('Got {} articles to process', toProcess)
+        for (List<Article> articlesPartition : prepare().collate(partitionSize)) {
+            if (stop){
+                break
+            }
 
-        articles.collate(partitionSize).each { List<Article> articlesPartition ->
-            log.info('Clearing first batch')
-            phase = ReIndexingPhase.CLEARING
-            Set<ArticleDocument> articleDocuments = ConversionUtils.asArticleDocuments(articlesPartition)
-            searchEngineIndexer.deleteArticles(articleDocuments)
-
-            log.info('Re-indexing first batch')
-            phase = ReIndexingPhase.INDEXING
-            searchEngineIndexer.indexArticles(articleDocuments)
-
-            processed += articleDocuments.size()
+            Set<ArticleDocument> articleDocuments = convert(articlesPartition)
+            clear(articleDocuments)
+            index(articleDocuments)
+            processed += articlesPartition.size()
         }
     }
 
+    private List<Article> prepare() {
+        phase = ReIndexingPhase.PREPARING
+        List<Article> articles = (List<Article>) articlesProvider.call()
+        toProcess = articles.size()
+        log.info('Got {} articles to process', toProcess)
+        return articles
+    }
+
+    private Set<ArticleDocument> convert(final List<Article> articlesPartition) {
+        log.info('Converting batch')
+        phase = ReIndexingPhase.CONVERTING
+        return ConversionUtils.asArticleDocuments(articlesPartition)
+    }
+
+    private void clear(Set<ArticleDocument> articleDocuments) {
+        log.info('Clearing index')
+        phase = ReIndexingPhase.CLEARING
+        searchEngineIndexer.deleteArticles(articleDocuments)
+    }
+
+    private void index(Set<ArticleDocument> articleDocuments) {
+        log.info('Re-indexing')
+        phase = ReIndexingPhase.INDEXING
+        searchEngineIndexer.indexArticles(articleDocuments)
+    }
+
+    @Override
+    void stop() {
+        stop = true
+    }
+
+    @Override
     ReIndexingStatus getStatus() {
         int percent = processed == 0 ? 0 : (processed / toProcess) * 100
         new ReIndexingStatus(percent, phase)

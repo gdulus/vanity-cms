@@ -1,24 +1,28 @@
 package vanity.cms.search
 
-import grails.converters.JSON
 import org.springframework.beans.factory.annotation.Autowired
-import vanity.article.Article
+import vanity.search.Index
 
 class SearchController {
 
     @Autowired
     ReIndexingManager reIndexingManager
 
-    def index(){
-        [state:reIndexingManager.getReIndexingStatuses()]
+    def index() {
+        [
+            supportedReIndexingTargets: [Index.ARTICLE],
+            state: reIndexingManager.getReIndexingStatuses()
+        ]
     }
 
-    def startArticleIndexing() {
-        reIndexingManager.startReIndexing(Article)
+    def startReIndexing(ReIndexCmd cmd) {
+        reIndexingManager.startReIndexing(cmd.reIndexingTarget)
         redirect(action: 'index')
     }
 
-    def ajaxArticleIndexingStatus() {
-        render(reIndexingManager.getReIndexingStatuses() as JSON)
+    def stopReIndexing(ReIndexCmd cmd) {
+        reIndexingManager.stopReIndexing(cmd.reIndexingTarget)
+        redirect(action: 'index')
     }
+
 }

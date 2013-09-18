@@ -4,10 +4,10 @@ class ReIndexingStatus {
 
     final int percent
 
-    final ReIndexingPhase reIndexingPhase
+    final ReIndexingPhase phase
 
-    ReIndexingStatus(int percent, ReIndexingPhase reIndexingPhase) {
+    ReIndexingStatus(int percent, ReIndexingPhase phase) {
         this.percent = percent
-        this.reIndexingPhase = reIndexingPhase
+        this.phase = phase
     }
 }
