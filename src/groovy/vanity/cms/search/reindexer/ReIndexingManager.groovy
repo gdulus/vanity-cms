@@ -21,7 +21,6 @@ class ReIndexingManager {
 
     @Async
     public void startReIndexing(final Index reIndexingTarget) {
-
         // create lazy re indexer
         ReIndexer reIndexer = reIndexerFactory.produce(reIndexingTarget)
         // try add it to running indexes and add trigger start only when has status initialized
