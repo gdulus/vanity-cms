@@ -1,4 +1,4 @@
-package vanity.cms.search
+package vanity.cms.search.reindexer
 
 class ReIndexingStatus {
 

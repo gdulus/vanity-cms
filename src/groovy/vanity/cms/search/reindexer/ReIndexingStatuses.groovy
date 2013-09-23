@@ -1,4 +1,4 @@
-package vanity.cms.search
+package vanity.cms.search.reindexer
 
 import vanity.search.Index
 
@@ -8,11 +8,11 @@ class ReIndexingStatuses {
 
     private final Map<Index, ReIndexingStatus> statuses = [:]
 
-    void putAt(final Index index, final ReIndexingStatus status){
+    void putAt(final Index index, final ReIndexingStatus status) {
         statuses[index] = status
     }
 
-    ReIndexingStatus getAt(final Index index){
+    ReIndexingStatus getAt(final Index index) {
         statuses[index] ?: NULL_STATUS
     }
 }
