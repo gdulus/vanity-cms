@@ -1,19 +1,19 @@
-package vanity.cms.article
+package vanity.cms.tracking
 
 import groovy.util.logging.Slf4j
 
 @Slf4j
-class ArticleClicksAggregatorJob {
+class ClicksAggregatorJob {
 
     static triggers = {
         simple startDelay: 10000, repeatInterval: 10000
     }
 
-    ArticleClicksAggregationService articleClicksAggregationService
+    ClicksAggregationService clicksAggregationService
 
     def execute() {
         log.info('Starting job')
-        articleClicksAggregationService.execute()
+        clicksAggregationService.execute()
         log.info('Job finished')
     }
 }
