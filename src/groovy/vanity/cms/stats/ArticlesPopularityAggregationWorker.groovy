@@ -1,34 +1,36 @@
-package vanity.cms.tracking
+package vanity.cms.stats
 
 import groovy.transform.PackageScope
-import vanity.article.ArticleService
+import vanity.article.Article
+import vanity.stats.PopularityService
 import vanity.tracking.ArticleClick
 import vanity.tracking.ClickService
 
 @PackageScope
-class ArticlesClicksAggregationWorker extends AbstractClicksAggregationWorker<ArticleService> {
+class ArticlesPopularityAggregationWorker extends AbstractPopularityAggregationWorker {
 
-    ArticlesClicksAggregationWorker(ClickService clickService, ArticleService updateRankService) {
-        super(clickService, updateRankService)
+    ArticlesPopularityAggregationWorker(ClickService clickService, PopularityService popularityService) {
+        super(clickService, popularityService)
     }
 
     @Override
     protected Set<AggregationResult> aggregateClicks() {
         List<Object[]> queryResult = (List<Object[]>) ArticleClick.executeQuery('''
            select
-               article.id, count(*)
+               article.id, day, count(*)
            from
                ArticleClick a
            group by
-               article.id
+               article.id,
+               day
        ''')
 
-        queryResult.collect { new AggregationResult((Long) it[0], (Integer) it[1]) } as Set
+        queryResult.collect { new AggregationResult(it) } as Set
     }
 
     @Override
     protected void updateRank(final AggregationResult aggregationResult) {
-        updateRankService.updateRank(aggregationResult.id, aggregationResult.count)
+        popularityService.update(Article.load(aggregationResult.id), aggregationResult.day, aggregationResult.count)
     }
 
     @Override
