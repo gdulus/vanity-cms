@@ -6,6 +6,7 @@ import vanity.utils.ConfigUtils
 ConfigUtils.externalConfig(grails, userHome) {
     file 'base-db.properties'
     file 'base-search.properties'
+    file 'base-files.properties'
     file 'cms-config.properties'
 }
 
