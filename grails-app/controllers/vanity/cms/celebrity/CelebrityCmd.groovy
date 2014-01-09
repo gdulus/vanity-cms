@@ -22,6 +22,8 @@ class CelebrityCmd implements ImageContainer {
 
     Tag tag
 
+    Boolean deleteAvatar
+
     static constraints = {
         id(nullable: true)
         firstName(nullable: true, blank: true)

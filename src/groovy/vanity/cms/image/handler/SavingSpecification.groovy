@@ -4,7 +4,7 @@ import grails.validation.Validateable
 import org.springframework.web.multipart.MultipartFile
 
 @Validateable
-final class HandlingSpecification {
+final class SavingSpecification {
 
     MultipartFile uploadedImage
 

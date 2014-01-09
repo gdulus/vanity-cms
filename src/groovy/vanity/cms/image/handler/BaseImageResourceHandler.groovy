@@ -14,9 +14,10 @@ import java.awt.image.BufferedImage
 
 @Slf4j
 @Component
-class BaseImageUploadHandler implements ImageUploadHandler {
+class BaseImageResourceHandler implements ImageResourceHandler {
 
-    public Image handle(final HandlingSpecification specification) {
+    @Override
+    public Image save(final SavingSpecification specification) {
         if (!validateParams(specification)) {
             throw new ImageHandlingException('Invalid list of parameters')
         }
@@ -34,11 +35,11 @@ class BaseImageUploadHandler implements ImageUploadHandler {
         return new Image(name: specification.fileName, width: bufferedImage.width, height: bufferedImage.height)
     }
 
-    private validateParams(final HandlingSpecification specification) {
+    private validateParams(final SavingSpecification specification) {
         return (specification && specification.validate() && !specification.uploadedImage.isEmpty())
     }
 
-    private validateDimension(final BufferedImage image, final HandlingSpecification specification) {
+    private validateDimension(final BufferedImage image, final SavingSpecification specification) {
         return (image.width <= specification.maxWidth && image.height <= specification.maxHeight)
     }
 
@@ -60,5 +61,24 @@ class BaseImageUploadHandler implements ImageUploadHandler {
             log.info('Exception during saving image', exp)
             return false
         }
+    }
+
+    @Override
+    boolean delete(final DeletingSpecification specification) {
+        if (!validateParams(specification)) {
+            throw new ImageHandlingException('Invalid list of parameters')
+        }
+
+        File file = new File(specification.path)
+
+        if (!file.exists()) {
+            throw new ImageHandlingException("No image found in path ${file}")
+        }
+
+        return file.delete()
+    }
+
+    private validateParams(final DeletingSpecification specification) {
+        return (specification && specification.validate())
     }
 }

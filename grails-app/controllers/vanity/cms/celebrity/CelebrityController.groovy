@@ -1,6 +1,5 @@
 package vanity.cms.celebrity
 
-import vanity.celebrity.Celebrity
 import vanity.cms.image.handler.ImageHandlingException
 
 class CelebrityController {
@@ -25,22 +24,21 @@ class CelebrityController {
             return render(view: 'create', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrityCmd])
         }
 
-        def celebrity = new Celebrity()
-        bindData(celebrity, celebrityCmd.properties, [exclude: 'avatar'])
-
         try {
-            def savedCelebrity = celebrityAdminService.save(celebrity, celebrityCmd.avatar)
+            def celebrity = celebrityAdminService.save(celebrityCmd.avatar) {
+                bindData(it, celebrityCmd.properties, [exclude: 'avatar'])
+            }
 
-            if (!savedCelebrity) {
+            if (celebrity.hasErrors()) {
                 flash.error = 'vanity.cms.celebrity.savingDomainError'
                 return render(view: 'create', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrity])
             } else {
                 flash.info = 'vanity.cms.celebrity.saved'
-                return redirect(action: 'edit', id: savedCelebrity.id)
+                return redirect(action: 'edit', id: celebrity.id)
             }
         } catch (ImageHandlingException e) {
             flash.error = 'vanity.cms.celebrity.savingImageError'
-            return render(view: 'create', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrity])
+            return render(view: 'create', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrityCmd])
         }
     }
 
@@ -49,23 +47,27 @@ class CelebrityController {
     }
 
     def update(final CelebrityCmd celebrityCmd) {
-        def celebrity = celebrityService.get(celebrityCmd.id)
-        bindData(celebrity, params, [exclude: 'avatar'])
-
         try {
-            def savedCelebrity = celebrityAdminService.save(celebrity, celebrityCmd.avatar)
+            def celebrity = celebrityAdminService.update(celebrityCmd.id, celebrityCmd.deleteAvatar, celebrityCmd.avatar) {
+                bindData(it, params, [exclude: 'avatar'])
+            }
 
-            if (!savedCelebrity) {
+            if (!celebrity) {
+                flash.error = 'vanity.cms.entity.notFound'
+                return redirect(action: 'index')
+            }
+
+            if (celebrity.hasErrors()) {
                 flash.error = 'vanity.cms.celebrity.savingDomainError'
                 return render(view: 'edit', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrity])
             } else {
                 flash.info = 'vanity.cms.celebrity.saved'
-                return redirect(action: 'edit', id: savedCelebrity.id)
+                return redirect(action: 'edit', id: celebrity.id)
             }
         } catch (ImageHandlingException e) {
             flash.error = 'vanity.cms.celebrity.savingImageError'
             log.error(e)
-            return render(view: 'edit', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrity])
+            return render(view: 'edit', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrityCmd])
         }
     }
 

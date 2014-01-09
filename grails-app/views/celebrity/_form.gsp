@@ -31,7 +31,7 @@
             <p>
                 <img src="${celebrity.getImagePath(grailsApplication)}"/>
                 <label class="checkbox">
-                    <input type="checkbox"> <g:message code="vanity.cms.celebrity.image.delete"/>
+                    <g:checkBox name="deleteAvatar"/><g:message code="vanity.cms.celebrity.image.delete"/>
                 </label>
             </p>
         </g:if>
