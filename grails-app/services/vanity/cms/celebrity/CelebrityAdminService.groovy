@@ -27,7 +27,7 @@ class CelebrityAdminService {
             return null
         }
 
-        if (!multipartFile || multipartFile.isEmpty()) {
+        if (!multipartFile) {
             return savedCelebrity
         }
 

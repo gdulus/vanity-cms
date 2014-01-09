@@ -64,6 +64,7 @@ class CelebrityController {
             }
         } catch (ImageHandlingException e) {
             flash.error = 'vanity.cms.celebrity.savingImageError'
+            log.error(e)
             return render(view: 'edit', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrity])
         }
     }

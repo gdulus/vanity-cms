@@ -27,6 +27,15 @@
         <label class="control-label" for="description"><g:message code="vanity.cms.celebrity.description"/></label>
         <g:textArea class="input-xxlarge" name="description" value="${celebrity?.description}"/>
 
+        <g:if test="${celebrity?.hasImage()}">
+            <p>
+                <img src="${celebrity.getImagePath(grailsApplication)}"/>
+                <label class="checkbox">
+                    <input type="checkbox"> <g:message code="vanity.cms.celebrity.image.delete"/>
+                </label>
+            </p>
+        </g:if>
+
         <label class="control-label" for="avatar"><g:message code="vanity.cms.celebrity.image"/></label>
         <g:field class="input-xxlarge" type="file" name="avatar" value=""/>
 
