@@ -8,30 +8,29 @@ class TagController {
 
     def tagPromotionService
 
-    def index(){
+    def index() {
         redirect(action: 'review')
     }
 
-    def edit(){
-
+    def edit() {
     }
 
     def review() {
-        [elements:tagReviewService.getAllTagsForReview()]
+        [elements: tagReviewService.getAllTagsForReview()]
     }
 
-    def ajaxGetTagReviewForm(Long id){
+    def ajaxGetTagReviewForm(Long id) {
         [element: tagReviewService.getTagHint(id)]
     }
 
-    def ajaxConfirmTagReview(ConfirmTagReviewCmd reviewCmd){
-        if (!reviewCmd.validate()){
+    def ajaxConfirmTagReview(ConfirmTagReviewCmd reviewCmd) {
+        if (!reviewCmd.validate()) {
             render AjaxUtils.renderErrors(reviewCmd.errors)
             return
         }
 
         try {
-            if (performTagReviewAction(reviewCmd)){
+            if (performTagReviewAction(reviewCmd)) {
                 flash.info = 'vanity.cms.tags.review.success'
                 render AjaxUtils.Const.SUCCESS_RESPONSE
             } else {
@@ -44,8 +43,8 @@ class TagController {
         }
     }
 
-    private boolean performTagReviewAction(ConfirmTagReviewCmd reviewCmd){
-        switch(reviewCmd.strategy){
+    private boolean performTagReviewAction(ConfirmTagReviewCmd reviewCmd) {
+        switch (reviewCmd.strategy) {
             case ConfirmTagReviewCmd.Strategy.DUPLICATE:
                 return tagReviewService.markAsDuplicateTag(reviewCmd.id, reviewCmd.duplicatedTagId)
             case ConfirmTagReviewCmd.Strategy.ALIAS:
@@ -57,12 +56,12 @@ class TagController {
         }
     }
 
-    def promoted(){
-        [elements:tagPromotionService.getTagsValidForPromotion()]
+    def promoted() {
+        [elements: tagPromotionService.getTagsValidForPromotion()]
     }
 
-    def promoteTag(Long id){
-        if(tagPromotionService.promoteTag(id)){
+    def promoteTag(Long id) {
+        if (tagPromotionService.promoteTag(id)) {
             flash.info = 'vanity.cms.tags.promote.success'
         } else {
             flash.error = 'vanity.cms.tags.promote.error'
@@ -70,8 +69,8 @@ class TagController {
         redirect(action: 'promoted')
     }
 
-    def unPromoteTag(Long id){
-        if(tagPromotionService.unPromoteTag(id)){
+    def unPromoteTag(Long id) {
+        if (tagPromotionService.unPromoteTag(id)) {
             flash.info = 'vanity.cms.tags.unPromote.success'
         } else {
             flash.error = 'vanity.cms.tags.unPromote.error'
@@ -79,7 +78,7 @@ class TagController {
         redirect(action: 'promoted')
     }
 
-    def list(){
+    def list() {
     }
 
 }

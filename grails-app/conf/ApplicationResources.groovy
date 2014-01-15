@@ -1,10 +1,10 @@
 modules = {
     base {
-        resource url:'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
-        resource url:'js/bootstrap.min.js'
-        resource url:'js/cms.js'
-        resource url:'css/bootstrap.min.css'
-        resource url:'css/base.css'
+        resource url: 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
+        resource url: 'js/bootstrap.min.js'
+        resource url: 'js/cms.js'
+        resource url: 'css/bootstrap.min.css'
+        resource url: 'css/base.css'
     }
 
     reviewTag {
@@ -24,6 +24,15 @@ modules = {
     }
 
     celebrityForm {
+        dependsOn 'base'
+        resource url: 'css/celebrityForm.css'
+    }
+
+    articleList {
+        dependsOn 'base'
+    }
+
+    articleForm {
         dependsOn 'base'
         resource url: 'css/celebrityForm.css'
     }

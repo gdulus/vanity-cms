@@ -1,6 +1,7 @@
 package vanity.cms.celebrity
 
 import vanity.cms.image.handler.ImageHandlingException
+import vanity.utils.ConfigUtils
 
 class CelebrityController {
 
@@ -10,8 +11,11 @@ class CelebrityController {
 
     def celebrityAdminService
 
-    def index() {
-        [paginationBean: celebrityService.listWithPagination(params)]
+    def grailsApplication
+
+    def index(Long offset, Long max) {
+        max = params.max ?: ConfigUtils.$as(grailsApplication.config.cms.celebrity.pagination.max, Long)
+        [paginationBean: celebrityService.listWithPagination(max, offset, "lastName")]
     }
 
     def create() {

@@ -23,3 +23,7 @@ html {
     float: right;
     margin-right: 5px;
 }
+
+.pagination * {
+    padding: 0px 5px;
+}
