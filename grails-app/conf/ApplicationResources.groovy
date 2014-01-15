@@ -34,6 +34,6 @@ modules = {
 
     articleForm {
         dependsOn 'base'
-        resource url: 'css/celebrityForm.css'
+        resource url: 'css/articleForm.css'
     }
 }

@@ -1,17 +1,21 @@
 package vanity.cms.celebrity
 
+import org.codehaus.groovy.grails.commons.GrailsApplication
+import vanity.article.TagService
+import vanity.celebrity.Celebrity
+import vanity.celebrity.CelebrityService
 import vanity.cms.image.handler.ImageHandlingException
 import vanity.utils.ConfigUtils
 
 class CelebrityController {
 
-    def tagService
+    TagService tagService
 
-    def celebrityService
+    CelebrityService celebrityService
 
-    def celebrityAdminService
+    CelebrityAdminService celebrityAdminService
 
-    def grailsApplication
+    GrailsApplication grailsApplication
 
     def index(Long offset, Long max) {
         max = params.max ?: ConfigUtils.$as(grailsApplication.config.cms.celebrity.pagination.max, Long)
@@ -29,7 +33,7 @@ class CelebrityController {
         }
 
         try {
-            def celebrity = celebrityAdminService.save(celebrityCmd.avatar) {
+            Celebrity celebrity = celebrityAdminService.save(celebrityCmd.avatar) {
                 bindData(it, celebrityCmd.properties, [exclude: 'avatar'])
             }
 
@@ -52,7 +56,7 @@ class CelebrityController {
 
     def update(final CelebrityCmd celebrityCmd) {
         try {
-            def celebrity = celebrityAdminService.update(celebrityCmd.id, celebrityCmd.deleteAvatar, celebrityCmd.avatar) {
+            Celebrity celebrity = celebrityAdminService.update(celebrityCmd.id, celebrityCmd.deleteAvatar, celebrityCmd.avatar) {
                 bindData(it, params, [exclude: 'avatar'])
             }
 

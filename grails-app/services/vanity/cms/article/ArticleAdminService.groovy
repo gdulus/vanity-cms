@@ -15,4 +15,16 @@ class ArticleAdminService {
 
         article.delete()
     }
+
+    @Transactional
+    Article update(final Long id, final Closure binder) {
+        Article article = Article.get(id)
+
+        if (!article) {
+            return null
+        }
+
+        binder.call(article)
+        return article.save()
+    }
 }
