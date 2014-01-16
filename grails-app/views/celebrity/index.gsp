@@ -23,7 +23,7 @@
         <g:else>
             <table class="table table-striped">
                 <tr>
-                    <th style="width:20%"></th>
+
                     <th style="width:20%"><g:message code="vanity.cms.celebrity.name"/></th>
                     <th><g:message code="vanity.cms.celebrity.tag"/></th>
                     <th></th>
