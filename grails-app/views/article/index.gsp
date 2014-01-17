@@ -35,9 +35,9 @@
                         <td class="title">${element.title}</td>
                         <td class="source"><a href="${element.url}" target="_blank">${element.source.target}</a></td>
                         <td class="date-created"><g:formatDate date="${element.publicationDate}"
-                                                               format="yyyy-MM-dd HH:mm"/></td>
+                                                               format="${grailsApplication.config.cms.dateFormat}"/></td>
                         <td class="date-crawled"><g:formatDate date="${element.dateCreated}"
-                                                               format="yyyy-MM-dd HH:mm"/></td>
+                                                               format="${grailsApplication.config.cms.dateFormat}"/></td>
                         <td class="options">
                             <g:link action="delete" id="${element.id}" class="btn btn-danger delete"><g:message
                                     code="vanity.cms.delete"/></g:link>
@@ -50,7 +50,11 @@
             </table>
 
             <div class="pagination">
-                <g:paginate next="&raquo;" prev="&laquo;" maxsteps="0" controller="article" action="index"
+                <g:paginate next="&raquo;"
+                            prev="&laquo;"
+                            maxsteps="0"
+                            action="index"
+                            max="${grailsApplication.config.cms.celebrity.pagination.max}"
                             total="${paginationBean.totalCount}"/>
             </div>
         </g:else>

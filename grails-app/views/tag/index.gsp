@@ -2,7 +2,7 @@
 <head>
     <title></title>
     <meta name="layout" content="cms"/>
-    <r:require module="celebrityList"/>
+    <r:require module="tagList"/>
 </head>
 
 <body>
@@ -23,17 +23,13 @@
         <g:else>
             <table class="table table-striped">
                 <tr>
-
-                    <th style="width:20%"><g:message code="vanity.cms.celebrity.name"/></th>
-                    <th><g:message code="vanity.cms.celebrity.tag"/></th>
+                    <th style="width:50%"><g:message code="vanity.cms.tag.name"/></th>
                     <th></th>
                 </tr>
 
                 <g:each in="${paginationBean.elements}" var="element" status="i">
                     <tr>
-                        <td class="name">${element.firstName} ${element.lastName}</td>
-                        <td class="tag"><g:link controller="tag" action="edit"
-                                                id="${element.tag.id}">${element.tag.name}</g:link></td>
+                        <td class="title">${element.name}</td>
                         <td class="options">
                             <g:link action="delete" id="${element.id}" class="btn btn-danger delete"><g:message
                                     code="vanity.cms.delete"/></g:link>
@@ -46,14 +42,14 @@
             </table>
 
             <div class="pagination">
-                <g:paginate next="&raquo;"
-                            prev="&laquo;"
-                            maxsteps="0"
-                            action="index"
-                            max="${grailsApplication.config.cms.celebrity.pagination.max}"
-                            total="${paginationBean.totalCount}"/>
+                <g:paginate
+                        next="&raquo;"
+                        prev="&laquo;"
+                        maxsteps="0"
+                        action="index"
+                        max="${grailsApplication.config.cms.tag.pagination.max}"
+                        total="${paginationBean.totalCount}"/>
             </div>
-
         </g:else>
     </div>
 </div>

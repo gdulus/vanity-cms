@@ -1,18 +1,62 @@
 package vanity.cms.article
 
+import vanity.article.Tag
+import vanity.article.TagService
 import vanity.utils.AjaxUtils
+import vanity.utils.ConfigUtils
 
 class TagController {
 
-    def tagReviewService
+    TagService tagService
 
-    def tagPromotionService
+    TagAdminService tagAdminService
 
-    def index() {
-        redirect(action: 'review')
+    TagReviewService tagReviewService
+
+    TagPromotionService tagPromotionService
+
+    def index(final Long offset, final Long max) {
+        Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.tag.pagination.max, Long)
+        [paginationBean: tagService.listWithPagination(maxValue, offset, "name")]
     }
 
-    def edit() {
+    def create() {
+        [rootTags: tagService.getAllValidRootTags()]
+    }
+
+    def save(final TagCmd tagCmd) {
+        if (!tagCmd.validate()) {
+            flash.error = 'vanity.cms.tag.savingDomainError'
+            return render(view: 'create', model: [rootTags: tagService.getAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tagCmd])
+        }
+
+        Tag tag = tagAdminService.save(tagCmd.name, tagCmd.parentTagsIds)
+
+        if (tag.hasErrors()) {
+            flash.error = 'vanity.cms.tag.savingDomainError'
+            return render(view: 'create', model: [rootTags: tagService.getAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tag])
+        } else {
+            flash.info = 'vanity.cms.tag.saved'
+            return redirect(action: 'edit', id: tag.id)
+        }
+    }
+
+    def edit(final Long id) {
+        Tag tag = tagService.read(id)
+        Map<String, ?> model = [tag: tag]
+
+        if (!tag.root) {
+            model.rootTags = tagService.getAllValidRootTags()
+            model.parentTagsIds = tagService.getParentTags(id)*.id
+        }
+
+        return model
+    }
+
+    def delete(final Long id) {
+        tagAdminService.delete(id)
+        flash.info = 'vanity.cms.tag.deleted'
+        redirect(action: 'index')
     }
 
     def review() {
@@ -21,6 +65,28 @@ class TagController {
 
     def ajaxGetTagReviewForm(Long id) {
         [element: tagReviewService.getTagHint(id)]
+    }
+
+    def promoted() {
+        [elements: tagPromotionService.getTagsValidForPromotion()]
+    }
+
+    def promoteTag(Long id) {
+        if (tagPromotionService.promoteTag(id)) {
+            flash.info = 'vanity.cms.tags.promote.success'
+        } else {
+            flash.error = 'vanity.cms.tags.promote.error'
+        }
+        redirect(action: 'promoted')
+    }
+
+    def unPromoteTag(Long id) {
+        if (tagPromotionService.unPromoteTag(id)) {
+            flash.info = 'vanity.cms.tags.unPromote.success'
+        } else {
+            flash.error = 'vanity.cms.tags.unPromote.error'
+        }
+        redirect(action: 'promoted')
     }
 
     def ajaxConfirmTagReview(ConfirmTagReviewCmd reviewCmd) {
@@ -54,31 +120,6 @@ class TagController {
             default:
                 return false
         }
-    }
-
-    def promoted() {
-        [elements: tagPromotionService.getTagsValidForPromotion()]
-    }
-
-    def promoteTag(Long id) {
-        if (tagPromotionService.promoteTag(id)) {
-            flash.info = 'vanity.cms.tags.promote.success'
-        } else {
-            flash.error = 'vanity.cms.tags.promote.error'
-        }
-        redirect(action: 'promoted')
-    }
-
-    def unPromoteTag(Long id) {
-        if (tagPromotionService.unPromoteTag(id)) {
-            flash.info = 'vanity.cms.tags.unPromote.success'
-        } else {
-            flash.error = 'vanity.cms.tags.unPromote.error'
-        }
-        redirect(action: 'promoted')
-    }
-
-    def list() {
     }
 
 }

@@ -16,9 +16,9 @@ class ArticleController {
 
     GrailsApplication grailsApplication
 
-    def index(Long offset, Long max) {
-        max = max ?: ConfigUtils.$as(grailsApplication.config.cms.article.pagination.max, Long)
-        [paginationBean: articleService.listWithPagination(max, offset, "dateCreated")]
+    def index(final Long offset, final Long max) {
+        Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.article.pagination.max, Long)
+        [paginationBean: articleService.listWithPagination(maxValue, offset, "dateCreated")]
     }
 
     def edit(final Long id) {

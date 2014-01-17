@@ -32,8 +32,17 @@ modules = {
         dependsOn 'base'
     }
 
+    tagList {
+        dependsOn 'base'
+    }
+
     articleForm {
         dependsOn 'base'
         resource url: 'css/articleForm.css'
+    }
+
+    tagForm {
+        dependsOn 'base'
+        resource url: 'css/tagForm.css'
     }
 }

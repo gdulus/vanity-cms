@@ -17,9 +17,9 @@ class CelebrityController {
 
     GrailsApplication grailsApplication
 
-    def index(Long offset, Long max) {
-        max = params.max ?: ConfigUtils.$as(grailsApplication.config.cms.celebrity.pagination.max, Long)
-        [paginationBean: celebrityService.listWithPagination(max, offset, "lastName")]
+    def index(final Long offset, final Long max) {
+        Long maxValue = params.max ?: ConfigUtils.$as(grailsApplication.config.cms.celebrity.pagination.max, Long)
+        [paginationBean: celebrityService.listWithPagination(maxValue, offset, "lastName")]
     }
 
     def create() {
