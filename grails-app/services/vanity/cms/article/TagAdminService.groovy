@@ -23,10 +23,8 @@ class TagAdminService {
 
     @Transactional
     Tag save(final String name, final List<Long> parentTagIds) {
-        String cleanedUpTagName = Tag.clearName(name)
-
         Tag tag = new Tag(
-            name: cleanedUpTagName,
+            name: name,
             status: Status.Tag.PUBLISHED,
             root: false
         )
