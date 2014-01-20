@@ -43,7 +43,13 @@ class TagController {
 
     def edit(final Long id) {
         Tag tag = tagService.read(id)
-        Map<String, ?> model = [tag: tag]
+
+        if (!tag) {
+            flash.error = 'vanity.cms.entity.notFound'
+            return redirect(action: 'index')
+        }
+
+        Map<String, Object> model = [tag: tag]
 
         if (!tag.root) {
             model.rootTags = tagService.getAllValidRootTags()
@@ -51,6 +57,29 @@ class TagController {
         }
 
         return model
+    }
+
+    def update(final TagCmd tagCmd) {
+        if (!tagCmd.validate()) {
+            flash.error = 'vanity.cms.tag.savingDomainError'
+            return render(view: 'edit', model: [rootTags: tagService.getAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tagCmd])
+        }
+
+        Tag tag = tagAdminService.update(tagCmd.id, tagCmd.name, tagCmd.parentTagsIds)
+
+        if (!tag) {
+            flash.error = 'vanity.cms.entity.notFound'
+            return redirect(action: 'index')
+        }
+
+        if (tag.hasErrors()) {
+            flash.error = 'vanity.cms.tag.savingDomainError'
+            return render(view: 'edit', model: [rootTags: tagService.getAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tag])
+        } else {
+            flash.info = 'vanity.cms.tag.saved'
+            return redirect(action: 'edit', id: tag.id)
+        }
+
     }
 
     def delete(final Long id) {

@@ -23,15 +23,38 @@ class TagAdminService {
 
     @Transactional
     Tag save(final String name, final List<Long> parentTagIds) {
-        Tag tag = tagService.create(name)
+        String cleanedUpTagName = Tag.clearName(name)
 
-        if (tag.hasErrors()) {
+        Tag tag = new Tag(
+            name: cleanedUpTagName,
+            status: Status.Tag.PUBLISHED,
+            root: false
+        )
+
+        if (!tag.save()) {
             return tag
         }
 
-        tag.status = Status.Tag.PUBLISHED
-        tag.save()
-        List<Tag> parentTags = parentTagIds.collect { Tag.get(it) }
+        List<Tag> parentTags = parentTagIds.collect { Tag.load(it) }
+        parentTags*.addToChildTags(tag)
+        return tag
+    }
+
+    @Transactional
+    Tag update(final Long id, final String name, final List<Long> parentTagIds) {
+        Tag tag = Tag.get(id)
+
+        if (!tag) {
+            return null
+        }
+
+        tag.name = name
+
+        if (!tag.save()) {
+            return tag
+        }
+
+        List<Tag> parentTags = parentTagIds.collect { Tag.load(it) }
         parentTags*.addToChildTags(tag)
         return tag
     }

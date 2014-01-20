@@ -47,7 +47,6 @@ class ArticleController {
             flash.info = 'vanity.cms.article.saved'
             return redirect(action: 'edit', id: article.id)
         }
-
     }
 
     def delete(final Long id) {

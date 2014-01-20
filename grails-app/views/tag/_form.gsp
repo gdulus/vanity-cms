@@ -24,6 +24,10 @@
                       optionKey="id" optionValue="name" multiple="true"/>
         </g:if>
 
+        <g:if test="${tag?.root}">
+            <p><g:message code="vanity.cms.tag.root"/></p>
+        </g:if>
+
         <div class="form-actions">
             <button type="submit" class="btn btn-primary"><g:message code="vanity.cms.save"/></button>
             <g:link action="index" class="btn"><g:message code="vanity.cms.cancel"/></g:link>

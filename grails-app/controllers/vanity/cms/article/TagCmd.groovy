@@ -9,6 +9,7 @@ class TagCmd {
 
     String name
 
+    // only for validation purpose
     Boolean root = false
 
     List<String> parentTagsIds
