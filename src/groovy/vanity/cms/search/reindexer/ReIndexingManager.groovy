@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component
 import vanity.article.Article
 import vanity.cms.search.reindexer.impl.ReIndexer
 import vanity.cms.search.reindexer.impl.ReIndexerFactory
+import vanity.cms.search.reindexer.impl.ReIndexingCmd
 import vanity.search.Index
 
 import java.util.concurrent.ConcurrentHashMap
@@ -20,18 +21,18 @@ class ReIndexingManager {
     ReIndexerFactory reIndexerFactory
 
     @Async
-    public void startReIndexing(final Index reIndexingTarget) {
+    public void startReIndexing(final ReIndexingCmd reIndexingCmd) {
         // create lazy re indexer
-        ReIndexer reIndexer = reIndexerFactory.produce(reIndexingTarget)
+        ReIndexer reIndexer = reIndexerFactory.produce(reIndexingCmd)
         // try add it to running indexes and add trigger start only when has status initialized
-        if (RUNNING_REINDEXERS.putIfAbsent(reIndexingTarget, reIndexer) == null) {
+        if (RUNNING_REINDEXERS.putIfAbsent(reIndexingCmd.target, reIndexer) == null) {
             try {
                 Article.withNewSession {
                     reIndexer.start()
                 }
             } finally {
-                if (!RUNNING_REINDEXERS.remove(reIndexingTarget, reIndexer)) {
-                    throw new IllegalStateException("Could not remove entry for ${reIndexingTarget}")
+                if (!RUNNING_REINDEXERS.remove(reIndexingCmd.target, reIndexer)) {
+                    throw new IllegalStateException("Could not remove entry for ${reIndexingCmd.target}")
                 }
             }
         }

@@ -23,15 +23,19 @@ final class ReIndexerFactory {
     @Autowired
     GrailsApplication grailsApplication
 
-    public final ReIndexer produce(final Index reIndexingTarget) {
-        switch (reIndexingTarget) {
-            case Index.ARTICLE:
+    public final ReIndexer produce(final ReIndexingCmd reIndexingCmd) {
+        switch (reIndexingCmd.target) {
+            case Index.ARTICLE_ALL:
                 return new ArticleReIndexer(batchSize, { articleService.list() }, searchEngineIndexer)
-            case Index.TAG:
+            case Index.TAG_ALL:
                 return new TagReIndexer(batchSize, { tagService.getAllValidRootTags() }, searchEngineIndexer)
+            case Index.ARTICLE_PARTIAL:
+                return new ArticleReIndexer(batchSize, { articleService.findAllFromThePointOfTime(reIndexingCmd.startFrom) }, searchEngineIndexer)
+            case Index.TAG_PARTIAL:
+                return new TagReIndexer(batchSize, { tagService.findAllFromThePointOfTime(reIndexingCmd.startFrom) }, searchEngineIndexer)
         }
 
-        throw new IllegalArgumentException("Not supported re indexing target ${reIndexingTarget}")
+        throw new IllegalArgumentException("Not supported re indexing target ${reIndexingCmd.target}")
     }
 
     private Integer getBatchSize() {

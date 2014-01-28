@@ -2,6 +2,7 @@ package vanity.cms.search
 
 import org.springframework.beans.factory.annotation.Autowired
 import vanity.cms.search.reindexer.ReIndexingManager
+import vanity.cms.search.reindexer.impl.ReIndexingCmd
 import vanity.search.Index
 
 class SearchController {
@@ -11,13 +12,18 @@ class SearchController {
 
     def index() {
         [
-            supportedReIndexingTargets: [Index.ARTICLE, Index.TAG],
+            supportedReIndexingTargets: [
+                (Index.ARTICLE_ALL): true,
+                (Index.TAG_ALL): true,
+                (Index.ARTICLE_PARTIAL): false,
+                (Index.TAG_PARTIAL): false
+            ],
             state: reIndexingManager.getReIndexingStatuses()
         ]
     }
 
     def startReIndexing(ReIndexCmd cmd) {
-        reIndexingManager.startReIndexing(cmd.reIndexingTarget)
+        reIndexingManager.startReIndexing(new ReIndexingCmd(cmd.reIndexingTarget))
         redirect(action: 'index')
     }
 

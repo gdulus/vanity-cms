@@ -23,31 +23,33 @@
                 <th style="width: 50px;"></th>
             </tr>
             <g:each in="${supportedReIndexingTargets}" var="reIndexingTarget">
-                <tr>
-                    <td>${reIndexingTarget}</td>
-                    <g:if test="${state[reIndexingTarget].phase == ReIndexingPhase.NONE}">
+                <tr style="height: 45px">
+                    <td>${reIndexingTarget.key}</td>
+                    <g:if test="${state[reIndexingTarget.key].phase == ReIndexingPhase.NONE}">
                         <td>-</td>
                         <td>-</td>
                         <td>
-                            <g:link action="startReIndexing"
-                                    class="btn btn-success"
-                                    params="[reIndexingTarget: reIndexingTarget]"
-                                    onclick="return confirm('${g.message(code: 'search.reindex.start.confirm')}')">
-                                <g:message code="search.reindex.start"/>
-                            </g:link>
+                            <g:if test="${reIndexingTarget.value}">
+                                <g:link action="startReIndexing"
+                                        class="btn btn-success"
+                                        params="[reIndexingTarget: reIndexingTarget.key]"
+                                        onclick="return confirm('${g.message(code: 'search.reindex.start.confirm')}')">
+                                    <g:message code="search.reindex.start"/>
+                                </g:link>
+                            </g:if>
                         </td>
                     </g:if>
                     <g:else>
-                        <td>${state[reIndexingTarget].phase}</td>
+                        <td>${state[reIndexingTarget.key].phase}</td>
                         <td>
                             <div class="progress progress-striped">
-                                <div class="bar" style="width:  ${state[reIndexingTarget].percent}%;"></div>
+                                <div class="bar" style="width:  ${state[reIndexingTarget.key].percent}%;"></div>
                             </div>
                         </td>
                         <td>
                             <g:link action="stopReIndexing"
                                     class="btn btn-danger"
-                                    params="[reIndexingTarget: reIndexingTarget]"
+                                    params="[reIndexingTarget: reIndexingTarget.key]"
                                     onclick="return confirm('${g.message(code: 'search.reindex.stop.confirm')}')">
                                 <g:message code="search.reindex.stop"/>
                             </g:link>
