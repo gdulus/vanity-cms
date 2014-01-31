@@ -14,7 +14,7 @@ class TagReviewService {
 
     @Transactional(readOnly = true)
     public List<Tag> getAllTagsForReview() {
-        return Tag.findAllByStatus(Status.Tag.TO_BE_REVIEWED, [sort: 'name'])
+        return Tag.findAllByStatus(TagStatus.TO_BE_REVIEWED, [sort: 'name'])
     }
 
     @Transactional(readOnly = true)
@@ -24,9 +24,9 @@ class TagReviewService {
         Tag tag = Tag.get(id)
         Validate.notNull(tag, "There is no Tag with id ${id}")
         // get all reviewed parent tags
-        List<Tag> parentTags = tagService.getAllValidRootTags()
+        List<Tag> parentTags = tagService.findAllValidRootTags()
         // find similar tags
-        List<Tag> similarTags = tagService.getAllTags().findAll({
+        List<Tag> similarTags = tagService.findAll().findAll({
             (it != tag
                 && (it.name.toLowerCase().contains(tag.name.toLowerCase())
                 || tag.name.toLowerCase().contains(it.name.toLowerCase())
@@ -45,7 +45,7 @@ class TagReviewService {
         Validate.notNull(tag, "There is no Tag with id ${id}")
         // mark tag as root one and mark it as published
         tag.root = true
-        tag.status = Status.Tag.PUBLISHED
+        tag.status = TagStatus.PUBLISHED
         return tag.save() != null
     }
 
@@ -61,7 +61,7 @@ class TagReviewService {
         Validate.notNull(reviewedTag, "There is no Tag with id ${reviewedTagId}")
         Validate.notNull(duplicatedTag, "There is no Tag with id ${duplicatedTagId}")
         // search for all articles that contain tag that is a duplication
-        List<Article> relatedArticles = articleService.getByTag(reviewedTag)
+        List<Article> relatedArticles = articleService.findAllByTag(reviewedTag)
         // remove tag that is a duplication and replace it by duplicated tag
         relatedArticles.each { Article it ->
             it.removeFromTags(reviewedTag)
@@ -89,7 +89,7 @@ class TagReviewService {
             parentTag.save()
         }
         // mark child tag as published
-        reviewedTag.status = Status.Tag.PUBLISHED
+        reviewedTag.status = TagStatus.PUBLISHED
         reviewedTag.save() != null
     }
 

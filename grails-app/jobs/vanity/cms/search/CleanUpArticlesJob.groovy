@@ -9,10 +9,10 @@ import vanity.cms.search.reindexer.impl.ReIndexingCmd
 import vanity.search.Index
 
 @Slf4j
-class ReIndexingArticlesJob {
+class CleanUpArticlesJob {
 
     static triggers = {
-        cron name: 'ReIndexingArticlesJob', cronExpression: '0 0/1 * * * ?'
+        cron name: 'CleanUpArticlesJob', cronExpression: '0 0/1 * * * ?'
     }
 
     def concurrent = false
@@ -25,8 +25,8 @@ class ReIndexingArticlesJob {
     def execute(lastRun) {
         if (lastRun) {
             log.info('Starting job last run = {}', lastRun)
-            Closure dataProvider = { articleService.findAllFromThePointOfTimeWithStatus((Date) lastRun, [ArticleStatus.ACTIVE]) }
-            reIndexingManager.startReIndexing(new ReIndexingCmd(Index.ARTICLE_UPDATE, dataProvider))
+            Closure dataProvider = { articleService.findAllFromThePointOfTimeWithStatus((Date) lastRun, [ArticleStatus.DELETED]) }
+            reIndexingManager.startReIndexing(new ReIndexingCmd(Index.ARTICLE_REMOVE, dataProvider))
             log.info('Job finished')
         }
     }

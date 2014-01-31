@@ -6,14 +6,10 @@ public final class ReIndexingCmd {
 
     final Index target
 
-    final Date startFrom
+    final Closure dataProvider
 
-    ReIndexingCmd(Index target) {
-        this(target, null)
-    }
-
-    ReIndexingCmd(Index target, Date startFrom) {
+    ReIndexingCmd(Index target, Closure dataProvider) {
         this.target = target
-        this.startFrom = startFrom
+        this.dataProvider = dataProvider
     }
 }

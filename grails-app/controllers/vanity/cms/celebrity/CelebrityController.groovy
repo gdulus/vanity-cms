@@ -23,13 +23,13 @@ class CelebrityController {
     }
 
     def create() {
-        [tags: tagService.getAllValidRootTags()]
+        [tags: tagService.findAllValidRootTags()]
     }
 
     def save(final CelebrityCmd celebrityCmd) {
         if (!celebrityCmd.validate()) {
             flash.error = 'vanity.cms.celebrity.savingDomainError'
-            return render(view: 'create', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrityCmd])
+            return render(view: 'create', model: [tags: tagService.findAllValidRootTags(), celebrity: celebrityCmd])
         }
 
         try {
@@ -39,19 +39,19 @@ class CelebrityController {
 
             if (celebrity.hasErrors()) {
                 flash.error = 'vanity.cms.celebrity.savingDomainError'
-                return render(view: 'create', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrity])
+                return render(view: 'create', model: [tags: tagService.findAllValidRootTags(), celebrity: celebrity])
             } else {
                 flash.info = 'vanity.cms.celebrity.saved'
                 return redirect(action: 'edit', id: celebrity.id)
             }
         } catch (ImageHandlingException e) {
             flash.error = 'vanity.cms.celebrity.savingImageError'
-            return render(view: 'create', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrityCmd])
+            return render(view: 'create', model: [tags: tagService.findAllValidRootTags(), celebrity: celebrityCmd])
         }
     }
 
     def edit(final Long id) {
-        [tags: tagService.getAllValidRootTags(), celebrity: celebrityService.read(id)]
+        [tags: tagService.findAllValidRootTags(), celebrity: celebrityService.read(id)]
     }
 
     def update(final CelebrityCmd celebrityCmd) {
@@ -67,7 +67,7 @@ class CelebrityController {
 
             if (celebrity.hasErrors()) {
                 flash.error = 'vanity.cms.celebrity.savingDomainError'
-                return render(view: 'edit', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrity])
+                return render(view: 'edit', model: [tags: tagService.findAllValidRootTags(), celebrity: celebrity])
             } else {
                 flash.info = 'vanity.cms.celebrity.saved'
                 return redirect(action: 'edit', id: celebrity.id)
@@ -75,7 +75,7 @@ class CelebrityController {
         } catch (ImageHandlingException e) {
             flash.error = 'vanity.cms.celebrity.savingImageError'
             log.error(e)
-            return render(view: 'edit', model: [tags: tagService.getAllValidRootTags(), celebrity: celebrityCmd])
+            return render(view: 'edit', model: [tags: tagService.findAllValidRootTags(), celebrity: celebrityCmd])
         }
     }
 

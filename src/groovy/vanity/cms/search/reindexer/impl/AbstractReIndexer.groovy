@@ -34,20 +34,27 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
     }
 
     @Override
-    void start() {
+    final void start() {
         for (List<I> partition : prepare().collate(partitionSize)) {
             if (stop) {
                 break
             }
 
             Set<O> documents = convert(partition)
-            clear(documents)
-            index(documents)
-            processed += partition.size()
+
+            if (documents) {
+                processPartition(documents)
+                processed += partition.size()
+            }
         }
     }
 
-    private List<I> prepare() {
+    protected void processPartition(final Set<O> documents) {
+        clear(documents)
+        index(documents)
+    }
+
+    protected List<I> prepare() {
         phase = ReIndexingPhase.PREPARING
         List<I> documents = (List<I>) dataProvider.call()
         toProcess = documents.size()
@@ -65,7 +72,7 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
 
     protected abstract void doClear(Set<O> documents)
 
-    private void clear(final Set<O> documents) {
+    protected void clear(final Set<O> documents) {
         log.info('Clearing index')
         phase = ReIndexingPhase.CLEARING
         doClear(documents)
@@ -73,7 +80,7 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
 
     protected abstract void doIndex(Set<O> documents)
 
-    private void index(final Set<O> documents) {
+    protected void index(final Set<O> documents) {
         log.info('Re-indexing')
         phase = ReIndexingPhase.INDEXING
         doIndex(documents)

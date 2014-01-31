@@ -17,24 +17,24 @@ class TagController {
 
     def index(final Long offset, final Long max) {
         Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.tag.pagination.max, Long)
-        [paginationBean: tagService.listWithPagination(maxValue, offset, "name")]
+        [paginationBean: tagAdminService.listWithPagination(maxValue, offset, "name")]
     }
 
     def create() {
-        [rootTags: tagService.getAllValidRootTags()]
+        [rootTags: tagService.findAllValidRootTags()]
     }
 
     def save(final TagCmd tagCmd) {
         if (!tagCmd.validate()) {
             flash.error = 'vanity.cms.tag.savingDomainError'
-            return render(view: 'create', model: [rootTags: tagService.getAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tagCmd])
+            return render(view: 'create', model: [rootTags: tagService.findAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tagCmd])
         }
 
         Tag tag = tagAdminService.save(tagCmd.name, tagCmd.parentTagsIds)
 
         if (tag.hasErrors()) {
             flash.error = 'vanity.cms.tag.savingDomainError'
-            return render(view: 'create', model: [rootTags: tagService.getAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tag])
+            return render(view: 'create', model: [rootTags: tagService.findAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tag])
         } else {
             flash.info = 'vanity.cms.tag.saved'
             return redirect(action: 'edit', id: tag.id)
@@ -52,8 +52,8 @@ class TagController {
         Map<String, Object> model = [tag: tag]
 
         if (!tag.root) {
-            model.rootTags = tagService.getAllValidRootTags()
-            model.parentTagsIds = tagService.getParentTags(id)*.id
+            model.rootTags = tagService.findAllValidRootTags()
+            model.parentTagsIds = tagService.findAllByParentTags(id)*.id
         }
 
         return model
@@ -62,7 +62,7 @@ class TagController {
     def update(final TagCmd tagCmd) {
         if (!tagCmd.validate()) {
             flash.error = 'vanity.cms.tag.savingDomainError'
-            return render(view: 'edit', model: [rootTags: tagService.getAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tagCmd])
+            return render(view: 'edit', model: [rootTags: tagService.findAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tagCmd])
         }
 
         Tag tag = tagAdminService.update(tagCmd.id, tagCmd.name, tagCmd.parentTagsIds)
@@ -74,7 +74,7 @@ class TagController {
 
         if (tag.hasErrors()) {
             flash.error = 'vanity.cms.tag.savingDomainError'
-            return render(view: 'edit', model: [rootTags: tagService.getAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tag])
+            return render(view: 'edit', model: [rootTags: tagService.findAllValidRootTags(), parentTagsIds: tagCmd.parentTagsIds, tag: tag])
         } else {
             flash.info = 'vanity.cms.tag.saved'
             return redirect(action: 'edit', id: tag.id)

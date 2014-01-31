@@ -21,6 +21,10 @@ class ReIndexingManager {
     ReIndexerFactory reIndexerFactory
 
     @Async
+    public void startReIndexingAsync(final ReIndexingCmd reIndexingCmd) {
+        startReIndexing(reIndexingCmd)
+    }
+
     public void startReIndexing(final ReIndexingCmd reIndexingCmd) {
         // create lazy re indexer
         ReIndexer reIndexer = reIndexerFactory.produce(reIndexingCmd)

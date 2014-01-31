@@ -1,13 +1,20 @@
 package vanity.cms.article
 
 import org.springframework.transaction.annotation.Transactional
-import vanity.article.*
+import vanity.article.ArticleService
+import vanity.article.Tag
+import vanity.article.TagStatus
+import vanity.pagination.PaginationAware
+import vanity.pagination.PaginationBean
 
-class TagAdminService {
+class TagAdminService implements PaginationAware<Tag> {
 
     ArticleService articleService
 
-    TagService tagService
+    @Transactional(readOnly = true)
+    public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort) {
+        return new PaginationBean<Tag>(Tag.list(max: max, offset: offset, sort: sort), Tag.count())
+    }
 
     @Transactional
     void delete(final Long id) {
@@ -17,7 +24,7 @@ class TagAdminService {
             return
         }
 
-        articleService.getByTag(tag)*.removeFromTags(tag)
+        articleService.findAllByTag(tag)*.removeFromTags(tag)
         tag.delete()
     }
 
@@ -25,7 +32,7 @@ class TagAdminService {
     Tag save(final String name, final List<Long> parentTagIds) {
         Tag tag = new Tag(
             name: name,
-            status: Status.Tag.PUBLISHED,
+            status: TagStatus.PUBLISHED,
             root: false
         )
 
@@ -55,17 +62,5 @@ class TagAdminService {
         List<Tag> parentTags = parentTagIds.collect { Tag.load(it) }
         parentTags*.addToChildTags(tag)
         return tag
-    }
-
-    @Transactional
-    Article update(final Long id, final Closure binder) {
-        Article article = Article.get(id)
-
-        if (!article) {
-            return null
-        }
-
-        binder.call(article)
-        return article.save()
     }
 }

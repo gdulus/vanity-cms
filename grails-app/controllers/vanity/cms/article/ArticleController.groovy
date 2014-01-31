@@ -18,17 +18,17 @@ class ArticleController {
 
     def index(final Long offset, final Long max) {
         Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.article.pagination.max, Long)
-        [paginationBean: articleService.listWithPagination(maxValue, offset, "dateCreated")]
+        [paginationBean: articleAdminService.listWithPagination(maxValue, offset, "dateCreated")]
     }
 
     def edit(final Long id) {
-        [tags: tagService.getAllTags(), article: articleService.read(id)]
+        [tags: tagService.findAll(), article: articleService.read(id)]
     }
 
     def update(final ArticleCmd articleCmd) {
         if (!articleCmd.validate()) {
             flash.error = 'vanity.cms.article.savingDomainError'
-            return render(view: 'edit', model: [tags: tagService.getAllTags(), article: articleCmd])
+            return render(view: 'edit', model: [tags: tagService.findAll(), article: articleCmd])
         }
 
         Article article = articleAdminService.update(articleCmd.id) {
@@ -42,7 +42,7 @@ class ArticleController {
 
         if (article.hasErrors()) {
             flash.error = 'vanity.cms.article.savingDomainError'
-            return render(view: 'edit', model: [tags: tagService.getAllTags(), article: article])
+            return render(view: 'edit', model: [tags: tagService.findAll(), article: article])
         } else {
             flash.info = 'vanity.cms.article.saved'
             return redirect(action: 'edit', id: article.id)
@@ -50,7 +50,7 @@ class ArticleController {
     }
 
     def delete(final Long id) {
-        articleAdminService.delete(id)
+        articleAdminService.markAsDeleted(id)
         flash.info = 'vanity.cms.article.deleted'
         redirect(action: 'index')
     }

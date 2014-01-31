@@ -1,7 +1,6 @@
 package vanity.cms.stats
 
 import groovy.util.logging.Slf4j
-import pl.burningice.burningconfig.features.JobLastRun
 
 @Slf4j
 class PopularityAggregatorJob {
@@ -12,9 +11,8 @@ class PopularityAggregatorJob {
 
     PopularityAggregationService popularityAggregationService
 
-    @JobLastRun
-    def execute(lastRun) {
-        log.info('Starting job last run = {}', lastRun)
+    def execute() {
+        log.info('Starting job')
         popularityAggregationService.execute()
         log.info('Job finished')
     }
