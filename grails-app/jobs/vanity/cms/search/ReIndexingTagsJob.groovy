@@ -12,7 +12,7 @@ import vanity.search.Index
 class ReIndexingTagsJob {
 
     static triggers = {
-        cron name: 'ReIndexingTagsJob', cronExpression: '0 0/1 * * * ?'
+        cron name: 'ReIndexingTagsJob', cronExpression: '0 0/15 * * * ?' // every 15 minutes
     }
 
     def concurrent = false

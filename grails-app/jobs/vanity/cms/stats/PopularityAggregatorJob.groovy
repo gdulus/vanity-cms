@@ -6,7 +6,7 @@ import groovy.util.logging.Slf4j
 class PopularityAggregatorJob {
 
     static triggers = {
-        simple startDelay: 10000, repeatInterval: 10000
+        cron name: 'PopularityAggregatorJob', cronExpression: '0 0 0/1 * * ?' // every 1 hour
     }
 
     PopularityAggregationService popularityAggregationService

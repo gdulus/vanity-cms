@@ -12,7 +12,7 @@ import vanity.search.Index
 class CleanUpArticlesJob {
 
     static triggers = {
-        cron name: 'CleanUpArticlesJob', cronExpression: '0 0/1 * * * ?'
+        cron name: 'CleanUpArticlesJob', cronExpression: '0 0 3 * * ?' // 03:00 every day
     }
 
     def concurrent = false
