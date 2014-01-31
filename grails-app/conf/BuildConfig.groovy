@@ -27,7 +27,9 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        compile('postgresql:postgresql:9.1-901.jdbc4')
+        compile 'postgresql:postgresql:9.1-901.jdbc4'
+        compile 'org.codehaus.gpars:gpars:1.1.0'
+        compile 'org.codehaus.jsr166-mirror:jsr166y:1.7.0'
     }
 
     plugins {
