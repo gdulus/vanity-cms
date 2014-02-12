@@ -8,7 +8,8 @@ class ConfirmTagReviewCmd {
     public enum Strategy {
         DUPLICATE,
         ALIAS,
-        PARENT
+        ROOT,
+        SPAM
     }
 
     Long id
@@ -22,15 +23,15 @@ class ConfirmTagReviewCmd {
     static constraints = {
         id(nullable: false)
         strategy(nullable: false)
-        serializedParentTagIds(nullable: true, validator: {val, obj ->
-            if(obj.strategy == Strategy.ALIAS && (!val || !obj.parentTagIds)){
+        serializedParentTagIds(nullable: true, validator: { val, obj ->
+            if (obj.strategy == Strategy.ALIAS && (!val || !obj.parentTagIds)) {
                 return 'confirmTagReviewCmd.alias.noSelection'
             } else {
                 return true
             }
         })
-        duplicatedTagId(nullable: true, validator: {val, obj ->
-            if(obj.strategy == Strategy.DUPLICATE && !val){
+        duplicatedTagId(nullable: true, validator: { val, obj ->
+            if (obj.strategy == Strategy.DUPLICATE && !val) {
                 return 'confirmTagReviewCmd.duplicate.noSelection'
             } else {
                 return true
@@ -38,7 +39,7 @@ class ConfirmTagReviewCmd {
         })
     }
 
-    public List<Long> getParentTagIds(){
-        return serializedParentTagIds.tokenize().collect({it.toLong()})
+    public List<Long> getParentTagIds() {
+        return serializedParentTagIds.tokenize().collect({ it.toLong() })
     }
 }

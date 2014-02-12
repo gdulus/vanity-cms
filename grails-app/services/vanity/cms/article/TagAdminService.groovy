@@ -13,7 +13,8 @@ class TagAdminService implements PaginationAware<Tag> {
 
     @Transactional(readOnly = true)
     public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort) {
-        return new PaginationBean<Tag>(Tag.list(max: max, offset: offset, sort: sort), Tag.count())
+        List<Tag> tags = Tag.findAllByStatusInList(TagStatus.OPEN_STATUSES, [sort: sort, max: max, offset: offset])
+        return new PaginationBean<Tag>(tags, Tag.countByStatusInList(TagStatus.OPEN_STATUSES))
     }
 
     @Transactional

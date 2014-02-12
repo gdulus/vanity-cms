@@ -5,16 +5,19 @@ import org.apache.commons.lang.Validate
 import org.springframework.transaction.annotation.Transactional
 import vanity.article.*
 import vanity.cms.article.review.TagReviewHint
+import vanity.pagination.PaginationAware
+import vanity.pagination.PaginationBean
 
-class TagReviewService {
+class TagReviewService implements PaginationAware<Tag> {
 
     TagService tagService
 
     ArticleService articleService
 
     @Transactional(readOnly = true)
-    public List<Tag> getAllTagsForReview() {
-        return Tag.findAllByStatus(TagStatus.TO_BE_REVIEWED, [sort: 'name'])
+    public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort) {
+        List<Tag> tags = Tag.findAllByStatus(TagStatus.TO_BE_REVIEWED, [sort: sort, max: max, offset: offset])
+        return new PaginationBean<Tag>(tags, Tag.countByStatus(TagStatus.TO_BE_REVIEWED))
     }
 
     @Transactional(readOnly = true)
@@ -38,19 +41,26 @@ class TagReviewService {
     }
 
     @Transactional
-    public boolean markAsParentTag(final Long id) {
+    public boolean markAsRoot(final Long id) {
         // validate input
         Validate.notNull(id, 'Provide not null and not empty tag id')
         Tag tag = Tag.get(id)
-        Validate.notNull(tag, "There is no Tag with id ${id}")
-        // mark tag as root one and mark it as published
         tag.root = true
         tag.status = TagStatus.PUBLISHED
         return tag.save() != null
     }
 
     @Transactional
-    public boolean markAsDuplicateTag(final Long reviewedTagId, final Long duplicatedTagId) {
+    public boolean markAsSpam(final Long id) {
+        // validate input
+        Validate.notNull(id, 'Provide not null and not empty tag id')
+        Tag tag = Tag.get(id)
+        tag.status = TagStatus.SPAM
+        return tag.save() != null
+    }
+
+    @Transactional
+    public boolean markAsDuplicate(final Long reviewedTagId, final Long duplicatedTagId) {
         // validate input
         Validate.notNull(reviewedTagId, 'Provide not null and not empty reviewed tag id')
         Validate.notNull(duplicatedTagId, 'Provide not null and not empty dulicated tag id')
@@ -70,10 +80,11 @@ class TagReviewService {
         }
         // delete duplicated tag
         reviewedTag.delete()
+        return true
     }
 
     @Transactional
-    public boolean markAsAlisTag(final Long reviewedTagId, final List<Long> parentTagIds) {
+    public boolean markAsAlis(final Long reviewedTagId, final List<Long> parentTagIds) {
         // validate input
         Validate.notNull(reviewedTagId, 'Provide not null and not empty reviewed tag id')
         Validate.isTrue((parentTagIds && parentTagIds.size() > 0), 'Provide not null and not empty list of parent tag ids')

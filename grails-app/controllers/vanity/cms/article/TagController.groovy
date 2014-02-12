@@ -2,7 +2,6 @@ package vanity.cms.article
 
 import vanity.article.Tag
 import vanity.article.TagService
-import vanity.utils.AjaxUtils
 import vanity.utils.ConfigUtils
 
 class TagController {
@@ -88,14 +87,6 @@ class TagController {
         redirect(action: 'index')
     }
 
-    def review() {
-        [elements: tagReviewService.getAllTagsForReview()]
-    }
-
-    def ajaxGetTagReviewForm(Long id) {
-        [element: tagReviewService.getTagHint(id)]
-    }
-
     def promoted() {
         [elements: tagPromotionService.getTagsValidForPromotion()]
     }
@@ -118,34 +109,61 @@ class TagController {
         redirect(action: 'promoted')
     }
 
-    def ajaxConfirmTagReview(ConfirmTagReviewCmd reviewCmd) {
+    def review(final Long offset, final Long max) {
+        Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.tag.pagination.max, Long)
+        [paginationBean: tagReviewService.listWithPagination(maxValue, offset, 'name')]
+    }
+
+    def reviewMoreOptions(final Long id) {
+        [element: tagReviewService.getTagHint(id)]
+    }
+
+    def markAsRootTag(final Long id) {
+        tagReviewService.markAsRoot(id)
+        flash.info = 'vanity.cms.tags.review.success'
+        redirect(action: 'review')
+    }
+
+    def markAsSpam(final Long id) {
+        tagReviewService.markAsSpam(id)
+        flash.info = 'vanity.cms.tags.review.success'
+        redirect(action: 'review')
+    }
+
+    def ajaxGetTagReviewForm(Long id) {
+        [element: tagReviewService.getTagHint(id)]
+    }
+
+    def confirmTagReview(ConfirmTagReviewCmd reviewCmd) {
         if (!reviewCmd.validate()) {
-            render AjaxUtils.renderErrors(reviewCmd.errors)
-            return
+            flash.error = 'vanity.cms.tags.review.error.validate'
+            return render(view: 'reviewMoreOptions', model: [element: tagReviewService.getTagHint(reviewCmd.id)])
         }
 
         try {
             if (performTagReviewAction(reviewCmd)) {
                 flash.info = 'vanity.cms.tags.review.success'
-                render AjaxUtils.Const.SUCCESS_RESPONSE
+                redirect(action: 'review')
             } else {
                 flash.error = 'vanity.cms.tags.review.error'
-                render AjaxUtils.Const.ERROR_RESPONSE
+                redirect(action: 'review')
             }
         } catch (IllegalArgumentException exc) {
             flash.error = 'vanity.cms.tags.review.error'
-            render AjaxUtils.Const.ERROR_RESPONSE
+            redirect(action: 'review')
         }
     }
 
     private boolean performTagReviewAction(ConfirmTagReviewCmd reviewCmd) {
         switch (reviewCmd.strategy) {
             case ConfirmTagReviewCmd.Strategy.DUPLICATE:
-                return tagReviewService.markAsDuplicateTag(reviewCmd.id, reviewCmd.duplicatedTagId)
+                return tagReviewService.markAsDuplicate(reviewCmd.id, reviewCmd.duplicatedTagId)
             case ConfirmTagReviewCmd.Strategy.ALIAS:
-                return tagReviewService.markAsAlisTag(reviewCmd.id, reviewCmd.parentTagIds)
-            case ConfirmTagReviewCmd.Strategy.PARENT:
-                return tagReviewService.markAsParentTag(reviewCmd.id)
+                return tagReviewService.markAsAlis(reviewCmd.id, reviewCmd.parentTagIds)
+            case ConfirmTagReviewCmd.Strategy.ROOT:
+                return tagReviewService.markAsRoot(reviewCmd.id)
+            case ConfirmTagReviewCmd.Strategy.SPAM:
+                return tagReviewService.markAsSpam(reviewCmd.id)
             default:
                 return false
         }

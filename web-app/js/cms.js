@@ -31,7 +31,7 @@ V.CMS.I18n = (function () {
 
     var messages = {
         'vanity.cms.save.error': 'Errors while saving data',
-        'vanity.cms.delete.confirm': 'Are you sure?',
+        'vanity.cms.confirm': 'Are you sure?',
         'vanity.cms.tags.review.selectOneStrategy': 'Please select at last one strategy'
     }
 
@@ -42,10 +42,10 @@ V.CMS.I18n = (function () {
     }
 })();
 
-V.CMS.DeleteButton = {
+V.CMS.Prompt = {
     init: function () {
-        $('.btn.btn-danger.delete').click(function (event) {
-            if (!confirm(V.CMS.I18n.get('vanity.cms.delete.confirm'))) {
+        $('.btn.btn-danger.confirm').click(function (event) {
+            if (!confirm(V.CMS.I18n.get('vanity.cms.confirm'))) {
                 event.stopPropagation();
                 event.preventDefault();
             }
@@ -54,5 +54,5 @@ V.CMS.DeleteButton = {
 }
 
 $(document).ready(function () {
-    V.CMS.DeleteButton.init();
+    V.CMS.Prompt.init();
 });

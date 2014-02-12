@@ -11,12 +11,8 @@ table.table tbody tr.selected td.name {
     background: url("../images/review-loader.gif") no-repeat center center;
 }
 
-#activate label.radio  {
+#activate label.radio {
     margin: 10px 0px 5px 0px;
-}
-
-#activate button {
-    margin-top: 20px;
 }
 
 #error {

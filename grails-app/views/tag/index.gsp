@@ -31,7 +31,7 @@
                     <tr>
                         <td class="title">${element.name}</td>
                         <td class="options">
-                            <g:link action="delete" id="${element.id}" class="btn btn-danger delete"><g:message
+                            <g:link action="delete" id="${element.id}" class="btn btn-danger confirm"><g:message
                                     code="vanity.cms.delete"/></g:link>
                             <g:link action="edit" id="${element.id}" class="btn btn-success"><g:message
                                     code="vanity.cms.edit"/></g:link>
