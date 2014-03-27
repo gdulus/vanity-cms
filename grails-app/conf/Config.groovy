@@ -4,10 +4,10 @@ import vanity.utils.ConfigUtils
  * set up all external config file
  */
 ConfigUtils.externalConfig(grails, userHome) {
-    file 'base-db.properties'
-    file 'base-search.properties'
-    file 'base-files.properties'
-    file 'cms-config.properties'
+    file 'base-db'
+    file 'base-search'
+    file 'base-files'
+    file 'cms-config'
 }
 
 /**

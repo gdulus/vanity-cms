@@ -15,7 +15,8 @@ grails.project.dependency.resolution = {
     inherits("global") {}
     log "error"          // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true       // Whether to verify checksums on resolve
-    legacyResolve false  // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
+    legacyResolve false
+    // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
         inherits true    // Whether to inherit repository definitions from plugins
@@ -33,11 +34,11 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        build ":tomcat:7.0.42"
+        build ":tomcat:7.0.52.1"
         runtime ":jquery:1.8.3"
         runtime ":resources:1.1.6"
         runtime ":database-migration:1.2.1"
-        runtime ":hibernate:3.6.10.2"
+        runtime ":hibernate:3.6.10.10"
         compile ":quartz:1.0-RC5"
         compile ':cache:1.0.1'
     }

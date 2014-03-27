@@ -29,6 +29,6 @@ class ArticleRemover extends AbstractReIndexer<Article, Document.ArticleDocument
 
     @Override
     protected void doIndex(final Set<Document.ArticleDocument> documents) {
-        searchEngineIndexer.indexArticles(documents)
+        throw new IllegalAccessException()
     }
 }

@@ -1,7 +1,7 @@
 package vanity.cms.search.reindexer.impl
 
-import org.codehaus.groovy.grails.commons.GrailsApplication
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import vanity.search.Index
 import vanity.search.SearchEngineIndexer
@@ -12,24 +12,21 @@ final class ReIndexerFactory {
     @Autowired
     SearchEngineIndexer searchEngineIndexer
 
-    @Autowired
-    GrailsApplication grailsApplication
+    @Value('${cms.search.reindex.batchSize}')
+    Integer batchSize
 
-    public final ReIndexer produce(final ReIndexingCmd reIndexingCmd) {
-        switch (reIndexingCmd.target) {
-            case Index.ARTICLE_UPDATE:
-                return new ArticleReIndexer(batchSize, reIndexingCmd.dataProvider, searchEngineIndexer)
-            case Index.ARTICLE_REMOVE:
-                return new ArticleRemover(batchSize, reIndexingCmd.dataProvider, searchEngineIndexer)
-            case Index.TAG_UPDATE:
-                return new TagReIndexer(batchSize, reIndexingCmd.dataProvider, searchEngineIndexer)
+    public final ReIndexer produce(final ReIndexingCmd cmd) {
+        switch (true) {
+            case (cmd.target == Index.ARTICLES && cmd.type == ReIndexingType.FULL):
+                return new ArticleReIndexer(batchSize, cmd.dataProvider, searchEngineIndexer)
+            case (cmd.target == Index.ARTICLES && cmd.type == ReIndexingType.DELETE):
+                return new ArticleRemover(batchSize, cmd.dataProvider, searchEngineIndexer)
+            case (cmd.target == Index.TAGS && cmd.type == ReIndexingType.FULL):
+                return new TagReIndexer(batchSize, cmd.dataProvider, searchEngineIndexer)
         }
 
-        throw new IllegalArgumentException("Not supported re indexing target ${reIndexingCmd.target}")
+        throw new IllegalArgumentException("Not supported re indexing target ${cmd.target} and action ${cmd.type}")
     }
 
-    private Integer getBatchSize() {
-        return Integer.valueOf(grailsApplication.config.cms.search.reindex.batchSize)
-    }
 
 }

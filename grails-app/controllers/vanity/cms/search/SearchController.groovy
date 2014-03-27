@@ -5,6 +5,7 @@ import vanity.article.ArticleService
 import vanity.article.TagService
 import vanity.cms.search.reindexer.ReIndexingManager
 import vanity.cms.search.reindexer.impl.ReIndexingCmd
+import vanity.cms.search.reindexer.impl.ReIndexingType
 import vanity.search.Index
 
 class SearchController {
@@ -19,10 +20,8 @@ class SearchController {
     def index() {
         [
             supportedReIndexingTargets: [
-                (Index.ARTICLE_UPDATE): true,
-                (Index.TAG_UPDATE): true,
-                (Index.ARTICLE_PARTIAL): false,
-                (Index.TAG_PARTIAL): false
+                (Index.ARTICLES): true,
+                (Index.TAGS): true
             ],
             state: reIndexingManager.getReIndexingStatuses()
         ]
@@ -32,7 +31,7 @@ class SearchController {
         Closure dataProvider = getReIndexingDataProvider(cmd.reIndexingTarget)
 
         if (dataProvider) {
-            reIndexingManager.startReIndexingAsync(new ReIndexingCmd(cmd.reIndexingTarget, dataProvider))
+            reIndexingManager.startReIndexingAsync(new ReIndexingCmd(cmd.reIndexingTarget, ReIndexingType.FULL, dataProvider))
         }
 
         redirect(action: 'index')
@@ -40,9 +39,9 @@ class SearchController {
 
     private Closure getReIndexingDataProvider(final Index target) {
         switch (target) {
-            case Index.ARTICLE_UPDATE:
+            case Index.ARTICLES:
                 return { articleService.findAll() }
-            case Index.TAG_UPDATE:
+            case Index.TAGS:
                 return { tagService.findAllValidRootTags() }
             default:
                 return null
