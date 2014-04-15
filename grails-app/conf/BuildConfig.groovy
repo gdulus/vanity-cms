@@ -43,8 +43,6 @@ grails.project.dependency.resolution = {
         compile ":quartz:1.0-RC5"
         compile ':cache:1.0.1'
         compile ":spring-security-core:2.0-RC2"
-        compile ":spring-security-eventlog:0.4"
-
     }
 }
 
