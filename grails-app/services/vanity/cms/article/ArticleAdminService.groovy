@@ -10,7 +10,7 @@ class ArticleAdminService implements PaginationAware<Article> {
 
     @Transactional(readOnly = true)
     PaginationBean<Article> listWithPagination(final Long max, final Long offset, final String sort) {
-        List<Article> articles = Article.findAllWhere([status: ArticleStatus.ACTIVE], [max: max, offset: offset, sort: sort])
+        List<Article> articles = Article.findAllByStatus(ArticleStatus.ACTIVE, [max: max, offset: offset, sort: sort])
         int count = Article.countByStatus(ArticleStatus.ACTIVE)
         return new PaginationBean<Article>(articles, count)
     }
