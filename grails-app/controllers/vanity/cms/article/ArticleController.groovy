@@ -1,11 +1,14 @@
 package vanity.cms.article
 
+import grails.plugin.springsecurity.annotation.Secured
 import org.codehaus.groovy.grails.commons.GrailsApplication
 import vanity.article.Article
 import vanity.article.ArticleService
 import vanity.article.TagService
+import vanity.user.Authority
 import vanity.utils.ConfigUtils
 
+@Secured([Authority.ROLE_ADMIN])
 class ArticleController {
 
     TagService tagService

@@ -1,12 +1,15 @@
 package vanity.cms.celebrity
 
+import grails.plugin.springsecurity.annotation.Secured
 import org.codehaus.groovy.grails.commons.GrailsApplication
 import vanity.article.TagService
 import vanity.celebrity.Celebrity
 import vanity.celebrity.CelebrityService
 import vanity.cms.image.handler.ImageHandlingException
+import vanity.user.Authority
 import vanity.utils.ConfigUtils
 
+@Secured([Authority.ROLE_ADMIN])
 class CelebrityController {
 
     TagService tagService

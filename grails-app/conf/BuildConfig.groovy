@@ -25,6 +25,7 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenLocal()
         mavenCentral()
+        mavenRepo "http://repo.spring.io/milestone/"
     }
 
     dependencies {
@@ -41,6 +42,9 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:3.6.10.10"
         compile ":quartz:1.0-RC5"
         compile ':cache:1.0.1'
+        compile ":spring-security-core:2.0-RC2"
+        compile ":spring-security-eventlog:0.4"
+
     }
 }
 

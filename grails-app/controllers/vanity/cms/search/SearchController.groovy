@@ -1,5 +1,6 @@
 package vanity.cms.search
 
+import grails.plugin.springsecurity.annotation.Secured
 import org.springframework.beans.factory.annotation.Autowired
 import vanity.article.ArticleService
 import vanity.article.TagService
@@ -7,7 +8,9 @@ import vanity.cms.search.reindexer.ReIndexingManager
 import vanity.cms.search.reindexer.impl.ReIndexingCmd
 import vanity.cms.search.reindexer.impl.ReIndexingType
 import vanity.search.Index
+import vanity.user.Authority
 
+@Secured([Authority.ROLE_ADMIN])
 class SearchController {
 
     @Autowired

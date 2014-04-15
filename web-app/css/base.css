@@ -27,3 +27,7 @@ html {
 .pagination * {
     padding: 0px 5px;
 }
+
+.btn-logout {
+    margin-bottom: 5px;
+}

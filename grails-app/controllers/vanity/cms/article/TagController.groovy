@@ -1,9 +1,12 @@
 package vanity.cms.article
 
+import grails.plugin.springsecurity.annotation.Secured
 import vanity.article.Tag
 import vanity.article.TagService
+import vanity.user.Authority
 import vanity.utils.ConfigUtils
 
+@Secured(['ROLE_ADMIN'])
 class TagController {
 
     TagService tagService
@@ -109,31 +112,32 @@ class TagController {
         redirect(action: 'promoted')
     }
 
+    @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
     def review(final Long offset, final Long max) {
         Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.tag.pagination.max, Long)
         [paginationBean: tagReviewService.listWithPagination(maxValue, offset, 'name')]
     }
 
+    @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
     def reviewMoreOptions(final Long id) {
         [element: tagReviewService.getTagHint(id)]
     }
 
+    @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
     def markAsRootTag(final Long id) {
         tagReviewService.markAsRoot(id)
         flash.info = 'vanity.cms.tags.review.success'
         redirect(action: 'review')
     }
 
+    @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
     def markAsSpam(final Long id) {
         tagReviewService.markAsSpam(id)
         flash.info = 'vanity.cms.tags.review.success'
         redirect(action: 'review')
     }
 
-    def ajaxGetTagReviewForm(Long id) {
-        [element: tagReviewService.getTagHint(id)]
-    }
-
+    @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
     def confirmTagReview(ConfirmTagReviewCmd reviewCmd) {
         if (!reviewCmd.validate()) {
             flash.error = 'vanity.cms.tags.review.error.validate'
