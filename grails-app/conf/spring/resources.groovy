@@ -1,5 +1,6 @@
 import org.apache.http.impl.client.DefaultHttpClient
 import org.apache.http.impl.conn.PoolingClientConnectionManager
+import vanity.utils.BootstrapUtils
 
 beans = {
 
@@ -13,5 +14,9 @@ beans = {
         PoolingClientConnectionManager manager = new PoolingClientConnectionManager()
         manager.maxTotal = 100
         it.constructorArgs = [manager]
+    }
+
+    bootstrapUtils(BootstrapUtils) {
+        springSecurityService = ref('springSecurityService')
     }
 }
