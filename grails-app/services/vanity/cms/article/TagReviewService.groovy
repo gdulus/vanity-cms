@@ -41,6 +41,17 @@ class TagReviewService implements PaginationAware<Tag> {
     }
 
     @Transactional
+    public boolean markAllAsRoot(final List<Long> ids) {
+        boolean result = true
+        ids.each {
+            if (!markAsRoot(it)) {
+                result = false
+            }
+        }
+        return result
+    }
+
+    @Transactional
     public boolean markAsRoot(final Long id) {
         // validate input
         Validate.notNull(id, 'Provide not null and not empty tag id')
@@ -48,6 +59,17 @@ class TagReviewService implements PaginationAware<Tag> {
         tag.root = true
         tag.status = TagStatus.PUBLISHED
         return tag.save() != null
+    }
+
+    @Transactional
+    public boolean markAllAsSpam(final List<Long> ids) {
+        boolean result = true
+        ids.each {
+            if (!markAsSpam(it)) {
+                result = false
+            }
+        }
+        return result
     }
 
     @Transactional

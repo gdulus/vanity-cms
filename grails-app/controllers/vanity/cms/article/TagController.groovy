@@ -127,14 +127,46 @@ class TagController {
     def markAsRootTag(final Long id) {
         tagReviewService.markAsRoot(id)
         flash.info = 'vanity.cms.tags.review.success'
-        redirect(action: 'review')
+        redirect(action: 'review', params: [offset: params.offset, max: params.max])
     }
 
     @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
     def markAsSpam(final Long id) {
         tagReviewService.markAsSpam(id)
         flash.info = 'vanity.cms.tags.review.success'
-        redirect(action: 'review')
+        redirect(action: 'review', params: [offset: params.offset, max: params.max])
+    }
+
+    @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
+    def confirmTagsReview(ConfirmTagsReviewCmd reviewCmd) {
+        if (!reviewCmd.validate()) {
+            flash.error = 'vanity.cms.tags.review.error.validate'
+            return redirect(action: 'review')
+        }
+
+        try {
+            if (performTagsReviewAction(reviewCmd)) {
+                flash.info = 'vanity.cms.tags.review.success'
+                redirect(action: 'review')
+            } else {
+                flash.error = 'vanity.cms.tags.review.error'
+                redirect(action: 'review')
+            }
+        } catch (IllegalArgumentException exc) {
+            flash.error = 'vanity.cms.tags.review.error'
+            redirect(action: 'review')
+        }
+    }
+
+    private boolean performTagsReviewAction(ConfirmTagsReviewCmd reviewCmd) {
+        switch (reviewCmd.strategy) {
+            case ConfirmTagsReviewCmd.Strategy.ROOT:
+                return tagReviewService.markAllAsRoot(reviewCmd.tagIds)
+            case ConfirmTagsReviewCmd.Strategy.SPAM:
+                return tagReviewService.markAllAsSpam(reviewCmd.tagIds)
+            default:
+                return false
+        }
     }
 
     @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])

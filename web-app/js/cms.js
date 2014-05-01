@@ -51,8 +51,17 @@ V.CMS.Prompt = {
             }
         });
     }
-}
+};
+
+V.CMS.SelectAll = {
+    init: function () {
+        $('.selection-master').change(function () {
+            $('.selection-slave').prop('checked', $(this).is(':checked'));
+        });
+    }
+};
 
 $(document).ready(function () {
     V.CMS.Prompt.init();
+    V.CMS.SelectAll.init();
 });

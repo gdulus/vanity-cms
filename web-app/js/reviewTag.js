@@ -96,3 +96,13 @@
     activateSingleTagCloud(form.find('#duplicates'), form.find('#duplicated-tag-id'));
     activateMultipleTagCloud(form.find('#parents'), form.find('#parent-tag-ids'));
 })();
+
+(function () {
+    $('.submit').click(function () {
+        $('#strategy').val($(this).attr('id'));
+        var ids = $('.selection-slave:checked').serialize();
+        if (ids) {
+            $('#serializedTagIds').val(ids.replace(/tags\./g, '').replace(/=on/g, '').replace(/&/g, ','));
+        }
+    })
+})();
