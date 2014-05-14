@@ -31,21 +31,21 @@ class SearchController {
     }
 
     def startReIndexing(ReIndexCmd cmd) {
-        Closure dataProvider = getReIndexingDataProvider(cmd.reIndexingTarget)
+        List<Long> entitiesIds = getReIndexingSource(cmd.reIndexingTarget)
 
-        if (dataProvider) {
-            reIndexingManager.startReIndexingAsync(new ReIndexingCmd(cmd.reIndexingTarget, ReIndexingType.FULL, dataProvider))
+        if (entitiesIds) {
+            reIndexingManager.startReIndexingAsync(new ReIndexingCmd(cmd.reIndexingTarget, ReIndexingType.FULL, entitiesIds))
         }
 
         redirect(action: 'index')
     }
 
-    private Closure getReIndexingDataProvider(final Index target) {
+    private List<Long> getReIndexingSource(final Index target) {
         switch (target) {
             case Index.ARTICLES:
-                return { articleService.findAll() }
+                return articleService.findAllIds()
             case Index.TAGS:
-                return { tagService.findAllValidRootTags() }
+                return tagService.findAllValidRootTagsIds()
             default:
                 return null
         }

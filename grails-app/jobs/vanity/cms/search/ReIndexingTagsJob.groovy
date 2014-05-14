@@ -26,8 +26,8 @@ class ReIndexingTagsJob {
     def execute(lastRun) {
         if (lastRun) {
             log.info('Starting job last run = {}', lastRun)
-            Closure dataProvider = { tagService.findAllFromThePointOfTime((Date) lastRun, TagStatus.OPEN_STATUSES) }
-            reIndexingManager.startReIndexing(new ReIndexingCmd(Index.TAGS, ReIndexingType.FULL, dataProvider))
+            List<Long> entitiesIds = tagService.findAllIdsFromThePointOfTime((Date) lastRun, TagStatus.OPEN_STATUSES)
+            reIndexingManager.startReIndexing(new ReIndexingCmd(Index.TAGS, ReIndexingType.FULL, entitiesIds))
             log.info('Job finished')
         }
     }

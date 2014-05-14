@@ -18,11 +18,11 @@ final class ReIndexerFactory {
     public final ReIndexer produce(final ReIndexingCmd cmd) {
         switch (true) {
             case (cmd.target == Index.ARTICLES && cmd.type == ReIndexingType.FULL):
-                return new ArticleReIndexer(batchSize, cmd.dataProvider, searchEngineIndexer)
+                return new ArticleReIndexer(batchSize, cmd.entitiesIds, searchEngineIndexer)
             case (cmd.target == Index.ARTICLES && cmd.type == ReIndexingType.DELETE):
-                return new ArticleRemover(batchSize, cmd.dataProvider, searchEngineIndexer)
+                return new ArticleRemover(batchSize, cmd.entitiesIds, searchEngineIndexer)
             case (cmd.target == Index.TAGS && cmd.type == ReIndexingType.FULL):
-                return new TagReIndexer(batchSize, cmd.dataProvider, searchEngineIndexer)
+                return new TagReIndexer(batchSize, cmd.entitiesIds, searchEngineIndexer)
         }
 
         throw new IllegalArgumentException("Not supported re indexing target ${cmd.target} and action ${cmd.type}")

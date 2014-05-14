@@ -8,13 +8,13 @@ import vanity.search.SearchEngineIndexer
 @PackageScope
 class TagReIndexer extends AbstractReIndexer<Tag, Document.TagDocument> {
 
-    TagReIndexer(Integer partitionSize, Closure dataProvider, SearchEngineIndexer searchEngineIndexer) {
-        super(partitionSize, dataProvider, searchEngineIndexer)
+    TagReIndexer(Integer partitionSize, List<Long> entitiesIds, SearchEngineIndexer searchEngineIndexer) {
+        super(partitionSize, entitiesIds, searchEngineIndexer)
     }
 
     @Override
-    protected Set<Document.TagDocument> doConvert(final List<Tag> partition) {
-        return Document.asTagDocuments(partition)
+    protected Set<Document.TagDocument> doConvert(final List<Long> partition) {
+        return Document.asTagDocuments(partition.collect { Tag.read(it) })
     }
 
     @Override

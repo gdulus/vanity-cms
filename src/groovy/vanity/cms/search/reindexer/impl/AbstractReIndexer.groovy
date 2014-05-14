@@ -10,11 +10,11 @@ import vanity.search.SearchEngineIndexer
 @PackageScope
 abstract class AbstractReIndexer<I, O> implements ReIndexer {
 
+    protected final SearchEngineIndexer searchEngineIndexer
+
     private final int partitionSize
 
-    private final Closure dataProvider
-
-    protected final SearchEngineIndexer searchEngineIndexer
+    private final List<Long> entitiesIds
 
     private ReIndexingPhase phase
 
@@ -24,9 +24,9 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
 
     private volatile Boolean stop
 
-    public AbstractReIndexer(Integer partitionSize, Closure dataProvider, SearchEngineIndexer searchEngineIndexer) {
+    public AbstractReIndexer(Integer partitionSize, List<Long> entitiesIds, SearchEngineIndexer searchEngineIndexer) {
         this.partitionSize = partitionSize
-        this.dataProvider = dataProvider
+        this.entitiesIds = entitiesIds
         this.searchEngineIndexer = searchEngineIndexer
         this.processed = 0
         this.phase = ReIndexingPhase.INITIALIZED
@@ -35,7 +35,7 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
 
     @Override
     final void start() {
-        for (List<I> partition : prepare().collate(partitionSize)) {
+        for (List<Long> partition : prepare().collate(partitionSize)) {
             if (stop) {
                 break
             }
@@ -54,17 +54,16 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
         index(documents)
     }
 
-    protected List<I> prepare() {
+    protected List<Long> prepare() {
         phase = ReIndexingPhase.PREPARING
-        List<I> documents = (List<I>) dataProvider.call()
-        toProcess = documents.size()
+        toProcess = entitiesIds.size()
         log.info('Got {} elements to process', toProcess)
-        return documents
+        return entitiesIds
     }
 
-    protected abstract Set<O> doConvert(List<I> partition)
+    protected abstract Set<O> doConvert(List<Long> partition)
 
-    private Set<O> convert(final List<I> partition) {
+    private Set<O> convert(final List<Long> partition) {
         log.info('Converting batch')
         phase = ReIndexingPhase.CONVERTING
         return doConvert(partition)

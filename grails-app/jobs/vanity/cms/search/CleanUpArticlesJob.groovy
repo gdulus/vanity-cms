@@ -26,10 +26,8 @@ class CleanUpArticlesJob {
     def execute(lastRun) {
         if (lastRun) {
             log.info('Starting job last run = {}', lastRun)
-            Closure dataProvider = {
-                articleService.findAllFromThePointOfTimeWithStatus((Date) lastRun, [ArticleStatus.DELETED])
-            }
-            reIndexingManager.startReIndexing(new ReIndexingCmd(Index.ARTICLES, ReIndexingType.DELETE, dataProvider))
+            List<Long> ids = articleService.findAllIdsFromThePointOfTimeWithStatus((Date) lastRun, [ArticleStatus.DELETED])
+            reIndexingManager.startReIndexing(new ReIndexingCmd(Index.ARTICLES, ReIndexingType.DELETE, ids))
             log.info('Job finished')
         }
     }

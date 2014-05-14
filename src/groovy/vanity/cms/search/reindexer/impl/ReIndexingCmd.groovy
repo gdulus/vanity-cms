@@ -8,11 +8,11 @@ public final class ReIndexingCmd {
 
     final ReIndexingType type
 
-    final Closure dataProvider
+    final List<Long> entitiesIds
 
-    ReIndexingCmd(Index target, ReIndexingType type, Closure dataProvider) {
+    ReIndexingCmd(Index target, ReIndexingType type, List<Long> entitiesIds) {
         this.target = target
         this.type = type
-        this.dataProvider = dataProvider
+        this.entitiesIds = entitiesIds
     }
 }

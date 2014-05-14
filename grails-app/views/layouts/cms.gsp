@@ -22,7 +22,7 @@
 
             <div class="nav-collapse collapse">
                 <p class="navbar-text pull-right">
-                    <g:link controller="logout" class="btn btn-warning btn-small btn-logout"><g:message code="vanity.cms.logout"/></g:link>
+                    <g:link controller="logout" class="btn btn-small btn-danger btn-logout"><i class="icon-off icon-white"></i></g:link>
                 </p>
                 <ul class="nav">
                     <nav:mainMenu controller="article" code="vanity.cms.mainMenu.articles" roles="[Authority.ROLE_ADMIN]"/>

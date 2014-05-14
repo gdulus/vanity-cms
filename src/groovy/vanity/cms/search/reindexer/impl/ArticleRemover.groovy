@@ -8,8 +8,8 @@ import vanity.search.SearchEngineIndexer
 @PackageScope
 class ArticleRemover extends AbstractReIndexer<Article, Document.ArticleDocument> {
 
-    ArticleRemover(Integer partitionSize, Closure dataProvider, SearchEngineIndexer searchEngineIndexer) {
-        super(partitionSize, dataProvider, searchEngineIndexer)
+    ArticleRemover(Integer partitionSize, List<Long> entitiesIds, SearchEngineIndexer searchEngineIndexer) {
+        super(partitionSize, entitiesIds, searchEngineIndexer)
     }
 
     @Override
@@ -18,8 +18,8 @@ class ArticleRemover extends AbstractReIndexer<Article, Document.ArticleDocument
     }
 
     @Override
-    protected Set<Document.ArticleDocument> doConvert(final List<Article> partition) {
-        Document.asArticleDocuments(partition)
+    protected Set<Document.ArticleDocument> doConvert(final List<Long> partition) {
+        Document.asArticleDocuments(partition.collect { Article.read(it) })
     }
 
     @Override

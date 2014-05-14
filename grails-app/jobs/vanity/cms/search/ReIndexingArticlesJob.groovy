@@ -13,7 +13,7 @@ import vanity.search.Index
 class ReIndexingArticlesJob {
 
     static triggers = {
-        cron name: 'ReIndexingArticlesJob', cronExpression: '0 0 0/2 * * ?' // every 2 hours
+        cron name: 'ReIndexingArticlesJob', cronExpression: '0 0 0/1 * * ?' // every 1 hours
     }
 
     def concurrent = false
@@ -26,10 +26,8 @@ class ReIndexingArticlesJob {
     def execute(lastRun) {
         if (lastRun) {
             log.info('Starting job last run = {}', lastRun)
-            Closure dataProvider = {
-                articleService.findAllFromThePointOfTimeWithStatus((Date) lastRun, [ArticleStatus.ACTIVE])
-            }
-            reIndexingManager.startReIndexing(new ReIndexingCmd(Index.ARTICLES, ReIndexingType.FULL, dataProvider))
+            List<Long> ids = articleService.findAllIdsFromThePointOfTimeWithStatus((Date) lastRun, [ArticleStatus.ACTIVE])
+            reIndexingManager.startReIndexing(new ReIndexingCmd(Index.ARTICLES, ReIndexingType.FULL, ids))
             log.info('Job finished')
         }
     }
