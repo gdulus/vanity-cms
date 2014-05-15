@@ -18,7 +18,7 @@
                 rootTags: rootTags,
                 parentTagsIds: parentTagsIds,
                 action: 'update',
-                formLegend: 'vanity.cms.tag.formCreateLegend']}"/>
+                formLegend: 'vanity.cms.tag.formUpdateLegend']}"/>
     </div>
 </div>
 

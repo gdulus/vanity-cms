@@ -23,13 +23,32 @@
         <g:else>
             <table class="table table-striped">
                 <tr>
-                    <th style="width:50%"><g:message code="vanity.cms.tag.name"/></th>
+                    <th style="width:20%"><g:message code="vanity.cms.tag.name"/></th>
+                    <th style="width:10%"><g:message code="vanity.cms.tag.status"/></th>
+                    <th style="width:10%"><g:message code="vanity.cms.tag.children"/></th>
                     <th></th>
                 </tr>
 
                 <g:each in="${paginationBean.elements}" var="element" status="i">
                     <tr>
-                        <td class="title">${element.name}</td>
+                        <td class="title"><g:link action="edit" id="${element.id}">${element.name}</g:link></td>
+                        <td>
+                            <g:if test="${element.root}">
+                                <span class="label label-success"><g:message code="vanity.cms.tag.root"/></span>
+                            </g:if>
+                            <g:else>
+                                <span class="label label-info"><g:message code="vanity.cms.tag.child"/></span>
+                            </g:else>
+                        </td>
+                        <td>
+                            <g:if test="${element.childTags}">
+                                <ul>
+                                    <g:each in="${element.childTags}">
+                                        <li><g:link action="edit" id="${it.id}">${it.name}</g:link></li>
+                                    </g:each>
+                                </ul>
+                            </g:if>
+                        </td>
                         <td class="options">
                             <g:link action="delete" id="${element.id}" class="btn btn-danger confirm"><g:message
                                     code="vanity.cms.delete"/></g:link>

@@ -54,8 +54,7 @@ class TagController {
         Map<String, Object> model = [tag: tag]
 
         if (!tag.root) {
-            model.rootTags = tagService.findAllValidRootTags()
-            model.parentTagsIds = tagService.findAllByParentTags(id)*.id
+            model.parentTags = tagService.findAllByParentTags(id)
         }
 
         return model
