@@ -1,6 +1,50 @@
 var V = V || {};
 V.CMS = V.CMS || {};
 
+V.CMS.ClickableTags = (function () {
+    return {
+        init: function (tagContainer, unique, onSelect, onDeselect) {
+            tagContainer.find('span').hover(
+                function () {
+                    var that = $(this);
+                    if (!that.hasClass('label-success')) {
+                        that.removeClass('label-info').addClass('label-warning');
+                    }
+                },
+                function () {
+                    var that = $(this);
+                    if (!that.hasClass('label-success')) {
+                        that.removeClass('label-warning').addClass('label-info');
+                    }
+                }
+            ).click(function () {
+                    var that = $(this);
+                    if (!that.hasClass('label-success')) {
+                        if (unique) {
+                            var markedTag = tagContainer.find('span.label-success');
+                            if (markedTag) {
+                                markedTag.removeClass('label-success').addClass('label-info');
+                            }
+                        }
+
+                        that.removeClass('label-info').removeClass('label-warning').addClass('label-success');
+
+                        if (onSelect) {
+                            onSelect(that, tagContainer.find('span.label-success'));
+                        }
+                    } else {
+                        that.removeClass('label-success').addClass('label-warning');
+
+                        if (onDeselect) {
+                            onDeselect(that, tagContainer.find('span.label-success'));
+                        }
+                    }
+                }
+            );
+        }
+    }
+}());
+
 V.CMS.Ajax = {
     serializeForSingleInputBinding: function (elements) {
         if (!(elements && $.isArray(elements))) {

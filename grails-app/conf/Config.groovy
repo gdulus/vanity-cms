@@ -133,3 +133,5 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/**/favicon.ico': ['permitAll']
 ]
 
+org.grails.jaxrs.provider.name = 'restlet'
+

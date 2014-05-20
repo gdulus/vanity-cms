@@ -1,3 +1,7 @@
-#parentTagsIds {
-    height: 400px;
+#tag-selection {
+    margin-bottom: 20px;
+}
+
+.tag {
+    cursor: pointer;
 }

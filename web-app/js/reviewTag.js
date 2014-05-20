@@ -26,39 +26,22 @@
 
     // allows to bind quick search action for parent tags
     function activateSingleTagCloud(tagContainer, targetInputField) {
-        tagContainer.find('.tags span').hover(
-            function () {
-                var that = $(this);
-                if (!that.hasClass('label-success')) {
-                    that.removeClass('label-info').addClass('label-warning');
-                }
+        V.CMS.ClickableTags.init(
+            tagContainer,
+            true,
+            function (tag) {
+                targetInputField.val(tag.attr('id'));
             },
             function () {
-                var that = $(this);
-                if (!that.hasClass('label-success')) {
-                    that.removeClass('label-warning').addClass('label-info');
-                }
+                targetInputField.val('');
             }
-        ).click(function () {
-                var that = $(this);
-                if (!that.hasClass('label-success')) {
-                    var markedTag = tagContainer.find('.tags span.label-success');
-                    if (markedTag) {
-                        markedTag.removeClass('label-success').addClass('label-info');
-                    }
-                    targetInputField.val(that.attr('id'));
-                    that.removeClass('label-info').removeClass('label-warning').addClass('label-success');
-                } else {
-                    targetInputField.val('');
-                    that.removeClass('label-success').addClass('label-warning');
-                }
-            });
+        );
     }
 
     // allows to bind quick search action for parent tags
     function activateMultipleTagCloud(tagContainer, targetInputField) {
-        var serializeSelected = function () {
-            var listOfIds = tagContainer.find('.tags span.label-success').map(function () {
+        var serializeSelected = function (allSelected) {
+            var listOfIds = allSelected.map(function () {
                 return $(this).attr('id');
             }).get();
             var val = V.CMS.Ajax.serializeForSingleInputBinding(listOfIds);
@@ -66,29 +49,16 @@
             return val;
         }
         // prepare action on cloud
-        tagContainer.find('.tags span').hover(
-            function () {
-                var that = $(this);
-                if (!that.hasClass('label-success')) {
-                    that.removeClass('label-info').addClass('label-warning');
-                }
+        V.CMS.ClickableTags.init(
+            tagContainer,
+            false,
+            function (current, allSelected) {
+                targetInputField.val(serializeSelected(allSelected));
             },
-            function () {
-                var that = $(this);
-                if (!that.hasClass('label-success')) {
-                    that.removeClass('label-warning').addClass('label-info');
-                }
+            function (current, allSelected) {
+                targetInputField.val(serializeSelected(allSelected));
             }
-        ).click(function () {
-                var that = $(this);
-                if (!that.hasClass('label-success')) {
-                    that.removeClass('label-info').removeClass('label-warning').addClass('label-success');
-                    targetInputField.val(serializeSelected());
-                } else {
-                    that.removeClass('label-success').addClass('label-warning');
-                    targetInputField.val(serializeSelected());
-                }
-            });
+        );
     }
 
     var form = $('#review-form');

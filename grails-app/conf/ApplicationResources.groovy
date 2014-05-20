@@ -44,5 +44,7 @@ modules = {
     tagForm {
         dependsOn 'base'
         resource url: 'css/tagForm.css'
+        resource url: 'js/jquery.ba-dotimeout.min.js'
+        resource url: 'js/tagForm.js'
     }
 }
