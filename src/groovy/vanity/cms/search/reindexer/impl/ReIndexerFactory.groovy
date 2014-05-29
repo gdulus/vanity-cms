@@ -17,11 +17,9 @@ final class ReIndexerFactory {
 
     public final ReIndexer produce(final ReIndexingCmd cmd) {
         switch (true) {
-            case (cmd.target == Index.ARTICLES && cmd.type == ReIndexingType.FULL):
+            case cmd.target == Index.ARTICLES:
                 return new ArticleReIndexer(batchSize, cmd.entitiesIds, searchEngineIndexer)
-            case (cmd.target == Index.ARTICLES && cmd.type == ReIndexingType.DELETE):
-                return new ArticleRemover(batchSize, cmd.entitiesIds, searchEngineIndexer)
-            case (cmd.target == Index.TAGS && cmd.type == ReIndexingType.FULL):
+            case cmd.target == Index.TAGS:
                 return new TagReIndexer(batchSize, cmd.entitiesIds, searchEngineIndexer)
         }
 

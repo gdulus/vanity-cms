@@ -4,7 +4,6 @@ import grails.plugin.springsecurity.annotation.Secured
 import org.springframework.beans.factory.annotation.Autowired
 import vanity.cms.search.reindexer.ReIndexingManager
 import vanity.cms.search.reindexer.impl.ReIndexingCmd
-import vanity.cms.search.reindexer.impl.ReIndexingType
 import vanity.search.Index
 import vanity.user.Authority
 
@@ -32,7 +31,7 @@ class SearchController {
         List<Long> entitiesIds = getReIndexingSource(cmd.reIndexingTarget)
 
         if (entitiesIds) {
-            reIndexingManager.startReIndexingAsync(new ReIndexingCmd(cmd.reIndexingTarget, ReIndexingType.FULL, entitiesIds))
+            reIndexingManager.startReIndexingAsync(new ReIndexingCmd(cmd.reIndexingTarget, entitiesIds))
         }
 
         redirect(action: 'index')

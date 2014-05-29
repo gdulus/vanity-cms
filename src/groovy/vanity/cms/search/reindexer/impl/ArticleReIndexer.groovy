@@ -24,6 +24,6 @@ class ArticleReIndexer extends AbstractReIndexer<Article, Document.ArticleDocume
 
     @Override
     protected void doIndex(final Set<Document.ArticleDocument> documents) {
-        searchEngineIndexer.indexArticles(documents)
+        searchEngineIndexer.indexArticles(documents.findAll { it.validForIndexing } as Set)
     }
 }
