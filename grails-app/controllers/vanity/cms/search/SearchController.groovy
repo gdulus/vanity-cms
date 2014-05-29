@@ -45,7 +45,7 @@ class SearchController {
             case Index.ARTICLES:
                 return articleService.findAllIds()
             case Index.TAGS:
-                return tagService.findAllValidRootTagsIds()
+                return tagService.findAllValidTagsIds()
             default:
                 return null
         }

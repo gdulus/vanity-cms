@@ -25,7 +25,7 @@ class ReIndexingTagsJob {
     def execute(lastRun) {
         if (lastRun) {
             log.info('Starting job last run = {}', lastRun)
-            List<Long> entitiesIds = tagService.findAllValidRootTagsIds((Date) lastRun)
+            List<Long> entitiesIds = tagService.findAllValidTagsIds((Date) lastRun)
             reIndexingManager.startReIndexing(new ReIndexingCmd(Index.TAGS, ReIndexingType.FULL, entitiesIds))
             log.info('Job finished')
         }
