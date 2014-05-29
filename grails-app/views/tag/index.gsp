@@ -21,6 +21,13 @@
             <message:nothingToList/>
         </g:if>
         <g:else>
+
+            <g:form class="form-inline">
+                <input type="text" value="${query}" name="query" class="input-xxlarge" placeholder="${g.message(code: 'vanity.cms.tag.search')}">
+                <g:submitButton name="${message(code: 'default.button.search.label')}" class="btn btn-success"/>
+                <g:link class="btn btn-success"><g:message code="default.button.clean.label"/></g:link>
+            </g:form>
+
             <table class="table table-striped">
                 <tr>
                     <th style="width:20%"><g:message code="vanity.cms.tag.name"/></th>
@@ -66,6 +73,7 @@
                         prev="&laquo;"
                         maxsteps="0"
                         action="index"
+                        params="${query ? [query: query] : null}"
                         max="${grailsApplication.config.cms.tag.pagination.max}"
                         total="${paginationBean.totalCount}"/>
             </div>

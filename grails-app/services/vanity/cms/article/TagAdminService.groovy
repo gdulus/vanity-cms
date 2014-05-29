@@ -12,9 +12,53 @@ class TagAdminService implements PaginationAware<Tag> {
     ArticleService articleService
 
     @Transactional(readOnly = true)
-    public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort) {
-        List<Tag> tags = Tag.findAllByStatusInList(TagStatus.OPEN_STATUSES, [sort: sort, max: max, offset: offset])
-        return new PaginationBean<Tag>(tags, Tag.countByStatusInList(TagStatus.OPEN_STATUSES))
+    public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort, final String query) {
+        if (!query) {
+            List<Tag> tags = Tag.findAllByStatusInList(TagStatus.OPEN_STATUSES, [sort: sort, max: max, offset: offset])
+            int count = Tag.countByStatusInList(TagStatus.OPEN_STATUSES)
+            return new PaginationBean<Tag>(tags, count)
+        }
+
+        String likeStatement = "%${query?.toLowerCase()}%"
+
+        List<Tag> tags = Tag.executeQuery("""
+                select
+                    id
+                from
+                    Tag t
+                where
+                    lower(name) like :query
+                    and status in (:openStatuses)
+                order by
+                    :sort
+            """,
+            [
+                query: likeStatement,
+                openStatuses: TagStatus.OPEN_STATUSES,
+                max: max,
+                offset: offset ?: 0,
+                sort: sort
+            ]
+        ).collect { Long it -> Tag.read(it) }
+
+        int count = Tag.executeQuery("""
+                select
+                    count(*)
+                from
+                    Tag t
+                where
+                    lower(name) like :query
+                    and status in (:openStatuses)
+            """,
+            [
+                query: likeStatement,
+                openStatuses: TagStatus.OPEN_STATUSES,
+
+            ]
+        )[0]
+
+        return new PaginationBean<Tag>(tags, count)
+
     }
 
     @Transactional

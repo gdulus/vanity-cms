@@ -15,7 +15,7 @@ class TagReviewService implements PaginationAware<Tag> {
     ArticleService articleService
 
     @Transactional(readOnly = true)
-    public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort) {
+    public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort, final String query) {
         List<Tag> tags = Tag.findAllByStatus(TagStatus.TO_BE_REVIEWED, [sort: sort, max: max, offset: offset])
         return new PaginationBean<Tag>(tags, Tag.countByStatus(TagStatus.TO_BE_REVIEWED))
     }
