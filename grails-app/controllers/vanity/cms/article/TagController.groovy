@@ -140,7 +140,7 @@ class TagController {
     @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
     def review(final Long offset, final Long max) {
         Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.tag.pagination.max, Long)
-        [paginationBean: tagReviewService.listWithPagination(maxValue, offset, 'name')]
+        [paginationBean: tagReviewService.listWithPagination(maxValue, offset, 'name', null)]
     }
 
     @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
