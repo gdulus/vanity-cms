@@ -14,11 +14,7 @@
     </div>
 
     <div class="span9">
-        <g:render template="form" model="${[tag: tag,
-                rootTags: rootTags,
-                parentTagsIds: parentTagsIds,
-                action: 'update',
-                formLegend: 'vanity.cms.tag.formUpdateLegend']}"/>
+        <g:render template="form" model="${[tag: tag, action: 'update', formLegend: 'vanity.cms.tag.formUpdateLegend']}"/>
     </div>
 </div>
 

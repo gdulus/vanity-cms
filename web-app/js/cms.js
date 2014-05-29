@@ -3,6 +3,9 @@ V.CMS = V.CMS || {};
 
 V.CMS.ClickableTags = (function () {
     return {
+        getAllActive: function (tagContainer) {
+            return tagContainer.find('span.label-success');
+        },
         init: function (tagContainer, unique, onSelect, onDeselect) {
             tagContainer.find('span').hover(
                 function () {

@@ -7,9 +7,8 @@
 </g:hasErrors>
 
 <g:form url="[action: action]">
-    <g:if test="${tag?.id}">
-        <g:hiddenField name="id" value="${tag.id}"/>
-        <g:hiddenField name="root" value="${tag.root}"/>
+    <g:if test="${action == 'update'}">
+        <g:hiddenField name="tag.id" value="${tag.id}"/>
     </g:if>
 
     <fieldset>
@@ -20,8 +19,8 @@
 
 
         <label class="checkbox" for="root">
-            <g:checkBox name="root" value="${tag.root}"/>
-            <g:message code="vanity.cms.tag.root"/>
+        <g:checkBox name="root" value="${tag?.root}"/>
+        <g:message code="vanity.cms.tag.root"/>
         </label>
 
         <g:if test="${rootTags}">
@@ -38,16 +37,45 @@
     </fieldset>
 </g:form>
 
-<g:if test="${tag?.id}">
-    <g:form>
-        <fieldset>
-            <legend><g:message code="vanity.cms.tag.children"/></legend>
-            <g:field href="${g.createLink(controller: 'tagApi', action: 'children')}" class="input-xxlarge" type="text" name="search" placeholder="${g.message(code: 'vanity.cms.tag.searchChildren')}"/>
+<g:if test="${action == 'update'}">
 
-            <div id="tag-selection"></div>
+    <g:form action="updateRelations" id="${tag.id}" name="update-relations">
+        <g:hiddenField name="parentsToAddSerialized" id="add-parents"/>
+        <g:hiddenField name="childrenToAddSerialized" id="add-children"/>
+        <g:hiddenField name="parentsToDeleteSerialized" id="delete-parents"/>
+        <g:hiddenField name="childrenToDeleteSerialized" id="delete-children"/>
+
+        <fieldset>
+
+            <g:if test="${!tag.root}">
+                <legend><g:message code="vanity.cms.tag.parentTags"/></legend>
+                <g:field href="${g.createLink(controller: 'tagApi', action: 'parents')}" class="input-xxlarge" type="text" name="search-parents" placeholder="${g.message(code: 'vanity.cms.tag.searchParents')}"/>
+
+                <div id="parent-tag-selection" class="tags"></div>
+
+                <g:if test="${parentTags}">
+                    <table class="table table-striped" id="current-parents">
+                        <tr>
+                            <th style="width: 90%"><g:message code="vanity.cms.tag.name"/></th>
+                            <th><g:message code="default.button.delete.label"/></th>
+                        </tr>
+                        <g:each in="${parentTags}">
+                            <tr>
+                                <td><g:link action="edit" id="${it.id}">${it.name}</g:link></td>
+                                <td><g:checkBox name="parent_${it.id}" value=""/></td>
+                            </tr>
+                        </g:each>
+                    </table>
+                </g:if>
+            </g:if>
+
+            <legend><g:message code="vanity.cms.tag.children"/></legend>
+            <g:field href="${g.createLink(controller: 'tagApi', action: 'children')}" class="input-xxlarge" type="text" name="search-children" placeholder="${g.message(code: 'vanity.cms.tag.searchChildren')}"/>
+
+            <div id="children-tag-selection" class="tags"></div>
 
             <g:if test="${tag?.hasChildren()}">
-                <table class="table table-striped">
+                <table class="table table-striped" id="current-children">
                     <tr>
                         <th style="width: 90%"><g:message code="vanity.cms.tag.name"/></th>
                         <th><g:message code="default.button.delete.label"/></th>
@@ -55,7 +83,7 @@
                     <g:each in="${tag.childTags}">
                         <tr>
                             <td><g:link action="edit" id="${it.id}">${it.name}</g:link></td>
-                            <td><g:checkBox name="tag_${it.id}" value=""/></td>
+                            <td><g:checkBox name="child_${it.id}" value=""/></td>
                         </tr>
                     </g:each>
                 </table>

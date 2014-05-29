@@ -30,38 +30,44 @@ class TagAdminService implements PaginationAware<Tag> {
     }
 
     @Transactional
-    Tag save(final String name, final List<Long> parentTagIds) {
-        Tag tag = new Tag(
-            name: name,
-            status: TagStatus.PUBLISHED,
-            root: false
-        )
-
-        if (!tag.save()) {
-            return tag
-        }
-
-        List<Tag> parentTags = parentTagIds.collect { Tag.load(it) }
-        parentTags*.addToChildTags(tag)
+    Tag save(final String name, final Boolean root) {
+        Tag tag = new Tag(name: name, status: TagStatus.PUBLISHED, root: root)
+        tag.save()
         return tag
     }
 
     @Transactional
-    Tag update(final Long id, final String name, final List<Long> parentTagIds) {
+    Tag update(final Long id, final String name, final Boolean root) {
         Tag tag = Tag.get(id)
 
         if (!tag) {
             return null
         }
 
-        tag.name = name
-
-        if (!tag.save()) {
-            return tag
+        if (!root) {
+            tag.childTags.clear()
         }
 
-        List<Tag> parentTags = parentTagIds.collect { Tag.load(it) }
-        parentTags*.addToChildTags(tag)
+        tag.name = name
+        tag.root = root
+        tag.save()
+        return tag
+    }
+
+    @Transactional
+    Tag updateRelations(final Long id, final List<Long> parentsToAdd, final List<Long> parentsToRemove, final List<Long> childrenToAdd, final List<Long> childrenToRemove) {
+        Tag tag = Tag.get(id)
+
+        if (!tag) {
+            return null
+        }
+
+        parentsToAdd.each { Tag.get(it).addToChildTags(tag) }
+        parentsToRemove.each { Tag.get(it).removeFromChildTags(tag) }
+        childrenToAdd.each { tag.addToChildTags(Tag.load(it)) }
+        childrenToRemove.each { tag.removeFromChildTags(Tag.load(it)) }
+
+        tag.save()
         return tag
     }
 }
