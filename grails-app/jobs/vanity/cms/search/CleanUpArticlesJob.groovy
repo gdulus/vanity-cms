@@ -2,7 +2,6 @@ package vanity.cms.search
 
 import groovy.util.logging.Slf4j
 import pl.burningice.burningconfig.features.JobLastRun
-import vanity.article.ArticleService
 import vanity.article.ArticleStatus
 import vanity.cms.search.reindexer.ReIndexingManager
 import vanity.cms.search.reindexer.impl.ReIndexingCmd
@@ -20,13 +19,13 @@ class CleanUpArticlesJob {
 
     ReIndexingManager reIndexingManager
 
-    ArticleService articleService
+    ArticleReIndexingService articleReIndexingService
 
     @JobLastRun
     def execute(lastRun) {
         if (lastRun) {
             log.info('Starting job last run = {}', lastRun)
-            List<Long> ids = articleService.findAllIdsFromThePointOfTimeWithStatus((Date) lastRun, [ArticleStatus.DELETED])
+            List<Long> ids = articleReIndexingService.findAllValidForReIndexing((Date) lastRun, [ArticleStatus.DELETED])
             reIndexingManager.startReIndexing(new ReIndexingCmd(Index.ARTICLES, ReIndexingType.DELETE, ids))
             log.info('Job finished')
         }

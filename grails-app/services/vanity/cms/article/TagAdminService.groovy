@@ -70,7 +70,8 @@ class TagAdminService implements PaginationAware<Tag> {
         }
 
         articleService.findAllByTag(tag)*.removeFromTags(tag)
-        tag.delete()
+        tag.status = TagStatus.SPAM
+        tag.save()
     }
 
     @Transactional

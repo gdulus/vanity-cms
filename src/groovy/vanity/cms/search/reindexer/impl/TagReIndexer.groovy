@@ -24,6 +24,6 @@ class TagReIndexer extends AbstractReIndexer<Tag, Document.TagDocument> {
 
     @Override
     protected void doIndex(final Set<Document.TagDocument> documents) {
-        searchEngineIndexer.indexTags(documents.findAll { it.root } as Set)
+        searchEngineIndexer.indexTags(documents.findAll { it.validForIndexing } as Set)
     }
 }
