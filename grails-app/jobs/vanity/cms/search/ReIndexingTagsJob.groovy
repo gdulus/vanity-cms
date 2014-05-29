@@ -3,7 +3,6 @@ package vanity.cms.search
 import groovy.util.logging.Slf4j
 import pl.burningice.burningconfig.features.JobLastRun
 import vanity.article.TagService
-import vanity.article.TagStatus
 import vanity.cms.search.reindexer.ReIndexingManager
 import vanity.cms.search.reindexer.impl.ReIndexingCmd
 import vanity.cms.search.reindexer.impl.ReIndexingType
@@ -26,7 +25,7 @@ class ReIndexingTagsJob {
     def execute(lastRun) {
         if (lastRun) {
             log.info('Starting job last run = {}', lastRun)
-            List<Long> entitiesIds = tagService.findAllIdsFromThePointOfTime((Date) lastRun, TagStatus.OPEN_STATUSES)
+            List<Long> entitiesIds = tagService.findAllValidRootTagsIds((Date) lastRun)
             reIndexingManager.startReIndexing(new ReIndexingCmd(Index.TAGS, ReIndexingType.FULL, entitiesIds))
             log.info('Job finished')
         }
