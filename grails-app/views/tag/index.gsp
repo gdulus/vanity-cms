@@ -22,9 +22,9 @@
         </g:if>
         <g:else>
 
-            <g:form class="form-inline">
+            <g:form class="form-inline" method="GET">
                 <input type="text" value="${query}" name="query" class="input-xxlarge" placeholder="${g.message(code: 'vanity.cms.tag.search')}">
-                <g:submitButton name="${message(code: 'default.button.search.label')}" class="btn btn-success"/>
+                <button type="submit" class="btn btn-success"><g:message code="default.button.search.label"/></button>
                 <g:link class="btn btn-success"><g:message code="default.button.clean.label"/></g:link>
             </g:form>
 
@@ -38,7 +38,9 @@
 
                 <g:each in="${paginationBean.elements}" var="element" status="i">
                     <tr>
-                        <td class="title"><g:link action="edit" id="${element.id}">${element.name}</g:link></td>
+                        <td class="title">
+                            <g:link url=" https://www.google.pl/#q=${element.name}" target="_blank"><i class="icon-search"></i> ${element.name}</g:link>
+                        </td>
                         <td>
                             <g:if test="${element.root}">
                                 <span class="label label-success"><g:message code="vanity.cms.tag.root"/></span>

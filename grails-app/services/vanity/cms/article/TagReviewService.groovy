@@ -16,8 +16,50 @@ class TagReviewService implements PaginationAware<Tag> {
 
     @Transactional(readOnly = true)
     public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort, final String query) {
-        List<Tag> tags = Tag.findAllByStatus(TagStatus.TO_BE_REVIEWED, [sort: sort, max: max, offset: offset])
-        return new PaginationBean<Tag>(tags, Tag.countByStatus(TagStatus.TO_BE_REVIEWED))
+        if (!query) {
+            List<Tag> tags = Tag.findAllByStatus(TagStatus.TO_BE_REVIEWED, [sort: sort, max: max, offset: offset])
+            return new PaginationBean<Tag>(tags, Tag.countByStatus(TagStatus.TO_BE_REVIEWED))
+        }
+
+        String likeStatement = "%${query?.toLowerCase()}%"
+
+        List<Tag> tags = Tag.executeQuery("""
+                    select
+                        id
+                    from
+                        Tag t
+                    where
+                        lower(name) like :query
+                        and status = :status
+                    order by
+                        :sort
+                """,
+            [
+                query: likeStatement,
+                status: TagStatus.TO_BE_REVIEWED,
+                max: max,
+                offset: offset ?: 0,
+                sort: sort
+            ]
+        ).collect { Long it -> Tag.read(it) }
+
+        int count = Tag.executeQuery("""
+                    select
+                        count(*)
+                    from
+                        Tag t
+                    where
+                        lower(name) like :query
+                        and status = :status
+                """,
+            [
+                query: likeStatement,
+                status: TagStatus.TO_BE_REVIEWED,
+
+            ]
+        )[0]
+
+        return new PaginationBean<Tag>(tags, count)
     }
 
     @Transactional(readOnly = true)

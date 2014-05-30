@@ -17,6 +17,12 @@
 
         <message:flashBased/>
 
+        <g:form action="review" class="form-inline" method="GET">
+            <input type="text" value="${query}" name="query" class="input-xxlarge" placeholder="${g.message(code: 'vanity.cms.tag.search')}">
+            <button type="submit" class="btn btn-success"><g:message code="default.button.search.label"/></button>
+            <g:link class="btn btn-success"><g:message code="default.button.clean.label"/></g:link>
+        </g:form>
+
         <g:form action="confirmTagsReview">
             <g:hiddenField name="strategy" value=""/>
             <g:hiddenField name="serializedTagIds" value=""/>
@@ -60,6 +66,7 @@
                     next="&raquo;"
                     prev="&laquo;"
                     maxsteps="0"
+                    params="${query ? [query: query] : null}"
                     max="${grailsApplication.config.cms.tag.pagination.max}"
                     total="${paginationBean.totalCount}"/>
         </div>
