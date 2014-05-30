@@ -18,7 +18,7 @@ class TagReIndexingService {
 
                 """,
             [
-                status: (TagStatus.OPEN_STATUSES + [TagStatus.SPAM])
+                statuses: (TagStatus.OPEN_STATUSES + [TagStatus.SPAM])
             ]
         ) as List<Long>
     }
@@ -37,7 +37,7 @@ class TagReIndexingService {
                 """,
             [
                 point: point,
-                status: (TagStatus.OPEN_STATUSES + [TagStatus.SPAM])
+                statuses: (TagStatus.OPEN_STATUSES + [TagStatus.SPAM])
             ]
         ) as List<Long>
     }
