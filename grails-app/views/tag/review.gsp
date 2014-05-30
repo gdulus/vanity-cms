@@ -43,7 +43,7 @@
                             <g:checkBox tag-id="${element.id}" name="tags.${element.id}" class="selection-slave"/>
                         </td>
                         <td class="name">
-                            ${element.name}
+                            <g:link url=" https://www.google.pl/#q=${element.name}" target="_blank"><i class="icon-search"></i> ${element.name}</g:link>
                         </td>
                         <td class="data">
                             <g:link action="markAsRootTag" id="${element.id}" class="btn btn-danger confirm" params="[offset: params.offset, max: params.max]">
