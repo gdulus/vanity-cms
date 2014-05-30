@@ -40,18 +40,9 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
                 break
             }
 
-            Set<O> documents = convert(partition)
-
-            if (documents) {
-                processPartition(documents)
-                processed += partition.size()
-            }
+            clear(partition)
+            index(partition)
         }
-    }
-
-    protected void processPartition(final Set<O> documents) {
-        clear(documents)
-        index(documents)
     }
 
     protected List<Long> prepare() {
@@ -61,29 +52,35 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
         return entitiesIds
     }
 
-    protected abstract Set<O> doConvert(List<Long> partition)
-
-    private Set<O> convert(final List<Long> partition) {
-        log.info('Converting batch')
+    protected void clear(final List<Long> partition) {
+        log.info('Clearing index')
         phase = ReIndexingPhase.CONVERTING
-        return doConvert(partition)
+        Set<O> documents = getForClearing(partition)
+
+        if (documents) {
+            phase = ReIndexingPhase.CLEARING
+            doClear(documents)
+        }
     }
+
+    protected abstract Set<O> getForClearing(List<Long> partition)
 
     protected abstract void doClear(Set<O> documents)
 
-    protected void clear(final Set<O> documents) {
-        log.info('Clearing index')
-        phase = ReIndexingPhase.CLEARING
-        doClear(documents)
+    protected void index(final List<Long> partition) {
+        log.info('Re-indexing')
+        phase = ReIndexingPhase.CONVERTING
+        Set<O> documents = getForIndexing(partition)
+
+        if (documents) {
+            phase = ReIndexingPhase.INDEXING
+            doIndex(documents)
+        }
     }
+
+    protected abstract Set<O> getForIndexing(List<Long> partition)
 
     protected abstract void doIndex(Set<O> documents)
-
-    protected void index(final Set<O> documents) {
-        log.info('Re-indexing')
-        phase = ReIndexingPhase.INDEXING
-        doIndex(documents)
-    }
 
     @Override
     void stop() {

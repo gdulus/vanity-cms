@@ -12,9 +12,17 @@ class TagReIndexer extends AbstractReIndexer<Tag, Document.TagDocument> {
         super(partitionSize, entitiesIds, searchEngineIndexer)
     }
 
+
     @Override
-    protected Set<Document.TagDocument> doConvert(final List<Long> partition) {
-        return Document.asTagDocuments(partition.collect { Tag.read(it) })
+    protected Set<Document.TagDocument> getForIndexing(final List<Long> partition) {
+        List<Tag> tags = partition.collect { Tag.read(it) }.findAll { it.searchable() }
+        Document.asTagDocuments(tags)
+    }
+
+    @Override
+    protected Set<Document.TagDocument> getForClearing(final List<Long> partition) {
+        List<Tag> tags = partition.collect { Tag.read(it) }
+        Document.asTagDocuments(tags)
     }
 
     @Override
@@ -24,6 +32,6 @@ class TagReIndexer extends AbstractReIndexer<Tag, Document.TagDocument> {
 
     @Override
     protected void doIndex(final Set<Document.TagDocument> documents) {
-        searchEngineIndexer.indexTags(documents.findAll { it.validForIndexing } as Set)
+        searchEngineIndexer.indexTags(documents)
     }
 }

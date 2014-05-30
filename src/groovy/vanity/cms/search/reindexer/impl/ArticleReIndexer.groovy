@@ -13,8 +13,15 @@ class ArticleReIndexer extends AbstractReIndexer<Article, Document.ArticleDocume
     }
 
     @Override
-    protected Set<Document.ArticleDocument> doConvert(final List<Long> partition) {
-        Document.asArticleDocuments(partition.collect { Article.read(it) })
+    protected Set<Document.ArticleDocument> getForIndexing(final List<Long> partition) {
+        List<Article> articles = partition.collect { Article.read(it) }.findAll { it.searchable() }
+        Document.asArticleDocuments(articles)
+    }
+
+    @Override
+    protected Set<Document.ArticleDocument> getForClearing(final List<Long> partition) {
+        List<Article> articles = partition.collect { Article.read(it) }
+        Document.asArticleDocuments(articles)
     }
 
     @Override
@@ -24,6 +31,6 @@ class ArticleReIndexer extends AbstractReIndexer<Article, Document.ArticleDocume
 
     @Override
     protected void doIndex(final Set<Document.ArticleDocument> documents) {
-        searchEngineIndexer.indexArticles(documents.findAll { it.validForIndexing } as Set)
+        searchEngineIndexer.indexArticles(documents)
     }
 }
