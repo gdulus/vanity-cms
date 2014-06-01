@@ -2,6 +2,7 @@ package vanity.cms.search.reindexer.impl
 
 import groovy.transform.PackageScope
 import groovy.util.logging.Slf4j
+import vanity.article.TagService
 import vanity.cms.search.reindexer.ReIndexingPhase
 import vanity.cms.search.reindexer.ReIndexingStatus
 import vanity.search.SearchEngineIndexer
@@ -11,6 +12,8 @@ import vanity.search.SearchEngineIndexer
 abstract class AbstractReIndexer<I, O> implements ReIndexer {
 
     protected final SearchEngineIndexer searchEngineIndexer
+
+    protected final TagService tagService
 
     private final int partitionSize
 
@@ -24,10 +27,11 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
 
     private volatile Boolean stop
 
-    public AbstractReIndexer(Integer partitionSize, List<Long> entitiesIds, SearchEngineIndexer searchEngineIndexer) {
+    public AbstractReIndexer(Integer partitionSize, List<Long> entitiesIds, SearchEngineIndexer searchEngineIndexer, TagService tagService) {
         this.partitionSize = partitionSize
         this.entitiesIds = entitiesIds
         this.searchEngineIndexer = searchEngineIndexer
+        this.tagService = tagService
         this.processed = 0
         this.phase = ReIndexingPhase.INITIALIZED
         this.stop = false
@@ -42,6 +46,7 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
 
             clear(partition)
             index(partition)
+            processed += partition.size()
         }
     }
 
