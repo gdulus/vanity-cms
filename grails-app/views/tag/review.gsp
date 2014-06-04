@@ -30,7 +30,8 @@
             <table class="table table-striped">
                 <tr>
                     <th width="10px"><g:checkBox name="tag.all" class="selection-master"/></th>
-                    <th width="75%"><g:message code="vanity.cms.tag.name"/></th>
+                    <th width="65%"><g:message code="vanity.cms.tag.name"/></th>
+                    <th width="15%"><g:message code="vanity.cms.tag.articlesCount"/></th>
                     <th>
                         <g:submitButton id="ROOT" class="btn btn-danger confirm submit" name="${message(code: 'vanity.cms.tags.review.root')}"/>
                         <g:submitButton id="SPAM" class="btn btn-danger confirm submit" name="${message(code: 'vanity.cms.tags.review.spam')}"/>
@@ -40,19 +41,22 @@
                 <g:each in="${paginationBean.elements}" var="element" status="i">
                     <tr>
                         <td>
-                            <g:checkBox tag-id="${element.id}" name="tags.${element.id}" class="selection-slave"/>
+                            <g:checkBox tag-id="${element.left.id}" name="tags.${element.left.id}" class="selection-slave"/>
                         </td>
                         <td class="name">
-                            <g:link url=" https://www.google.pl/#q=${element.name}" target="_blank"><i class="icon-search"></i> ${element.name}</g:link>
+                            <g:link url=" https://www.google.pl/#q=${element.left.name}" target="_blank"><i class="icon-search"></i> ${element.left.name}</g:link>
+                        </td>
+                        <td>
+                            ${element.right}
                         </td>
                         <td class="data">
-                            <g:link action="markAsRootTag" id="${element.id}" class="btn btn-danger confirm" params="[offset: params.offset, max: params.max]">
+                            <g:link action="markAsRootTag" id="${element.left.id}" class="btn btn-danger confirm" params="[offset: params.offset, max: params.max]">
                                 <g:message code="vanity.cms.tags.review.root"/>
                             </g:link>
-                            <g:link action="markAsSpam" id="${element.id}" class="btn btn-danger confirm" params="[offset: params.offset, max: params.max]">
+                            <g:link action="markAsSpam" id="${element.left.id}" class="btn btn-danger confirm" params="[offset: params.offset, max: params.max]">
                                 <g:message code="vanity.cms.tags.review.spam"/>
                             </g:link>
-                            <g:link action="reviewMoreOptions" id="${element.id}" class="btn btn-success">
+                            <g:link action="reviewMoreOptions" id="${element.left.id}" class="btn btn-success">
                                 <g:message code="vanity.cms.tags.review.more"/>
                             </g:link>
                         </td>

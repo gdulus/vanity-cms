@@ -3,6 +3,7 @@ package vanity.cms.article
 import org.apache.commons.lang.StringUtils
 import org.apache.commons.lang.Validate
 import org.springframework.transaction.annotation.Transactional
+import vanity.Touple
 import vanity.article.*
 import vanity.cms.article.review.TagReviewHint
 import vanity.pagination.PaginationAware
@@ -15,51 +16,60 @@ class TagReviewService implements PaginationAware<Tag> {
     ArticleService articleService
 
     @Transactional(readOnly = true)
-    public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort, final String query) {
-        if (!query) {
-            List<Tag> tags = Tag.findAllByStatus(TagStatus.TO_BE_REVIEWED, [sort: sort, max: max, offset: offset])
-            return new PaginationBean<Tag>(tags, Tag.countByStatus(TagStatus.TO_BE_REVIEWED))
+    public PaginationBean<Touple<Tag, Long>> listWithPagination(final Long max, final Long offset, final String sort, final String query) {
+
+        Map<String, ?> dataParams = [
+            status: TagStatus.TO_BE_REVIEWED,
+            max: max,
+            offset: offset ?: 0
+        ]
+
+        Map<String, ?> countParams = [
+            status: TagStatus.TO_BE_REVIEWED,
+        ]
+
+        String hqlDataQuery = """
+            select
+                t.id,
+                count(*) as articles
+            from
+                Article a
+            left join
+                a.tags as t
+            where
+                t.status = :status
+        """
+
+        String hqlCountQuery = """
+            select
+                count(*)
+            from
+                Tag t
+            where
+                t.status = :status
+            """
+
+        if (query) {
+            hqlDataQuery += ' and lower(t.name) like :query '
+            hqlCountQuery += ' and lower(t.name) like :query '
+            dataParams['query'] = "%${query?.toLowerCase()}%"
+            countParams['query'] = "%${query?.toLowerCase()}%"
         }
 
-        String likeStatement = "%${query?.toLowerCase()}%"
+        hqlDataQuery += '''
+            group by
+                t
+            order by
+                articles desc,
+                t.name
+        '''
 
-        List<Tag> tags = Tag.executeQuery("""
-                    select
-                        id
-                    from
-                        Tag t
-                    where
-                        lower(name) like :query
-                        and status = :status
-                    order by
-                        :sort
-                """,
-            [
-                query: likeStatement,
-                status: TagStatus.TO_BE_REVIEWED,
-                max: max,
-                offset: offset ?: 0,
-                sort: sort
-            ]
-        ).collect { Long it -> Tag.read(it) }
+        List<Touple<Tag, Long>> tags = Tag.executeQuery(hqlDataQuery, dataParams).collect {
+            return new Touple<>(Tag.read(it[0]), it[1])
+        }
 
-        int count = Tag.executeQuery("""
-                    select
-                        count(*)
-                    from
-                        Tag t
-                    where
-                        lower(name) like :query
-                        and status = :status
-                """,
-            [
-                query: likeStatement,
-                status: TagStatus.TO_BE_REVIEWED,
-
-            ]
-        )[0]
-
-        return new PaginationBean<Tag>(tags, count)
+        int count = Tag.executeQuery(hqlCountQuery, countParams)[0]
+        return new PaginationBean<Touple<Tag, Long>>(tags, count)
     }
 
     @Transactional(readOnly = true)
