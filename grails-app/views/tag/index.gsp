@@ -45,6 +45,9 @@
                             <g:if test="${element.root}">
                                 <span class="label label-success"><g:message code="vanity.cms.tag.root"/></span>
                             </g:if>
+                            <g:elseif test="${element.spam}">
+                                <span class="label label-error"><g:message code="vanity.cms.tag.spam"/></span>
+                            </g:elseif>
                             <g:else>
                                 <span class="label label-info"><g:message code="vanity.cms.tag.child"/></span>
                             </g:else>
@@ -59,10 +62,13 @@
                             </g:if>
                         </td>
                         <td class="options">
-                            <g:link action="delete" id="${element.id}" class="btn btn-danger confirm"><g:message
-                                    code="vanity.cms.delete"/></g:link>
-                            <g:link action="edit" id="${element.id}" class="btn btn-success"><g:message
-                                    code="vanity.cms.edit"/></g:link>
+                            <g:if test="${!element.spam}">
+                                <g:link action="spam" id="${element.id}" class="btn btn-danger confirm"><g:message code="vanity.cms.delete"/></g:link>
+                                <g:link action="edit" id="${element.id}" class="btn btn-success"><g:message code="vanity.cms.edit"/></g:link>
+                            </g:if>
+                            <g:else>
+                                <g:link action="unSpam" id="${element.id}" class="btn btn-danger confirm"><g:message code="vanity.cms.unspam"/></g:link>
+                            </g:else>
                             <div class="clearfix"></div>
                         </td>
                     </tr>

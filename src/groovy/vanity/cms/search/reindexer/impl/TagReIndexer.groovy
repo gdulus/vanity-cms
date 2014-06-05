@@ -15,14 +15,18 @@ class TagReIndexer extends AbstractReIndexer<Tag, Document.TagDocument> {
 
     @Override
     protected Set<Document.TagDocument> getForIndexing(final List<Long> partition) {
-        List<Tag> tags = partition.collect { Tag.read(it) }.findAll { it.searchable() }
-        return tags.collect { Document.asTagDocument(it, tagService.findAllInHierarchy(it.id)) }
+        return partition.collect { Tag.read(it) }.findAll { it.searchable() }.collect { Tag tag ->
+            Set<Tag> tags = tag.flatChildrenSet().findAll { Tag childTag -> childTag.searchable() }
+            Document.asTagDocument(tag, tags)
+        }
     }
 
     @Override
     protected Set<Document.TagDocument> getForClearing(final List<Long> partition) {
-        List<Tag> tags = partition.collect { Tag.read(it) }
-        return tags.collect { Document.asTagDocument(it, tagService.findAllInHierarchy(it.id)) }
+        return partition.collect { Tag.read(it) }.collect { Tag tag ->
+            Set<Tag> tags = tag.flatChildrenSet().findAll { Tag childTag -> childTag.searchable() }
+            Document.asTagDocument(tag, tags)
+        }
     }
 
     @Override

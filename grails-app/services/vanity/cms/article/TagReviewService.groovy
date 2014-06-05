@@ -4,7 +4,10 @@ import org.apache.commons.lang.StringUtils
 import org.apache.commons.lang.Validate
 import org.springframework.transaction.annotation.Transactional
 import vanity.Touple
-import vanity.article.*
+import vanity.article.ArticleService
+import vanity.article.Tag
+import vanity.article.TagService
+import vanity.article.TagStatus
 import vanity.cms.article.review.TagReviewHint
 import vanity.pagination.PaginationAware
 import vanity.pagination.PaginationBean
@@ -110,6 +113,8 @@ class TagReviewService implements PaginationAware<Tag> {
         Tag tag = Tag.get(id)
         tag.root = true
         tag.status = TagStatus.PUBLISHED
+        // bump last update for all related articles to reindex them
+        articleService.updateLastUpdatedForAllByTag(tag)
         return tag.save() != null
     }
 
@@ -126,35 +131,23 @@ class TagReviewService implements PaginationAware<Tag> {
 
     @Transactional
     public boolean markAsSpam(final Long id) {
-        // validate input
         Validate.notNull(id, 'Provide not null and not empty tag id')
         Tag tag = Tag.get(id)
-        tag.status = TagStatus.SPAM
-        return tag.save() != null
+        articleService.updateLastUpdatedForAllByTag(tag)
+        return tagService.setStatus(tag, TagStatus.SPAM)
+    }
+
+    @Transactional
+    public boolean markAsNotSpam(final Long id) {
+        Validate.notNull(id, 'Provide not null and not empty tag id')
+        Tag tag = Tag.get(id)
+        articleService.updateLastUpdatedForAllByTag(tag)
+        return tagService.setStatus(tag, TagStatus.PUBLISHED)
     }
 
     @Transactional
     public boolean markAsDuplicate(final Long reviewedTagId, final Long duplicatedTagId) {
-        // validate input
-        Validate.notNull(reviewedTagId, 'Provide not null and not empty reviewed tag id')
-        Validate.notNull(duplicatedTagId, 'Provide not null and not empty dulicated tag id')
-        // search for related tags
-        Tag reviewedTag = Tag.get(reviewedTagId)
-        Tag duplicatedTag = Tag.get(duplicatedTagId)
-        // validate that tags exists
-        Validate.notNull(reviewedTag, "There is no Tag with id ${reviewedTagId}")
-        Validate.notNull(duplicatedTag, "There is no Tag with id ${duplicatedTagId}")
-        // search for all articles that contain tag that is a duplication
-        List<Article> relatedArticles = articleService.findAllByTag(reviewedTag)
-        // remove tag that is a duplication and replace it by duplicated tag
-        relatedArticles.each { Article it ->
-            it.removeFromTags(reviewedTag)
-            it.addToTags(duplicatedTag)
-            it.save(flush: true)
-        }
-        // delete duplicated tag
-        reviewedTag.delete()
-        return true
+        markAsAlis(reviewedTagId, [duplicatedTagId])
     }
 
     @Transactional
@@ -172,6 +165,8 @@ class TagReviewService implements PaginationAware<Tag> {
         parentTags.each { Tag parentTag ->
             parentTag.addToChildTags(reviewedTag)
             parentTag.save()
+            // bump last update for all related articles to reindex them
+            articleService.updateLastUpdatedForAllByTag(parentTag)
         }
         // mark child tag as published
         reviewedTag.status = TagStatus.PUBLISHED

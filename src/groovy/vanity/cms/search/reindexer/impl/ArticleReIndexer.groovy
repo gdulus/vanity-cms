@@ -16,16 +16,18 @@ class ArticleReIndexer extends AbstractReIndexer<Article, Document.ArticleDocume
 
     @Override
     protected Set<Document.ArticleDocument> getForIndexing(final List<Long> partition) {
-        List<Article> articles = partition.collect { Article.read(it) }.findAll { it.searchable() }
-        Set<Tag> tags = articles.tags.sum { Tag it -> tagService.findAllInHierarchy(it.id) } as Set
-        articles.collect { Document.asArticleDocument(it, tags) }
+        partition.collect { Article.read(it) }.findAll { it.searchable() }.collect { Article article ->
+            Set<Tag> tags = article.tags.sum { Tag tag -> tag.flatChildrenSet() }.findAll { Tag tag -> tag.searchable() }
+            Document.asArticleDocument(article, tags)
+        }
     }
 
     @Override
     protected Set<Document.ArticleDocument> getForClearing(final List<Long> partition) {
-        List<Article> articles = partition.collect { Article.read(it) }
-        Set<Tag> tags = articles.tags.sum { Tag it -> tagService.findAllInHierarchy(it.id) } as Set
-        articles.collect { Document.asArticleDocument(it, tags) }
+        partition.collect { Article.read(it) }.collect { Article article ->
+            Set<Tag> tags = article.tags.sum { Tag tag -> tag.flatChildrenSet() }.findAll { Tag tag -> tag.searchable() }
+            Document.asArticleDocument(article, tags)
+        }
     }
 
     @Override

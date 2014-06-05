@@ -87,6 +87,18 @@ class TagController {
 
     }
 
+    def unSpam(final Long id) {
+        tagReviewService.markAsNotSpam(id)
+        flash.info = 'vanity.cms.tag.unSpamed'
+        redirect(action: 'index')
+    }
+
+    def spam(final Long id) {
+        tagReviewService.markAsSpam(id)
+        flash.info = 'vanity.cms.tag.spamed'
+        redirect(action: 'index')
+    }
+
     def updateRelations(final UpdateTagRelationsCmd cmd) {
         if (!cmd.validate()) {
             flash.error = 'vanity.cms.tag.savingDomainError'
@@ -107,12 +119,6 @@ class TagController {
             flash.info = 'vanity.cms.tag.saved'
             return redirect(action: 'edit', id: tag.id)
         }
-    }
-
-    def delete(final Long id) {
-        tagAdminService.delete(id)
-        flash.info = 'vanity.cms.tag.deleted'
-        redirect(action: 'index')
     }
 
     def promoted() {

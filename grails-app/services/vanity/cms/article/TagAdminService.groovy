@@ -13,9 +13,11 @@ class TagAdminService implements PaginationAware<Tag> {
 
     @Transactional(readOnly = true)
     public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort, final String query) {
+        List<TagStatus> statuses = TagStatus.OPEN_STATUSES + [TagStatus.SPAM]
+
         if (!query) {
-            List<Tag> tags = Tag.findAllByStatusInList(TagStatus.OPEN_STATUSES, [sort: sort, max: max, offset: offset])
-            int count = Tag.countByStatusInList(TagStatus.OPEN_STATUSES)
+            List<Tag> tags = Tag.findAllByStatusInList(statuses, [sort: sort, max: max, offset: offset])
+            int count = Tag.countByStatusInList(statuses)
             return new PaginationBean<Tag>(tags, count)
         }
 
@@ -34,7 +36,7 @@ class TagAdminService implements PaginationAware<Tag> {
             """,
             [
                 query: likeStatement,
-                openStatuses: TagStatus.OPEN_STATUSES,
+                openStatuses: statuses,
                 max: max,
                 offset: offset ?: 0,
                 sort: sort
@@ -52,26 +54,13 @@ class TagAdminService implements PaginationAware<Tag> {
             """,
             [
                 query: likeStatement,
-                openStatuses: TagStatus.OPEN_STATUSES,
+                openStatuses: statuses
 
             ]
         )[0]
 
         return new PaginationBean<Tag>(tags, count)
 
-    }
-
-    @Transactional
-    void delete(final Long id) {
-        Tag tag = Tag.get(id)
-
-        if (!tag) {
-            return
-        }
-
-        articleService.findAllByTag(tag)*.removeFromTags(tag)
-        tag.status = TagStatus.SPAM
-        tag.save()
     }
 
     @Transactional
