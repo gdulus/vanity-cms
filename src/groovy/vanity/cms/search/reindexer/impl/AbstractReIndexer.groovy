@@ -1,6 +1,5 @@
 package vanity.cms.search.reindexer.impl
 
-import groovy.transform.PackageScope
 import groovy.util.logging.Slf4j
 import vanity.article.TagService
 import vanity.cms.search.reindexer.ReIndexingPhase
@@ -8,7 +7,6 @@ import vanity.cms.search.reindexer.ReIndexingStatus
 import vanity.search.SearchEngineIndexer
 
 @Slf4j
-@PackageScope
 abstract class AbstractReIndexer<I, O> implements ReIndexer {
 
     protected final SearchEngineIndexer searchEngineIndexer
@@ -78,6 +76,7 @@ abstract class AbstractReIndexer<I, O> implements ReIndexer {
         Set<O> documents = getForIndexing(partition)
 
         if (documents) {
+            log.info('Indexing {} elements', documents.size())
             phase = ReIndexingPhase.INDEXING
             doIndex(documents)
         }

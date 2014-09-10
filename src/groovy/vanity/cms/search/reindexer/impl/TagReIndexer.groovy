@@ -1,12 +1,10 @@
 package vanity.cms.search.reindexer.impl
 
-import groovy.transform.PackageScope
 import vanity.article.Tag
 import vanity.article.TagService
 import vanity.search.Document
 import vanity.search.SearchEngineIndexer
 
-@PackageScope
 class TagReIndexer extends AbstractReIndexer<Tag, Document.TagDocument> {
 
     TagReIndexer(Integer partitionSize, List<Long> entitiesIds, SearchEngineIndexer searchEngineIndexer, TagService tagService) {
@@ -16,7 +14,7 @@ class TagReIndexer extends AbstractReIndexer<Tag, Document.TagDocument> {
     @Override
     protected Set<Document.TagDocument> getForIndexing(final List<Long> partition) {
         return partition.collect { Tag.read(it) }.findAll { it.searchable() }.collect { Tag tag ->
-            Set<Tag> tags = tag.flatChildrenSet().findAll { Tag childTag -> childTag.searchable() }
+            Set<Tag> tags = tag.flatChildrenSet().findAll { Tag childTag -> childTag.indexable() }
             Document.asTagDocument(tag, tags)
         }
     }
@@ -24,8 +22,7 @@ class TagReIndexer extends AbstractReIndexer<Tag, Document.TagDocument> {
     @Override
     protected Set<Document.TagDocument> getForClearing(final List<Long> partition) {
         return partition.collect { Tag.read(it) }.collect { Tag tag ->
-            Set<Tag> tags = tag.flatChildrenSet().findAll { Tag childTag -> childTag.searchable() }
-            Document.asTagDocument(tag, tags)
+            Document.asTagDocument(tag, Collections.emptySet())
         }
     }
 
