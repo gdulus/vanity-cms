@@ -1,0 +1,20 @@
+table.table tbody tr.selected td {
+    cursor: pointer;
+}
+
+table.table tbody tr.selected td.name {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.loader .data {
+    background: url("../images/review-loader.gif") no-repeat center center;
+}
+
+#activate label.radio {
+    margin: 10px 0px 5px 0px;
+}
+
+#error {
+    display: none;
+}

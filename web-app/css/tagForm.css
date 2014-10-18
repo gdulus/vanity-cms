@@ -1,0 +1,10 @@
+.tags {
+    margin-bottom: 20px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.tag {
+    cursor: pointer;
+    margin: 2px;
+}
