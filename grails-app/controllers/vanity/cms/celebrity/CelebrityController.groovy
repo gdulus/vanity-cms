@@ -2,12 +2,13 @@ package vanity.cms.celebrity
 
 import grails.plugin.springsecurity.annotation.Secured
 import org.codehaus.groovy.grails.commons.GrailsApplication
+import org.springframework.beans.factory.annotation.Value
 import vanity.article.TagService
 import vanity.celebrity.Celebrity
 import vanity.celebrity.CelebrityService
 import vanity.cms.image.handler.ImageHandlingException
+import vanity.pagination.PaginationParams
 import vanity.user.Authority
-import vanity.utils.ConfigUtils
 
 @Secured([Authority.ROLE_ADMIN])
 class CelebrityController {
@@ -20,9 +21,13 @@ class CelebrityController {
 
     GrailsApplication grailsApplication
 
+    @Value('${cms.celebrity.pagination.max}')
+    Long defaultMaxCelebrities
+
     def index(final Long offset, final Long max) {
-        Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.celebrity.pagination.max, Long)
-        [paginationBean: celebrityService.listWithPagination(maxValue, offset, "lastName", null)]
+        Long maxValue = max ?: defaultMaxCelebrities
+        PaginationParams paginationParams = new PaginationParams(maxValue, offset, 'lastName')
+        [paginationBean: celebrityService.listWithPagination(paginationParams)]
     }
 
     def create() {

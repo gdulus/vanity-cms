@@ -1,27 +1,25 @@
 package vanity.cms.article
 
 import org.springframework.transaction.annotation.Transactional
-import vanity.article.ArticleService
 import vanity.article.Tag
 import vanity.article.TagStatus
 import vanity.pagination.PaginationAware
 import vanity.pagination.PaginationBean
+import vanity.pagination.PaginationParams
 
 class TagAdminService implements PaginationAware<Tag> {
 
-    ArticleService articleService
-
     @Transactional(readOnly = true)
-    public PaginationBean<Tag> listWithPagination(final Long max, final Long offset, final String sort, final String query) {
+    public PaginationBean<Tag> listWithPagination(final PaginationParams params) {
         List<TagStatus> statuses = TagStatus.OPEN_STATUSES + [TagStatus.SPAM]
 
-        if (!query) {
-            List<Tag> tags = Tag.findAllByStatusInList(statuses, [sort: sort, max: max, offset: offset])
+        if (!params.queryParams.query) {
+            List<Tag> tags = Tag.findAllByStatusInList(statuses, [sort: params.sort, max: params.max, offset: params.offset])
             int count = Tag.countByStatusInList(statuses)
             return new PaginationBean<Tag>(tags, count)
         }
 
-        String likeStatement = "%${query?.toLowerCase()}%"
+        String likeStatement = "%${params.queryParams.query.toString().encodeAsPrettyUrl()}%"
 
         List<Tag> tags = Tag.executeQuery("""
                 select
@@ -29,7 +27,7 @@ class TagAdminService implements PaginationAware<Tag> {
                 from
                     Tag t
                 where
-                    lower(name) like :query
+                    normalizedName like :query
                     and status in (:openStatuses)
                 order by
                     :sort
@@ -37,9 +35,9 @@ class TagAdminService implements PaginationAware<Tag> {
             [
                 query: likeStatement,
                 openStatuses: statuses,
-                max: max,
-                offset: offset ?: 0,
-                sort: sort
+                max: params.max,
+                offset: params.offset ?: 0,
+                sort: params.sort
             ]
         ).collect { Long it -> Tag.read(it) }
 
