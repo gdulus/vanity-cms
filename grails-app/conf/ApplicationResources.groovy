@@ -54,7 +54,14 @@ modules = {
 
     celebrityJobForm {
         dependsOn 'base'
-        resource url: 'css/celebrityForm.css'
+    }
+
+    countryList {
+        dependsOn 'base'
+    }
+
+    countryForm {
+        dependsOn 'base'
     }
 
 }

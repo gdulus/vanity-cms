@@ -2,7 +2,7 @@
 
 <g:hasErrors bean="${celebrityJob}">
     <div class="alert alert-error">
-        <g:renderErrors bean="${celebrityJob}" field="tag" as="list"/>
+        <g:renderErrors bean="${celebrityJob}" field="name" as="list"/>
     </div>
 </g:hasErrors>
 
