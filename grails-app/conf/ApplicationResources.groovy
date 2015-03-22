@@ -47,4 +47,14 @@ modules = {
         resource url: 'js/jquery.ba-dotimeout.min.js'
         resource url: 'js/tagForm.js'
     }
+
+    celebrityJobList {
+        dependsOn 'base'
+    }
+
+    celebrityJobForm {
+        dependsOn 'base'
+        resource url: 'css/celebrityForm.css'
+    }
+
 }
