@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value
 import vanity.article.TagService
 import vanity.celebrity.Celebrity
 import vanity.celebrity.CelebrityJobService
+import vanity.celebrity.CelebrityQuotationsService
 import vanity.celebrity.CelebrityService
 import vanity.cms.image.handler.ImageHandlingException
 import vanity.location.CountryService
@@ -26,6 +27,8 @@ class CelebrityController {
     CelebrityJobService celebrityJobService
 
     CountryService countryService
+
+    CelebrityQuotationsService celebrityQuotationsService
 
     @Value('${cms.celebrity.pagination.max}')
     Long defaultMaxCelebrities
@@ -85,7 +88,7 @@ class CelebrityController {
         }
     }
 
-    def edit(final Long id) {
+    def edit(final Long id, final Long qId) {
         Celebrity celebrity = celebrityService.read(id)
 
         return [
@@ -93,7 +96,8 @@ class CelebrityController {
             jobs: celebrityJobService.listAll(),
             countries: countryService.listAll(),
             celebrity: celebrity,
-            quotations: celebrity.quotations
+            quotations: celebrity.quotations,
+            quotation: (qId ? celebrityQuotationsService.read(qId) : null)
         ]
     }
 

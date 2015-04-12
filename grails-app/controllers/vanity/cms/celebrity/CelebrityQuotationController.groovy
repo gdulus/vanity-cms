@@ -3,6 +3,7 @@ package vanity.cms.celebrity
 import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import vanity.celebrity.CelebrityQuotationsService
+import vanity.celebrity.Quotation
 import vanity.user.Authority
 
 @Secured([Authority.ROLE_ADMIN])
@@ -20,11 +21,11 @@ class CelebrityQuotationController {
         }
     }
 
-    def update(final Long celebrityId, final String content, final String source) {
+    def update(final Long id, final String content, final String source) {
         try {
-            celebrityQuotationsService.update(celebrityId, content, source)
+            Quotation quotation = celebrityQuotationsService.update(id, content, source)
             flash.info = 'vanity.cms.celebrity.quotation.saved'
-            return redirect(controller: 'celebrity', action: 'edit', id: celebrityId)
+            return redirect(controller: 'celebrity', action: 'edit', id: quotation.celebrity.id)
         } catch (ValidationException exp) {
             flash.error = 'vanity.cms.celebrity.quotation.savingDomainError'
         }
