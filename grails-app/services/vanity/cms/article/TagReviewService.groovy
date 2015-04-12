@@ -19,7 +19,7 @@ class TagReviewService implements PaginationAware<Tag> {
     ArticleService articleService
 
     @Transactional(readOnly = true)
-    public PaginationBean<Touple<Tag, Long>> listWithPagination(final Long max, final Long offset, final String sort, final String query) {
+    public PaginationBean<Touple<Tag, Long>> listWithPagination(final PaginationParams parm) {
 
         Map<String, ?> dataParams = [
             status: TagStatus.TO_BE_REVIEWED,

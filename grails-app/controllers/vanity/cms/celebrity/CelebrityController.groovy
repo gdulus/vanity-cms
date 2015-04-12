@@ -86,11 +86,14 @@ class CelebrityController {
     }
 
     def edit(final Long id) {
-        [
+        Celebrity celebrity = celebrityService.read(id)
+
+        return [
             tags: tagService.findAllValidRootTags(),
             jobs: celebrityJobService.listAll(),
             countries: countryService.listAll(),
-            celebrity: celebrityService.read(id)
+            celebrity: celebrity,
+            quotations: celebrity.quotations
         ]
     }
 
@@ -115,7 +118,8 @@ class CelebrityController {
                     tags: tagService.findAllValidRootTags(),
                     jobs: celebrityJobService.listAll(),
                     countries: countryService.listAll(),
-                    celebrity: celebrity
+                    celebrity: celebrity,
+                    quotations: celebrity.quotations
                 ])
             } else {
                 flash.info = 'vanity.cms.celebrity.saved'
@@ -128,7 +132,8 @@ class CelebrityController {
                 tags: tagService.findAllValidRootTags(),
                 jobs: celebrityJobService.listAll(),
                 countries: countryService.listAll(),
-                celebrity: cmd
+                celebrity: cmd,
+                quotations: []
             ])
         }
     }
