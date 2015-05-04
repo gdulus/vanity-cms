@@ -2,18 +2,17 @@ grails.servlet.version = "3.0" // Change depending on target container complianc
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
-grails.project.target.level = 1.6
-grails.project.source.level = 1.6
+grails.project.target.level = 1.7
+grails.project.source.level = 1.7
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
-// uncomment (and adjust settings) to fork the JVM to isolate classpaths
-//grails.project.fork = [
-//   run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
-//]
+grails.project.fork = [
+        run: [maxMemory: 1024, minMemory: 64, debug: false, maxPerm: 256, jvmArgs: ['-Dconfig.external.location=/home/gdulus/Workspace/projects/vanity/_config']]
+]
 
 grails.project.dependency.resolution = {
     inherits("global") {}
-    log "error"          // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+    log "warn"          // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true       // Whether to verify checksums on resolve
     legacyResolve false
     // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
@@ -25,6 +24,8 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenLocal()
         mavenCentral()
+        mavenRepo "http://repo.grails.org/grails/plugins"
+        mavenRepo "http://repo.grails.org/grails/core"
         mavenRepo "http://repo.spring.io/milestone/"
     }
 
@@ -40,6 +41,7 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.1.6"
         runtime ":database-migration:1.2.1"
         runtime ":hibernate:3.6.10.10"
+        compile ":quartz:1.0.2"
         compile ":quartz:1.0-RC5"
         compile ':cache:1.0.1'
         compile ":spring-security-core:2.0-RC2"
