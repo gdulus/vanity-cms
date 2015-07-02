@@ -6,10 +6,6 @@ grails.project.target.level = 1.7
 grails.project.source.level = 1.7
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
-grails.project.fork = [
-        run: [maxMemory: 1024, minMemory: 64, debug: false, maxPerm: 256, jvmArgs: ['-Dconfig.external.location=/home/gdulus/Workspace/projects/vanity/_config']]
-]
-
 grails.project.dependency.resolution = {
     inherits("global") {}
     log "warn"          // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
