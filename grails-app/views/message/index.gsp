@@ -21,6 +21,13 @@
             <message:nothingToList/>
         </g:if>
         <g:else>
+
+            <g:form class="form-inline" method="GET">
+                <input type="text" value="${params.query}" name="query" class="input-xxlarge" placeholder="${g.message(code: 'default.search.placeholder')}">
+                <button type="submit" class="btn btn-success"><g:message code="default.button.search.label"/></button>
+                <g:link class="btn btn-success"><g:message code="default.button.clean.label"/></g:link>
+            </g:form>
+
             <table class="table table-striped">
                 <tr>
                     <th style="width:20%"><g:message code="vanity.cms.message.code"/></th>

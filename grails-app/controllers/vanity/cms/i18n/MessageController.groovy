@@ -17,9 +17,9 @@ class MessageController {
     @Value('${cms.celebrity.messages.pagination.max}')
     Long defaultMaxMessages
 
-    def index(final Long offset, final Long max) {
+    def index(final Long offset, final Long max, final String query) {
         Long maxValue = max ?: defaultMaxMessages
-        PaginationParams paginationParams = new PaginationParams(maxValue, offset, 'code')
+        PaginationParams paginationParams = new PaginationParams(maxValue, offset, 'code', [query: query])
         [paginationBean: messageService.listWithPagination(paginationParams)]
     }
 

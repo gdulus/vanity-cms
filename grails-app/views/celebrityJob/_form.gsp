@@ -19,6 +19,9 @@
 
         <div class="form-actions">
             <button type="submit" class="btn btn-primary"><g:message code="vanity.cms.save"/></button>
+        <g:if test="${celebrityJob?.id}">
+            <g:link controller="message" action="index" params="${[query: "." + celebrityJob.getTranslationKey()]}" class="btn"><g:message code="vanity.cms.translations"/></g:link>
+        </g:if>
             <g:link action="index" class="btn"><g:message code="vanity.cms.cancel"/></g:link>
         </div>
 
