@@ -26,6 +26,8 @@
 
                     <th style="width:20%"><g:message code="vanity.cms.celebrity.name"/></th>
                     <th><g:message code="vanity.cms.celebrity.tag"/></th>
+                    <th><g:message code="vanity.cms.celebrity.country"/></th>
+                    <th><g:message code="vanity.cms.celebrity.job"/></th>
                     <th><g:message code="vanity.cms.celebrity.quotations"/></th>
                     <th></th>
                 </tr>
@@ -34,6 +36,25 @@
                     <tr>
                         <td class="name">${element.firstName} ${element.lastName}</td>
                         <td class="tag"><g:link controller="tag" action="edit" id="${element.tag.id}">${element.tag.name}</g:link></td>
+                        <td>
+                            <g:if test="${element.countries}">
+                                <ul>
+                                    <g:each in="${element.countries}" var="country">
+                                        <li>${country.name}</li>
+                                    </g:each>
+                                </ul>
+                            </g:if>
+                        </td>
+                        <td>
+                            <g:if test="${element.jobs}">
+                                <ul>
+                                    <g:each in="${element.jobs}" var="job">
+                                        <li>${job.name}</li>
+                                    </g:each>
+                                </ul>
+                            </g:if>
+                        </td>
+                        <td>${element.quotations.size()}</td>
                         <td>${element.quotations.size()}</td>
                         <td class="options">
                             <g:link action="delete" id="${element.id}" class="btn btn-danger confirm"><g:message code="vanity.cms.delete"/></g:link>
