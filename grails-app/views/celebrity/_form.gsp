@@ -20,6 +20,9 @@
         <label class="control-label" for="lastName"><g:message code="vanity.cms.celebrity.lastName"/></label>
         <g:field class="input-xxlarge" type="text" name="lastName" value="${celebrity?.lastName}"/>
 
+        <label class="control-label" for="nickName"><g:message code="vanity.cms.celebrity.nickName"/></label>
+        <g:field class="input-xxlarge" type="text" name="nickName" value="${celebrity?.nickName}"/>
+
         <label class="control-label" for="height"><g:message code="vanity.cms.celebrity.height"/></label>
         <g:field class="input-xxlarge" type="text" name="height" value="${celebrity?.height}"/>
 
@@ -32,7 +35,7 @@
         <label class="control-label" for="birth.location"><g:message code="vanity.cms.celebrity.birthPlace"/></label>
         <g:field class="input-xxlarge" type="text" name="birth.location" value="${celebrity?.birth?.location}"/>
 
-        <label class="control-label" for="dead"><g:message code="vanity.cms.celebrity.alive"/></label>
+        <label class="control-label" for="dead"><g:message code="vanity.cms.celebrity.dead"/></label>
         <g:checkBox name="dead" value="${celebrity?.dead}"/>
 
         <label class="control-label" for="death.date"><g:message code="vanity.cms.celebrity.deathDate"/></label>
