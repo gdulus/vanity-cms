@@ -32,8 +32,8 @@
         <label class="control-label" for="birth.location"><g:message code="vanity.cms.celebrity.birthPlace"/></label>
         <g:field class="input-xxlarge" type="text" name="birth.location" value="${celebrity?.birth?.location}"/>
 
-        <label class="control-label" for="alive"><g:message code="vanity.cms.celebrity.alive"/></label>
-        <g:checkBox name="alive" value="${celebrity?.alive}"/>
+        <label class="control-label" for="dead"><g:message code="vanity.cms.celebrity.alive"/></label>
+        <g:checkBox name="dead" value="${celebrity?.dead}"/>
 
         <label class="control-label" for="death.date"><g:message code="vanity.cms.celebrity.deathDate"/></label>
         <g:datePicker name="death.date" value="${celebrity?.death?.date}" precision="day" relativeYears="[-200..0]" default="none" noSelection="['': '']"/>
