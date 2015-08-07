@@ -29,20 +29,20 @@
         <label class="control-label" for="gender"><g:message code="vanity.cms.celebrity.gender"/></label>
         <g:select class="input-xxlarge" name="gender" from="${vanity.user.Gender.values()}" value="${celebrity?.gender}" noSelection="['': '']"/>
 
-        <label class="control-label" for="birth.date"><g:message code="vanity.cms.celebrity.birthDate"/></label>
-        <g:datePicker class="datepicker" name="birth.date" value="${celebrity?.birth?.date}" precision="day" relativeYears="[-200..0]" default="none" noSelection="['': '']"/>
+        <label class="control-label" for="birthDate"><g:message code="vanity.cms.celebrity.birthDate"/></label>
+        <g:datePicker class="datepicker" name="birthDate" value="${celebrity?.birthDate}" precision="day" relativeYears="[-200..0]" default="none" noSelection="['': '']"/>
 
-        <label class="control-label" for="birth.location"><g:message code="vanity.cms.celebrity.birthPlace"/></label>
-        <g:field class="input-xxlarge" type="text" name="birth.location" value="${celebrity?.birth?.location}"/>
+        <label class="control-label" for="birthLocation"><g:message code="vanity.cms.celebrity.birthPlace"/></label>
+        <g:field class="input-xxlarge" type="text" name="birthLocation" value="${celebrity?.birthLocation}"/>
 
         <label class="control-label" for="dead"><g:message code="vanity.cms.celebrity.dead"/></label>
         <g:checkBox name="dead" value="${celebrity?.dead}"/>
 
-        <label class="control-label" for="death.date"><g:message code="vanity.cms.celebrity.deathDate"/></label>
-        <g:datePicker name="death.date" value="${celebrity?.death?.date}" precision="day" relativeYears="[-200..0]" default="none" noSelection="['': '']"/>
+        <label class="control-label" for="deathDate"><g:message code="vanity.cms.celebrity.deathDate"/></label>
+        <g:datePicker name="deathDate" value="${celebrity?.deathDate}" precision="day" relativeYears="[-200..0]" default="none" noSelection="['': '']"/>
 
-        <label class="control-label" for="death.location"><g:message code="vanity.cms.celebrity.deathPlace"/></label>
-        <g:field class="input-xxlarge" type="text" name="death.location" value="${celebrity?.death?.location}"/>
+        <label class="control-label" for="deathLocation"><g:message code="vanity.cms.celebrity.deathPlace"/></label>
+        <g:field class="input-xxlarge" type="text" name="deathLocation" value="${celebrity?.deathLocation}"/>
 
         <label class="control-label" for="tag.id"><g:message code="vanity.cms.celebrity.tag"/></label>
         <g:select class="input-xxlarge" name="tag.id" from="${tags}" value="${celebrity?.tag?.id}" optionKey="id" optionValue="name" noSelection="['': '']"/>
