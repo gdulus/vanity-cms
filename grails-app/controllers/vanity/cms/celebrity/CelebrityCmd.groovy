@@ -6,7 +6,6 @@ import org.codehaus.groovy.grails.commons.GrailsApplication
 import org.springframework.web.multipart.MultipartFile
 import vanity.article.Tag
 import vanity.celebrity.Job
-import vanity.celebrity.TimePlace
 import vanity.image.gorm.ImageContainer
 import vanity.location.Country
 import vanity.user.Gender
@@ -26,11 +25,11 @@ class CelebrityCmd implements ImageContainer {
 
     String description
 
-    TimePlace birth
+    Date birthDate
 
     Boolean alive
 
-    TimePlace death
+    Date deathDate
 
     MultipartFile avatar
 

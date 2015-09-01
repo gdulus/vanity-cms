@@ -19,7 +19,7 @@
   :error
   (fn [db event]
     (do (log/error event)
-        (assoc-in db [:loading?] false))))
+        (assoc-in db [:context :loading?] false))))
 
 ;; ---------------------------------------------------------------------
 
@@ -29,6 +29,18 @@
     (let [node-name (event 1)]
       (do (log/info "Node name changed" node-name)
           (assoc-in db [:context :node-name] node-name)))))
+
+;; ---------------------------------------------------------------------
+
+(re-frame/register-handler
+  :render-nodes
+  (fn [db event]
+    (let [node-type (event 1)
+          response (event 2)]
+      (do (log/info "For node" node-type "got data" response)
+          (-> db
+              (assoc-in [:context :loading?] false)
+              (assoc-in [:data node-type] response))))))
 
 ;; ---------------------------------------------------------------------
 
@@ -45,10 +57,10 @@
         (let [url (config/get-config :remote :list node-type)]
           (do (log/info "Requested target node" node-type "and url" url)
               (GET url
-                   {:handler       #(re-frame/dispatch [:render-node %1])
+                   {:handler       #(re-frame/dispatch [:render-nodes node-type %1])
                     :error-handler #(re-frame/dispatch [:error %1])})
               (-> db
-                  (assoc-in [:loading?] true)
+                  (assoc-in [:context :loading?] true)
                   (assoc-in [:context :node-type] node-type)
                   (assoc-in [:context :node-name] ""))))))))
 

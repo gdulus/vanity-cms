@@ -64,4 +64,11 @@ modules = {
         dependsOn 'base'
     }
 
+    connections {
+        dependsOn 'base'
+        resource url: 'css/connections.css'
+        resource url: 'connections-app/app.js', disposition: 'head'
+        defaultBundle false
+    }
+
 }
