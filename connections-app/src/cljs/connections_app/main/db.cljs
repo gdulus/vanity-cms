@@ -3,7 +3,9 @@
 (def default-db
   {:context {:loading?  false
              :node-type nil
-             :node-name nil}
-   :data    {"GROUP"     {}
-             "CELEBRITY" {}
-             "ALIAS"     {}}})
+             :node-name nil
+             :node-id   nil}
+   :data    {"GROUP"        {}
+             "CELEBRITY"    {}
+             "ALIAS"        {}
+             :selected-data {}}})

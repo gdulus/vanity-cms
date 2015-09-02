@@ -33,6 +33,7 @@ html, body {
 
 .container-fluid {
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .canvas {
@@ -43,16 +44,34 @@ html, body {
     border-radius: 0;
 }
 
+#canvas {
+    max-width: 800px;
+    height: 800px;
+    margin: auto;
+}
+
+.menu .menu-section form input,
+.menu .menu-section form select {
+    border-bottom: none;
+    -webkit-box-shadow: -7px 4px 19px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -7px 4px 19px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: -7px 4px 19px -10px rgba(0, 0, 0, 0.75);
+}
+
 .list-group {
     overflow: scroll;
-    overflow-x: hidden;;
-    height: 600px;
+    overflow-x: hidden;
+    height: 90%;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+    -webkit-box-shadow: -7px 4px 19px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -7px 4px 19px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: -7px 4px 19px -10px rgba(0, 0, 0, 0.75);
 }
 
 .list-group-item {
-    font-size: 12px;
-    height: 30px;
-    padding: 7px 15px;
     cursor: pointer;
 }
 

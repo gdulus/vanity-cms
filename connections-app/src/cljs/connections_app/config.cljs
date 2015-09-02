@@ -5,9 +5,10 @@
 ;;----------------------------------------------
 
 (def ^{:private true} config
-  {:remote {:list {"GROUP"     "http://vanity-assembly/groups"
-                   "CELEBRITY" "http://vanity-assembly/celebrities"
-                   "ALIAS"     "http://vanity-assembly/aliases"}}})
+  {:remote {:list    {"GROUP"     "http://vanity-assembly/groups"
+                      "CELEBRITY" "http://vanity-assembly/celebrities"
+                      "ALIAS"     "http://vanity-assembly/aliases"}
+            :details "http://vanity-assembly/node"}})
 
 (defn get-config [& args]
   (try

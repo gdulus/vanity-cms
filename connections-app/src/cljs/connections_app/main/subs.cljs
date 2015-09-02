@@ -22,3 +22,8 @@
   (fn [db]
     (let [node-type (reaction (get-in @db [:context :node-type]))]
       (reaction (get-in @db [:data @node-type "data"])))))
+
+(re-frame/register-sub
+  :selected-node-data
+  (fn [db]
+    (reaction (get-in @db [:data :selected-data]))))

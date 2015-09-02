@@ -4681,3 +4681,1916 @@ notifying browser that file changed:  /connections_app/main/subs.js
 notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
 notifying browser that file changed:  /connections_app/main/subs.js
 [0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.306 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.174 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.144 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.251 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/log.js
+notifying browser that file changed:  /connections_app/main/db.js
+notifying browser that file changed:  /connections_app/main/subs.js
+notifying browser that file changed:  /connections_app/config.js
+notifying browser that file changed:  /connections_app/events.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+notifying browser that file changed:  /connections_app/main/views.js
+notifying browser that file changed:  /connections_app/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.19 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.168 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: extract-value at line 3 is being replaced at line 6 src/cljs/connections_app/events.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.243 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/events.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.11 seconds.[0m
+notifying browser that file changed:  /connections_app/events.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.107 seconds.[0m
+notifying browser that file changed:  /connections_app/events.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.156 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.143 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.132 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.117 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.115 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.171 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.12 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.135 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.127 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 74 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 77 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.173 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 73 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/response at line 73 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 76 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/response at line 76 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.209 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/response at line 73 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 76 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/response at line 76 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.216 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/response at line 73 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/dv at line 74 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.173 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/response at line 73 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.152 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.158 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.114 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.125 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.12 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.114 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: main-panel at line 39 is being replaced at line 46 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.248 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.159 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: No such namespace: reagent, could not locate reagent.cljs or reagent.cljc at line 54 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var reagent/create-class at line 54 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-render at line 54 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 55 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.247 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-render at line 55 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 56 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.209 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-render at line 54 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 55 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.199 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-render at line 58 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 59 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.217 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-render at line 60 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 61 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.195 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-render at line 62 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 63 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.178 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-render at line 63 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 64 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.189 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: main-panel at line 55 is being replaced at line 62 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-render at line 63 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 64 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.232 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: main-panel at line 55 is being replaced at line 62 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-render at line 63 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 64 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.226 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: main-panel at line 55 is being replaced at line 62 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 64 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.211 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: main-panel at line 55 is being replaced at line 62 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/menu-toggle-did-mount at line 64 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.211 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.198 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.149 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.154 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.162 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.214 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.151 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/log at line 56 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.21 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: :as alias must be unique; offending spec: [connections-app.log :as events] at line 1 src/cljs/connections_app/main/views.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.analyzer$error.invoke (analyzer.clj:380)
+    cljs.analyzer$error.invoke (analyzer.clj:377)
+    cljs.analyzer$parse_require_spec.invoke (analyzer.clj:1352)
+    clojure.lang.AFn.applyToHelper (AFn.java:171)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invoke (core.clj:630)
+    clojure.core$partial$fn__4234.doInvoke (core.clj:2474)
+    clojure.lang.RestFn.invoke (RestFn.java:408)
+    clojure.core$map$fn__4245.invoke (core.clj:2559)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:598)
+    clojure.core$next.invoke (core.clj:64)
+    clojure.core$reduce1.invoke (core.clj:903)
+    clojure.core$reduce1.invoke (core.clj:894)
+    clojure.core$merge_with.doInvoke (core.clj:2777)
+    clojure.lang.RestFn.applyTo (RestFn.java:139)
+    clojure.core$apply.invoke (core.clj:628)
+    cljs.analyzer$eval1922$fn__1924$fn__1928.invoke (analyzer.clj:1513)
+    clojure.core.protocols/fn (protocols.clj:143)
+    clojure.core.protocols$fn__6057$G__6052__6066.invoke (protocols.clj:19)
+    clojure.core.protocols$seq_reduce.invoke (protocols.clj:31)
+    clojure.core.protocols/fn (protocols.clj:54)
+    clojure.core.protocols$fn__6031$G__6026__6044.invoke (protocols.clj:13)
+    clojure.core$reduce.invoke (core.clj:6289)
+    cljs.analyzer$eval1922$fn__1924.invoke (analyzer.clj:1514)
+    clojure.lang.MultiFn.invoke (MultiFn.java:249)
+    cljs.analyzer$analyze_seq.invoke (analyzer.clj:1861)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/log at line 56 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.207 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.199 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/main-panel-renderer at line 27 src/cljs/connections_app/main/views.cljs
+WARNING: main-panel at line 26 is being replaced at line 56 src/cljs/connections_app/main/views.cljs
+WARNING: main-panel-did-mount at line 23 is being replaced at line 63 src/cljs/connections_app/main/views.cljs
+WARNING: main-panel at line 56 is being replaced at line 66 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/main-panel-renderer at line 67 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.295 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/main-panel-renderer at line 27 src/cljs/connections_app/main/views.cljs
+WARNING: main-panel at line 26 is being replaced at line 56 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.235 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/main-panel-renderer at line 27 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.185 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.162 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.175 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.15 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.16 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.183 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.182 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.187 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.155 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.159 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.167 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.154 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.135 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.16 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.139 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.154 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.15 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.187 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.145 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.154 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.141 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.141 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.142 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/node at line 17 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.251 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.163 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.143 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.141 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.256 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.137 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.157 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.14 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.147 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.139 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.143 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 18, column 47
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 18, column 47
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.139 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.138 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.199 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.248 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.145 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.139 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.184 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.151 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.166 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.203 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.155 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.145 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.145 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.151 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.212 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.163 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.15 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.147 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.181 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.137 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.136 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.132 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.204 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/target at line 84 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.23 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.152 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/target at line 84 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.21 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/target at line 84 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.164 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/target at line 84 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.161 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.159 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/target at line 84 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.171 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/target at line 84 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.168 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/target at line 84 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.158 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.117 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/url at line 84 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 85 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.186 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 83 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 86 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.201 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.121 seconds.[0m
+notifying browser that file changed:  /connections_app/config.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.117 seconds.[0m
+notifying browser that file changed:  /connections_app/config.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.115 seconds.[0m
+notifying browser that file changed:  /connections_app/config.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.184 seconds.[0m
+notifying browser that file changed:  /connections_app/config.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 83 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 86 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.202 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 86 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.159 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.handlers/node-type at line 86 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.179 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 79 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 91, column 1
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 79 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 92, column 1
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Duplicate key: :node-name on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/db.cljs, line 7, column 29
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.11 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/db.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.16 seconds.[0m
+notifying browser that file changed:  /connections_app/main/db.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 79 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 92, column 1
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 79 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 92, column 1
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 79 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 92, column 1
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 79 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 92, column 1
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 79 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 92, column 1
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.168 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+java.lang.AssertionError: No ns form found in src/cljs/connections_app/grapj.cljs
+ at cljs.analyzer$parse_ns$fn__2198.invoke (analyzer.clj:2095)
+    cljs.analyzer$parse_ns.invoke (analyzer.clj:2055)
+    cljs.analyzer$parse_ns.invoke (analyzer.clj:2046)
+    cljs.compiler$compile_root$fn__3123.invoke (compiler.clj:1170)
+    clojure.core$map$fn__4245.invoke (core.clj:2559)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$map$fn__4245.invoke (core.clj:2551)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:598)
+    clojure.core$next.invoke (core.clj:64)
+    clojure.core.protocols/fn (protocols.clj:146)
+    clojure.core.protocols$fn__6057$G__6052__6066.invoke (protocols.clj:19)
+    clojure.core.protocols$seq_reduce.invoke (protocols.clj:31)
+    clojure.core.protocols/fn (protocols.clj:54)
+    clojure.core.protocols$fn__6031$G__6026__6044.invoke (protocols.clj:13)
+    clojure.core$reduce.invoke (core.clj:6289)
+    cljs.js_deps$build_index.invoke (js_deps.clj:126)
+    cljs.js_deps$dependency_order.invoke (js_deps.clj:166)
+    cljs.compiler$compile_root.invoke (compiler.clj:1171)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.143 seconds.[0m
+notifying browser that file changed:  /connections_app/events.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.135 seconds.[0m
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+java.lang.AssertionError: No ns form found in src/cljs/connections_app/graph.cljs
+ at cljs.analyzer$parse_ns$fn__2198.invoke (analyzer.clj:2095)
+    cljs.analyzer$parse_ns.invoke (analyzer.clj:2055)
+    cljs.analyzer$parse_ns.invoke (analyzer.clj:2046)
+    cljs.compiler$compile_root$fn__3123.invoke (compiler.clj:1170)
+    clojure.core$map$fn__4245.invoke (core.clj:2559)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$map$fn__4245.invoke (core.clj:2551)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:598)
+    clojure.core$next.invoke (core.clj:64)
+    clojure.core.protocols/fn (protocols.clj:146)
+    clojure.core.protocols$fn__6057$G__6052__6066.invoke (protocols.clj:19)
+    clojure.core.protocols$seq_reduce.invoke (protocols.clj:31)
+    clojure.core.protocols/fn (protocols.clj:54)
+    clojure.core.protocols$fn__6031$G__6026__6044.invoke (protocols.clj:13)
+    clojure.core$reduce.invoke (core.clj:6289)
+    cljs.js_deps$build_index.invoke (js_deps.clj:126)
+    cljs.js_deps$dependency_order.invoke (js_deps.clj:166)
+    cljs.compiler$compile_root.invoke (compiler.clj:1171)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  /connections_app/events.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.129 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.133 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.142 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.13 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.124 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: :as alias must be unique; offending spec: [connections-app.graph :as config] at line 1 src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.analyzer$error.invoke (analyzer.clj:380)
+    cljs.analyzer$error.invoke (analyzer.clj:377)
+    cljs.analyzer$parse_require_spec.invoke (analyzer.clj:1352)
+    clojure.lang.AFn.applyToHelper (AFn.java:171)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invoke (core.clj:630)
+    clojure.core$partial$fn__4234.doInvoke (core.clj:2474)
+    clojure.lang.RestFn.invoke (RestFn.java:408)
+    clojure.core$map$fn__4245.invoke (core.clj:2559)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:598)
+    clojure.core$next.invoke (core.clj:64)
+    clojure.core$reduce1.invoke (core.clj:903)
+    clojure.core$reduce1.invoke (core.clj:894)
+    clojure.core$merge_with.doInvoke (core.clj:2777)
+    clojure.lang.RestFn.applyTo (RestFn.java:139)
+    clojure.core$apply.invoke (core.clj:628)
+    cljs.analyzer$eval1922$fn__1924$fn__1928.invoke (analyzer.clj:1513)
+    clojure.core.protocols/fn (protocols.clj:143)
+    clojure.core.protocols$fn__6057$G__6052__6066.invoke (protocols.clj:19)
+    clojure.core.protocols$seq_reduce.invoke (protocols.clj:31)
+    clojure.core.protocols/fn (protocols.clj:54)
+    clojure.core.protocols$fn__6031$G__6026__6044.invoke (protocols.clj:13)
+    clojure.core$reduce.invoke (core.clj:6289)
+    cljs.analyzer$eval1922$fn__1924.invoke (analyzer.clj:1514)
+    clojure.lang.MultiFn.invoke (MultiFn.java:249)
+    cljs.analyzer$analyze_seq.invoke (analyzer.clj:1861)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.131 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.136 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.graph/data at line 3 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.212 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.113 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.172 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.124 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Invalid token: js/ on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 4, column 10
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.113 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.graph/parser at line 4 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.202 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.graph/parser at line 4 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.153 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.119 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.124 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.13 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.158 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Invalid token: js/sigma/parser on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 4, column 22
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.129 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Invalid token: js/sigma/parser on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 4, column 22
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.15 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.122 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.113 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.114 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.153 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.128 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 3 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 4, column 16
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 3 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 4, column 15
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Map literal must contain an even number of forms on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 4, column 24
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 3 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 4, column 30
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Map literal must contain an even number of forms on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 5, column 28
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 3 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 5, column 38
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.11 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Map literal must contain an even number of forms on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 6, column 30
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Invalid token: : on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 6, column 46
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Invalid token: : on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 6, column 47
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.117 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.122 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.135 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.123 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.115 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 8, column 60
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: create-sigma at line 3 is being replaced at line 5 src/cljs/connections_app/graph.cljs
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 10, column 60
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 10, column 60
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 11, column 60
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 11, column 60
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 11, column 66
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 12, column 66
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 13, column 10
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 13, column 10
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 12 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 15, column 75
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 12 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 13, column 36
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.135 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.119 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.146 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.17 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.136 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.137 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.138 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: No such namespace: graph, could not locate graph.cljs or graph.cljc at line 85 src/cljs/connections_app/main/handlers.cljs
+WARNING: Use of undeclared Var graph/render at line 85 src/cljs/connections_app/main/handlers.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.203 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: :as alias must be unique; offending spec: [connections-app.graph :as config] at line 1 src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.analyzer$error.invoke (analyzer.clj:380)
+    cljs.analyzer$error.invoke (analyzer.clj:377)
+    cljs.analyzer$parse_require_spec.invoke (analyzer.clj:1352)
+    clojure.lang.AFn.applyToHelper (AFn.java:171)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invoke (core.clj:630)
+    clojure.core$partial$fn__4234.doInvoke (core.clj:2474)
+    clojure.lang.RestFn.invoke (RestFn.java:408)
+    clojure.core$map$fn__4245.invoke (core.clj:2559)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:598)
+    clojure.core$next.invoke (core.clj:64)
+    clojure.core$reduce1.invoke (core.clj:903)
+    clojure.core$reduce1.invoke (core.clj:894)
+    clojure.core$merge_with.doInvoke (core.clj:2777)
+    clojure.lang.RestFn.applyTo (RestFn.java:139)
+    clojure.core$apply.invoke (core.clj:628)
+    cljs.analyzer$eval1922$fn__1924$fn__1928.invoke (analyzer.clj:1513)
+    clojure.core.protocols/fn (protocols.clj:143)
+    clojure.core.protocols$fn__6057$G__6052__6066.invoke (protocols.clj:19)
+    clojure.core.protocols$seq_reduce.invoke (protocols.clj:31)
+    clojure.core.protocols/fn (protocols.clj:54)
+    clojure.core.protocols$fn__6031$G__6026__6044.invoke (protocols.clj:13)
+    clojure.core$reduce.invoke (core.clj:6289)
+    cljs.analyzer$eval1922$fn__1924.invoke (analyzer.clj:1514)
+    clojure.lang.MultiFn.invoke (MultiFn.java:249)
+    cljs.analyzer$analyze_seq.invoke (analyzer.clj:1861)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.138 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.143 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.165 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.153 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.158 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.144 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.136 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.139 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.16 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 88, column 57
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.142 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.14 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.14 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.121 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.124 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/graph.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.121 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.log/inf at line 16 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.153 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.169 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.2 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.log/inf at line 16 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.159 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.log/inf at line 16 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.146 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.122 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.116 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.115 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.185 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.132 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.141 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.182 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.119 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 18 and column 11 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 67, column 1
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.15 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.149 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-renderer at line 15 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-did-mount at line 16 src/cljs/connections_app/main/views.cljs
+WARNING: nodes-list at line 14 is being replaced at line 36 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.245 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: graph-canvas at line 9 is being replaced at line 14 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-renderer at line 15 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-did-mount at line 16 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.242 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-renderer at line 15 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-did-mount at line 16 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.236 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-did-mount at line 16 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.287 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: graph-canvas-renderer at line 9 is being replaced at line 14 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-did-mount at line 21 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.233 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-did-mount at line 21 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.192 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.162 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Duplicate key: :component-did-mount on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 21, column 70
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Duplicate key: :component-did-mount on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 21, column 66
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.157 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.157 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.164 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/g at line 16 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.234 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.115 seconds.[0m
+notifying browser that file changed:  /connections_app/main/db.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.126 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/db.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.116 seconds.[0m
+notifying browser that file changed:  /connections_app/main/db.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.18 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.146 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.149 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.171 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.16 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.149 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/g at line 17 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.219 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: :as alias must be unique; offending spec: [connections-app.graph :as log] at line 1 src/cljs/connections_app/main/views.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.analyzer$error.invoke (analyzer.clj:380)
+    cljs.analyzer$error.invoke (analyzer.clj:377)
+    cljs.analyzer$parse_require_spec.invoke (analyzer.clj:1352)
+    clojure.lang.AFn.applyToHelper (AFn.java:171)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invoke (core.clj:630)
+    clojure.core$partial$fn__4234.doInvoke (core.clj:2474)
+    clojure.lang.RestFn.invoke (RestFn.java:408)
+    clojure.core$map$fn__4245.invoke (core.clj:2559)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:598)
+    clojure.core$next.invoke (core.clj:64)
+    clojure.core$reduce1.invoke (core.clj:903)
+    clojure.core$reduce1.invoke (core.clj:894)
+    clojure.core$merge_with.doInvoke (core.clj:2777)
+    clojure.lang.RestFn.applyTo (RestFn.java:139)
+    clojure.core$apply.invoke (core.clj:628)
+    cljs.analyzer$eval1922$fn__1924$fn__1928.invoke (analyzer.clj:1513)
+    clojure.core.protocols/fn (protocols.clj:143)
+    clojure.core.protocols$fn__6057$G__6052__6066.invoke (protocols.clj:19)
+    clojure.core.protocols$seq_reduce.invoke (protocols.clj:31)
+    clojure.core.protocols/fn (protocols.clj:54)
+    clojure.core.protocols$fn__6031$G__6026__6044.invoke (protocols.clj:13)
+    clojure.core$reduce.invoke (core.clj:6289)
+    cljs.analyzer$eval1922$fn__1924.invoke (analyzer.clj:1514)
+    clojure.lang.MultiFn.invoke (MultiFn.java:249)
+    cljs.analyzer$analyze_seq.invoke (analyzer.clj:1861)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/g at line 17 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.213 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/g at line 17 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.193 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Wrong number of args (0) passed to connections-app.graph/render at line 17 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.203 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Wrong number of args (0) passed to connections-app.graph/render at line 17 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.222 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.156 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.218 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.159 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.22 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 15 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 79, column 1
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.18 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.219 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.161 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.13 seconds.[0m
+notifying browser that file changed:  /connections_app/main/subs.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.135 seconds.[0m
+notifying browser that file changed:  /connections_app/main/subs.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.119 seconds.[0m
+notifying browser that file changed:  /connections_app/main/subs.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.subs/node-type at line 29 src/cljs/connections_app/main/subs.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.169 seconds.[0m
+notifying browser that file changed:  /connections_app/main/subs.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.122 seconds.[0m
+notifying browser that file changed:  /connections_app/main/subs.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.134 seconds.[0m
+notifying browser that file changed:  /connections_app/main/subs.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.135 seconds.[0m
+notifying browser that file changed:  /connections_app/main/subs.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.153 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.212 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.162 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.173 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.164 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.184 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.165 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.136 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.158 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/graph-canvas-did-* at line 24 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/graph-canvas-did-* at line 25 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.225 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.158 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/graph-canvas-did at line 24 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/graph-canvas-did at line 25 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.215 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/graph-canvas-did at line 24 src/cljs/connections_app/main/views.cljs
+WARNING: Use of undeclared Var connections-app.main.views/graph-canvas-did at line 25 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.229 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.16 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.162 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.113 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.14 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.13 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.128 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.145 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.119 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.164 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.231 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.218 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.11 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.152 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.121 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.116 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.113 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.112 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.148 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.113 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.11 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.113 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.113 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.113 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 7 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 20, column 25
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.116 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.12 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.116 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.13 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.131 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.132 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.124 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.171 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.151 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.142 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.131 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.133 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.25 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.127 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.294 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.121 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 9 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 20, column 25
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.181 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.graph/id at line 14 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.246 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.119 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.131 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.152 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: create-sigma at line 9 is being replaced at line 18 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.285 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: create-sigma at line 9 is being replaced at line 16 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.24 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: create-sigma at line 9 is being replaced at line 16 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.254 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 10 and column 3 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 28, column 25
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 10 and column 3 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 28, column 25
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 10 and column 3 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 28, column 25
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.185 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.127 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.207 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.13 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.143 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.119 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Wrong number of args (2) passed to cljs.core/assoc at line 14 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.178 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Wrong number of args (2) passed to cljs.core/assoc-in at line 14 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.154 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Wrong number of args (2) passed to cljs.core/assoc at line 14 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.15 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.114 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.214 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.112 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.125 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.152 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.11 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.108 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.123 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.131 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.graph/sigma at line 12 src/cljs/connections_app/graph.cljs
+WARNING: Use of undeclared Var connections-app.graph/sigma at line 13 src/cljs/connections_app/graph.cljs
+WARNING: Use of undeclared Var connections-app.graph/sigma at line 14 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.186 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.log/ino at line 14 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.153 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.12 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.123 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.12 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.112 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/graph.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.131 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.114 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.112 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.109 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.127 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.114 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.119 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.145 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.159 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.117 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.149 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: sigma-instane at line 4 is being replaced at line 5 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.193 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.117 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/selected-node-data at line 13 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.217 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 13, column 28
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 13, column 28
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 13, column 28
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.144 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.132 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 19, column 38
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 17, column 32
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.121 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 19, column 38
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/graph.cljs, line 18, column 37
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.13 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.12 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.graph/sigma-data at line 12 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.196 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.134 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/graph.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/graph.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.218 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.199 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.115 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.168 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.112 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.114 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.115 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.106 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.118 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.125 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: No such namespace: sigma, could not locate sigma.cljs or sigma.cljc at line 19 src/cljs/connections_app/graph.cljs
+WARNING: Use of undeclared Var sigma/graph at line 19 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.178 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: No such namespace: sigma, could not locate sigma.cljs or sigma.cljc at line 19 src/cljs/connections_app/graph.cljs
+WARNING: Use of undeclared Var sigma/graph at line 19 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.164 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: No such namespace: sigma, could not locate sigma.cljs or sigma.cljc at line 19 src/cljs/connections_app/graph.cljs
+WARNING: Use of undeclared Var sigma/graph at line 19 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.164 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: No such namespace: sigma, could not locate sigma.cljs or sigma.cljc at line 19 src/cljs/connections_app/graph.cljs
+WARNING: Use of undeclared Var sigma/graph at line 19 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.167 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Wrong number of args (2) passed to cljs.core/clj->js at line 19 src/cljs/connections_app/graph.cljs
+WARNING: No such namespace: sigma, could not locate sigma.cljs or sigma.cljc at line 19 src/cljs/connections_app/graph.cljs
+WARNING: Use of undeclared Var sigma/graph at line 19 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.187 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Wrong number of args (2) passed to cljs.core/clj->js at line 19 src/cljs/connections_app/graph.cljs
+WARNING: No such namespace: sigma, could not locate sigma.cljs or sigma.cljc at line 19 src/cljs/connections_app/graph.cljs
+WARNING: Use of undeclared Var sigma/graph at line 19 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.168 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: No such namespace: sigma, could not locate sigma.cljs or sigma.cljc at line 19 src/cljs/connections_app/graph.cljs
+WARNING: Use of undeclared Var sigma/graph at line 19 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.156 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.11 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.11 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Wrong number of args (1) passed to connections-app.graph/create-sigma at line 17 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.159 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.122 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.18 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.121 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.107 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.116 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.128 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.131 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.107 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: sigma-instane at line 4 is being replaced at line 5 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.155 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Wrong number of args (0) passed to cljs.core/clj->js at line 13 src/cljs/connections_app/graph.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.15 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.115 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.111 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.115 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.11 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.12 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.116 seconds.[0m
+notifying browser that file changed:  /connections_app/graph.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.138 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
