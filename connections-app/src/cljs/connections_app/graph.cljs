@@ -1,10 +1,11 @@
 (ns connections-app.graph
-    (:require [connections-app.log :as log]))
+    (:require [connections-app.log :as log]
+              [re-frame.core :as re-frame]))
 
 (def ^{:private true} sigma-instane)
-(def ^{:private true} node-default-config {"Group"     {:color "rgb(255, 117, 110)" :size 1}
-                                           "Celebrity" {:color "rgb(104, 189, 246)" :size 1}
-                                           "Alias"     {:color "rgb(109, 206, 158)" :size 1}})
+(def ^{:private true} node-default-config {"Group"     {:color "rgb(255, 117, 110)" :size 1 :type "GROUP"}
+                                           "Celebrity" {:color "rgb(104, 189, 246)" :size 1 :type "CELEBRITY"}
+                                           "Alias"     {:color "rgb(109, 206, 158)" :size 1 :type "ALIAS"}})
 (def ^{:private true} default-config {:container "alchemy"
                                       :settings  {:defaultNodeColor "#ec5148"
                                                   :edgeColor        "#000000"
@@ -53,7 +54,7 @@
             (do
                 (log/info "Creating an instance of SigmaJS object")
                 (set! sigma-instane (js/sigma. (clj->js default-config)))
-                (.bind sigma-instane "clickNode" #(log/info "handling click event" %)))
+                (.bind sigma-instane "clickNode" #(re-frame/dispatch [:graph-node-clicked (-> % .-data .-node .-id) (-> % .-data .-node .-type)])))
             sigma-instane)))
 
 (defn render [data]

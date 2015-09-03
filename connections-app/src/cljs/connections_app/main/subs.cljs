@@ -1,12 +1,16 @@
 (ns connections-app.main.subs
     (:require-macros [reagent.ratom :refer [reaction]])
-    (:require [re-frame.core :as re-frame]
-              [clojure.string :as string]))
+    (:require [re-frame.core :as re-frame]))
 
 (re-frame/register-sub
     :loading?
     (fn [db]
         (reaction (get-in @db [:context :loading?]))))
+
+(re-frame/register-sub
+    :node-id
+    (fn [db]
+        (reaction (get-in @db [:context :node-id]))))
 
 (re-frame/register-sub
     :node-name
@@ -21,11 +25,8 @@
 (re-frame/register-sub
     :nodes-list
     (fn [db]
-        (let [node-name (reaction (get-in @db [:context :node-name]))
-              node-type (reaction (get-in @db [:context :node-type]))]
-            (if-not (string/blank? @node-name)
-                (reaction (filter #(= node-name %) (get-in @db [:data @node-type "data"])))
-                (reaction (get-in @db [:data @node-type "data"]))))))
+        (let [node-type (reaction (get-in @db [:context :node-type]))]
+            (reaction (get-in @db [:data @node-type "data"])))))
 
 (re-frame/register-sub
     :selected-node-data

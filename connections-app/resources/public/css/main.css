@@ -114,7 +114,7 @@ html, body {
     overflow: scroll;
     overflow-x: hidden;
     border: none;
-    height: 92%;
+    height: 85%;
     padding: 0;
     margin: 0;
     background-color: #525864;
@@ -133,6 +133,11 @@ html, body {
     background-color: #525864;
     color: #ffffff;
 }
+
+.menu .menu-section .list-group-item.add-button {
+    background-color: #008cc1;
+}
+
 
 .menu .menu-section .list-group-item:hover {
     background-color: #292b31;

@@ -105,3 +105,32 @@
                     (assoc-in [:context :loading?] true)
                     (assoc-in [:context :node-id] node-id))))))
 
+
+;; ---------------------------------------------------------------------
+
+(re-frame/register-handler
+    :graph-node-clicked
+    (fn [db event]
+        (let [node-id (event 1)
+              node-type (event 2)]
+            (do (log/info "Graph node" node-type "(" node-id ") selected")
+                (re-frame/dispatch [:show-node-details node-id])
+                (-> db
+                    (assoc-in [:context :node-id] node-id))))))
+
+;; ---------------------------------------------------------------------
+
+(re-frame/register-handler
+    :start-dragg
+    (fn [db event]
+        (let [node-id (event 1)]
+            (do (log/info "Starting dragging node" node-id)
+                (assoc-in db [:context :dragged-node-id] node-id)))))
+
+(re-frame/register-handler
+    :stop-dragg
+    (fn [db event]
+        (let [selected-node-id (get-in db [:context :node-id])
+              dragged-node-id (get-in db [:context :dragged-node-id])]
+            (do (log/info "Stopped dragging node" dragged-node-id "into" selected-node-id)
+                (assoc-in db [:context :dragged-node-id] nil)))))
