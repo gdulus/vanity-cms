@@ -10,13 +10,13 @@
 (defn graph-canvas []
   (fn []
     [:div {:class "col-md-10 fill"}
-     [:div {:id "canvas"}]]))
+     [:div {:id "alchemy"}]]))
 
 ;; ---------------------------------------------------------------
 
 (defn nodes-list-item []
   (fn [node]
-    [:div {:class    "list-group-item"
+      [:a {:class    "list-group-item"
            :on-click #(re-frame/dispatch [:show-node-details (get node "id")])} (get node "name")]))
 
 (defn nodes-list-renderer []
@@ -46,10 +46,10 @@
          [:form {:class "fill"}
           [:select {:class     "form-control"
                     :on-change #(re-frame/dispatch [:target-node-type-changed (events/extract-value %)])}
-           [:option {:value ""} ""]
-           [:option {:value "GROUP"} "group"]
-           [:option {:value "CELEBRITY"} "celebrity"]
-           [:option {:value "ALIAS"} "alias"]]
+           [:option {:value ""} "Select type ..."]
+           [:option {:value "GROUP"} "Group"]
+           [:option {:value "CELEBRITY"} "Celebrity"]
+           [:option {:value "ALIAS"} "Alias"]]
           [:input {:class       "form-control"
                    :disabled    @loading?
                    :value       @node-name
