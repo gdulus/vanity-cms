@@ -12520,3 +12520,554 @@ notifying browser that file changed:  /connections_app/main/handlers.js
 [0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
 [32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.141 seconds.[0m
 notifying browser that file changed:  /connections_app/main/handlers.js
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.125 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/log.js
+notifying browser that file changed:  /connections_app/main/db.js
+notifying browser that file changed:  /connections_app/main/subs.js
+notifying browser that file changed:  /connections_app/config.js
+notifying browser that file changed:  /connections_app/events.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+notifying browser that file changed:  /connections_app/main/views.js
+notifying browser that file changed:  /connections_app/graph.js
+notifying browser that file changed:  /connections_app/core.js
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.739 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/log.js
+notifying browser that file changed:  /connections_app/main/db.js
+notifying browser that file changed:  /connections_app/main/subs.js
+notifying browser that file changed:  /connections_app/config.js
+notifying browser that file changed:  /connections_app/events.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+notifying browser that file changed:  /connections_app/main/views.js
+notifying browser that file changed:  /connections_app/graph.js
+notifying browser that file changed:  /connections_app/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.348 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.181 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 39, column 65
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 39, column 65
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 39, column 65
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 39, column 65
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.259 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/log.js
+notifying browser that file changed:  /connections_app/main/db.js
+notifying browser that file changed:  /connections_app/main/subs.js
+notifying browser that file changed:  /connections_app/config.js
+notifying browser that file changed:  /connections_app/events.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+notifying browser that file changed:  /connections_app/main/views.js
+notifying browser that file changed:  /connections_app/graph.js
+notifying browser that file changed:  /connections_app/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.156 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 42 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 151, column 66
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: EOF while reading, starting at line 42 and column 1 on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/handlers.cljs, line 151, column 66
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.173 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.152 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+Figwheel: focusing on build-ids (dev)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.203 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/log.js
+notifying browser that file changed:  /connections_app/main/db.js
+notifying browser that file changed:  /connections_app/main/subs.js
+notifying browser that file changed:  /connections_app/config.js
+notifying browser that file changed:  /connections_app/events.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+notifying browser that file changed:  /connections_app/main/views.js
+notifying browser that file changed:  /connections_app/graph.js
+notifying browser that file changed:  /connections_app/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.18 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.17 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.162 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.223 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.157 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.181 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.17 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.177 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.149 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.145 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/connections_app/main/handlers.cljs
+ at clojure.core$ex_info.invoke (core.clj:4403)
+    cljs.compiler$compile_file$fn__3100.invoke (compiler.clj:1142)
+    cljs.compiler$compile_file.invoke (compiler.clj:1105)
+    cljs.compiler$compile_root.invoke (compiler.clj:1177)
+    cljs.closure$compile_dir.invoke (closure.clj:378)
+    cljs.closure$eval3516$fn__3517.invoke (closure.clj:418)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    cljs.closure$eval3503$fn__3504.invoke (closure.clj:432)
+    cljs.closure$eval3452$fn__3453$G__3443__3460.invoke (closure.clj:325)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:19)
+    clojure.core$map$fn__4245.invoke (core.clj:2557)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:484)
+    clojure.core$seq.invoke (core.clj:133)
+    clojure.core$apply.invoke (core.clj:624)
+    clojure.core$mapcat.doInvoke (core.clj:2586)
+    clojure.lang.RestFn.invoke (RestFn.java:423)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invoke (closure.clj:1446)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:153)
+    figwheel_sidecar.auto_builder$default_build_options$fn__17664.invoke (auto_builder.clj:78)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__17697.invoke (auto_builder.clj:179)
+    figwheel_sidecar.auto_builder$warning$fn__17661.invoke (auto_builder.clj:73)
+    clojurescript_build.auto$time_build$fn__17457.invoke (auto.clj:55)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$after$fn__17463.invoke (auto.clj:64)
+    clojurescript_build.auto$error$fn__17466.invoke (auto.clj:71)
+    clojurescript_build.auto$before$fn__17460.invoke (auto.clj:60)
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.144 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.143 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.165 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.154 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.141 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.148 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.149 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.156 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.145 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.154 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.19 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.147 seconds.[0m
+notifying browser that file changed:  /connections_app/main/handlers.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.168 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: nodes-list at line 77 is being replaced at line 105 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.186 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: nodes-list at line 77 is being replaced at line 105 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.169 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: navigation at line 84 is being replaced at line 105 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.179 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.172 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.161 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var cljs.core/defn at line 84 src/cljs/connections_app/main/views.cljs
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 88, column 117
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var cljs.core/defn at line 84 src/cljs/connections_app/main/views.cljs
+[31mCompiling "resources/public/js/compiled/app.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/gdulus/Workspace/projects/vanity/vanity-cms/connections-app/src/cljs/connections_app/main/views.cljs, line 88, column 117
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.162 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.176 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.165 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var connections-app.main.views/nodes-list-did-update at line 113 src/cljs/connections_app/main/views.cljs
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.174 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.175 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.16 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.158 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.182 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.166 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.171 seconds.[0m
+notifying browser that file changed:  /connections_app/main/views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...

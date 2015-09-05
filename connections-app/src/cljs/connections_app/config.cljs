@@ -5,15 +5,16 @@
 ;;----------------------------------------------
 
 (def ^{:private true} config
-  {:remote {:list    {"GROUP"     "http://vanity-assembly/groups"
-                      "CELEBRITY" "http://vanity-assembly/celebrities"
-                      "ALIAS"     "http://vanity-assembly/aliases"}
-            :details "http://vanity-assembly/node"}})
+    {:remote {:list    {"GROUP"     "http://vanity-assembly/groups"
+                        "CELEBRITY" "http://vanity-assembly/celebrities"
+                        "ALIAS"     "http://vanity-assembly/aliases"}
+              :search  "http://vanity-assembly/search"
+              :details "http://vanity-assembly/node"}})
 
 (defn get-config [& args]
-  (try
-    (loop [current config index 0]
-      (if (== index (count args))
-        current
-        (recur (current (nth args index)) (inc index))))
-    (catch js/Error e nil)))
+    (try
+        (loop [current config index 0]
+            (if (== index (count args))
+                current
+                (recur (current (nth args index)) (inc index))))
+        (catch js/Error e nil)))

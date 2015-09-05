@@ -29,12 +29,32 @@
 (re-frame/register-handler
     :node-name-changed
     (fn [db event]
-        (let [node-name (event 1)]
-            (do (log/info "Node name changed" node-name)
-                (if-not (nil? search-timer-instane)
-                    (js/clearInterval search-timer-instane))
-                ;;(set! search-timer-instane (js/setTimeout #(re-frame/dispatch [:render-nodes node-name]) 2000))
+        (let [node-type (get-in db [:context :node-type])
+              node-name (event 1)]
+            (do
+                (log/info "Node name changed" node-name "in context of" node-type)
+                (if-not (string/blank? node-name)
+                    (do
+                        (if-not (nil? search-timer-instane)
+                            (js/clearInterval search-timer-instane))
+                        (if-not (string/blank? node-type)
+                            (set! search-timer-instane (js/setTimeout #(re-frame/dispatch [:search-for-node node-type node-name]) 500))))
+                    (re-frame/dispatch [:target-node-type-changed node-type]))
                 (assoc-in db [:context :node-name] node-name)))))
+
+;; ---------------------------------------------------------------------
+
+(re-frame/register-handler
+    :search-for-node
+    (fn [db event]
+        (let [node-type (event 1)
+              node-name (event 2)
+              url (config/get-config :remote :search)]
+            (do (log/info "Searching for a node " node-type "with name" node-name)
+                (GET url {:params        {:type node-type :name node-name}
+                          :handler       #(re-frame/dispatch [:render-nodes node-type %1])
+                          :error-handler #(re-frame/dispatch [:error %1])})
+                (assoc-in db [:context :loading?] true)))))
 
 ;; ---------------------------------------------------------------------
 

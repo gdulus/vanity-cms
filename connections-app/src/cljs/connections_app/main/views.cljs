@@ -81,8 +81,10 @@
 
 ;; ---------------------------------------------------------------
 
+(defn navigation-did-update []
+    (js/$ (fn [] (.focus (js/$ "#search-input")))))
 
-(defn navigation []
+(defn navigation-renderer []
     (let [loading? (re-frame/subscribe [:loading?])
           node-name (re-frame/subscribe [:node-name])]
         (fn []
@@ -96,12 +98,17 @@
                  [:option {:value "GROUP"} "Group"]
                  [:option {:value "CELEBRITY"} "Celebrity"]
                  [:option {:value "ALIAS"} "Alias"]]
-                [:input {:class       "form-control"
+                [:input {:id          "search-input"
+                         :class       "form-control"
                          :disabled    @loading?
                          :value       @node-name
                          :placeholder "Start typing ..."
                          :on-change   #(re-frame/dispatch [:node-name-changed (events/extract-value %)])}]
                 [nodes-list]]]]])))
+
+(defn navigation []
+    (reagent/create-class {:reagent-render       navigation-renderer
+                           :component-did-update navigation-did-update}))
 
 ;; ---------------------------------------------------------------
 
