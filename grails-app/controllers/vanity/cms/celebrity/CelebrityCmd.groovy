@@ -27,11 +27,13 @@ class CelebrityCmd implements ImageContainer {
 
     Date birthDate
 
+    String birthLocation
+
     Boolean alive
 
     Date deathDate
 
-    MultipartFile avatar
+    String deathLocation
 
     Tag tag
 
@@ -41,6 +43,8 @@ class CelebrityCmd implements ImageContainer {
 
     Boolean deleteAvatar
 
+    MultipartFile avatar
+
     static constraints = {
         id(nullable: true)
         firstName(nullable: true, blank: true)
@@ -48,8 +52,6 @@ class CelebrityCmd implements ImageContainer {
         description(nullable: true, blank: true)
         tag(nullable: false, unique: true, validator: { it?.root })
         avatar(nullable: true, empty: false)
-        birth(validator: { it.location && it.date })
-        death(validator: { val, obj -> obj.alive || (!obj.alive && val.location && val.date) })
     }
 
     @Override

@@ -33,9 +33,9 @@ class CelebrityController {
     @Value('${cms.celebrity.pagination.max}')
     Long defaultMaxCelebrities
 
-    def index(final Long offset, final Long max) {
+    def index(final String query, final Long offset, final Long max) {
         Long maxValue = max ?: defaultMaxCelebrities
-        PaginationParams paginationParams = new PaginationParams(maxValue, offset, 'lastName')
+        PaginationParams paginationParams = new PaginationParams(maxValue, offset, 'firstName', [query: query])
         [paginationBean: celebrityService.listWithPagination(paginationParams)]
     }
 

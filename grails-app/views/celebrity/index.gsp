@@ -17,6 +17,13 @@
 
         <message:flashBased/>
 
+        <g:form class="form-inline" method="GET">
+            <input type="text" value="${params.query}" name="query" class="input-xxlarge"
+                   placeholder="${g.message(code: 'vanity.cms.search')}">
+            <button type="submit" class="btn btn-success"><g:message code="default.button.search.label"/></button>
+            <g:link class="btn btn-success"><g:message code="default.button.clean.label"/></g:link>
+        </g:form>
+
         <g:if test="${paginationBean.isEmpty()}">
             <message:nothingToList/>
         </g:if>
