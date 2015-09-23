@@ -23,13 +23,15 @@ class CelebrityCmd implements ImageContainer {
 
     String lastName
 
+    String nickName
+
     String description
 
     Date birthDate
 
     String birthLocation
 
-    Boolean alive
+    Boolean dead
 
     Date deathDate
 
@@ -46,12 +48,7 @@ class CelebrityCmd implements ImageContainer {
     MultipartFile avatar
 
     static constraints = {
-        id(nullable: true)
-        firstName(nullable: true, blank: true)
-        lastName(nullable: true, blank: true)
-        description(nullable: true, blank: true)
         tag(nullable: false, unique: true, validator: { it?.root })
-        avatar(nullable: true, empty: false)
     }
 
     @Override
