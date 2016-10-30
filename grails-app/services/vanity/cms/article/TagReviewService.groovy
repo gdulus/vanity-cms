@@ -11,6 +11,7 @@ import vanity.article.TagStatus
 import vanity.cms.article.review.TagReviewHint
 import vanity.pagination.PaginationAware
 import vanity.pagination.PaginationBean
+import vanity.pagination.PaginationParams
 
 class TagReviewService implements PaginationAware<Tag> {
 
@@ -19,12 +20,12 @@ class TagReviewService implements PaginationAware<Tag> {
     ArticleService articleService
 
     @Transactional(readOnly = true)
-    public PaginationBean<Touple<Tag, Long>> listWithPagination(final Long max, final Long offset, final String sort, final String query) {
+    public PaginationBean<Touple<Tag, Long>> listWithPagination(final PaginationParams parms) {
 
         Map<String, ?> dataParams = [
             status: TagStatus.TO_BE_REVIEWED,
-            max: max,
-            offset: offset ?: 0
+            max: parms.max,
+            offset: parms.offset ?: 0
         ]
 
         Map<String, ?> countParams = [
@@ -52,11 +53,11 @@ class TagReviewService implements PaginationAware<Tag> {
                 t.status = :status
             """
 
-        if (query) {
+        if (parms.queryParams.query) {
             hqlDataQuery += ' and lower(t.name) like :query '
             hqlCountQuery += ' and lower(t.name) like :query '
-            dataParams['query'] = "%${query?.toLowerCase()}%"
-            countParams['query'] = "%${query?.toLowerCase()}%"
+            dataParams['query'] = "%${parms.queryParams.query?.toLowerCase()}%"
+            countParams['query'] = "%${parms.queryParams.query?.toLowerCase()}%"
         }
 
         hqlDataQuery += '''

@@ -1,8 +1,10 @@
 package vanity.cms.article
 
 import grails.plugin.springsecurity.annotation.Secured
+import org.springframework.beans.factory.annotation.Value
 import vanity.article.Tag
 import vanity.article.TagService
+import vanity.pagination.PaginationParams
 import vanity.user.Authority
 import vanity.utils.ConfigUtils
 
@@ -17,9 +19,13 @@ class TagController {
 
     TagPromotionService tagPromotionService
 
+    @Value('${cms.tag.pagination.max}')
+    Long defaultMaxTags
+
     def index(final Long offset, final Long max, final String query) {
-        Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.tag.pagination.max, Long)
-        [paginationBean: tagAdminService.listWithPagination(maxValue, offset, "name", query), query: query]
+        Long maxValue = max ?: defaultMaxTags
+        PaginationParams paginationParams = new PaginationParams(maxValue, offset, "name", [query: query])
+        [paginationBean: tagAdminService.listWithPagination(paginationParams)]
     }
 
     def create() {
@@ -121,8 +127,10 @@ class TagController {
         }
     }
 
-    def promoted() {
-        [elements: tagPromotionService.getTagsValidForPromotion()]
+    def promoted(final Long offset, final Long max, final String promoted, final String query) {
+        Long maxValue = max ?: defaultMaxTags
+        PaginationParams paginationParams = new PaginationParams(maxValue, offset, 'name', [promoted: promoted, query: query])
+        [paginationBean: tagPromotionService.listWithPagination(paginationParams)]
     }
 
     def promoteTag(Long id) {
@@ -146,7 +154,8 @@ class TagController {
     @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])
     def review(final Long offset, final Long max, final String query) {
         Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.tag.pagination.max, Long)
-        [paginationBean: tagReviewService.listWithPagination(maxValue, offset, 'name', query), query: query]
+        PaginationParams paginationParams = new PaginationParams(maxValue, offset, 'name', [query: query])
+        [paginationBean: tagReviewService.listWithPagination(paginationParams), query: query]
     }
 
     @Secured([Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER])

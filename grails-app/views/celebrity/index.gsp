@@ -17,6 +17,13 @@
 
         <message:flashBased/>
 
+        <g:form class="form-inline" method="GET">
+            <input type="text" value="${params.query}" name="query" class="input-xxlarge"
+                   placeholder="${g.message(code: 'vanity.cms.search')}">
+            <button type="submit" class="btn btn-success"><g:message code="default.button.search.label"/></button>
+            <g:link class="btn btn-success"><g:message code="default.button.clean.label"/></g:link>
+        </g:form>
+
         <g:if test="${paginationBean.isEmpty()}">
             <message:nothingToList/>
         </g:if>
@@ -26,19 +33,38 @@
 
                     <th style="width:20%"><g:message code="vanity.cms.celebrity.name"/></th>
                     <th><g:message code="vanity.cms.celebrity.tag"/></th>
+                    <th><g:message code="vanity.cms.celebrity.country"/></th>
+                    <th><g:message code="vanity.cms.celebrity.job"/></th>
+                    <th><g:message code="vanity.cms.celebrity.quotations"/></th>
                     <th></th>
                 </tr>
 
                 <g:each in="${paginationBean.elements}" var="element" status="i">
                     <tr>
                         <td class="name">${element.firstName} ${element.lastName}</td>
-                        <td class="tag"><g:link controller="tag" action="edit"
-                                                id="${element.tag.id}">${element.tag.name}</g:link></td>
+                        <td class="tag"><g:link controller="tag" action="edit" id="${element.tag.id}">${element.tag.name}</g:link></td>
+                        <td>
+                            <g:if test="${element.countries}">
+                                <ul>
+                                    <g:each in="${element.countries}" var="country">
+                                        <li>${country.name}</li>
+                                    </g:each>
+                                </ul>
+                            </g:if>
+                        </td>
+                        <td>
+                            <g:if test="${element.jobs}">
+                                <ul>
+                                    <g:each in="${element.jobs}" var="job">
+                                        <li>${job.name}</li>
+                                    </g:each>
+                                </ul>
+                            </g:if>
+                        </td>
+                        <td>${element.quotations.size()}</td>
                         <td class="options">
-                            <g:link action="delete" id="${element.id}" class="btn btn-danger confirm"><g:message
-                                    code="vanity.cms.delete"/></g:link>
-                            <g:link action="edit" id="${element.id}" class="btn btn-success"><g:message
-                                    code="vanity.cms.edit"/></g:link>
+                            <g:link action="delete" id="${element.id}" class="btn btn-danger confirm"><g:message code="vanity.cms.delete"/></g:link>
+                            <g:link action="edit" id="${element.id}" class="btn btn-success"><g:message code="vanity.cms.edit"/></g:link>
                             <div class="clearfix"></div>
                         </td>
                     </tr>

@@ -2,11 +2,12 @@ package vanity.cms.article
 
 import grails.plugin.springsecurity.annotation.Secured
 import org.codehaus.groovy.grails.commons.GrailsApplication
+import org.springframework.beans.factory.annotation.Value
 import vanity.article.Article
 import vanity.article.ArticleService
 import vanity.article.TagService
+import vanity.pagination.PaginationParams
 import vanity.user.Authority
-import vanity.utils.ConfigUtils
 
 @Secured([Authority.ROLE_ADMIN])
 class ArticleController {
@@ -19,9 +20,13 @@ class ArticleController {
 
     GrailsApplication grailsApplication
 
+    @Value('${cms.article.pagination.max}')
+    Long defaultMaxArticles
+
     def index(final Long offset, final Long max) {
-        Long maxValue = max ?: ConfigUtils.$as(grailsApplication.config.cms.article.pagination.max, Long)
-        [paginationBean: articleAdminService.listWithPagination(maxValue, offset, "dateCreated", null)]
+        Long maxValue = max ?: defaultMaxArticles
+        PaginationParams paginationParams = new PaginationParams(maxValue, offset, "dateCreated")
+        [paginationBean: articleAdminService.listWithPagination(paginationParams)]
     }
 
     def edit(final Long id) {

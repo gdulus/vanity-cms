@@ -27,7 +27,22 @@
                 <ul class="nav">
                     <nav:mainMenu controller="article" code="vanity.cms.mainMenu.articles" roles="[Authority.ROLE_ADMIN]"/>
                     <nav:mainMenu controller="tag" code="vanity.cms.mainMenu.tags" roles="[Authority.ROLE_ADMIN, Authority.ROLE_REVIEWER]"/>
-                    <nav:mainMenu controller="celebrity" code="vanity.cms.mainMenu.celebrities" roles="[Authority.ROLE_ADMIN]"/>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"><g:message code="vanity.cms.vip"/><span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <nav:mainMenu controller="celebrity" code="vanity.cms.mainMenu.celebrities" roles="[Authority.ROLE_ADMIN]"/>
+                            <nav:mainMenu controller="celebrityJob" code="vanity.cms.mainMenu.celebrities.jobs" roles="[Authority.ROLE_ADMIN]"/>
+                            <nav:mainMenu controller="connections" code="vanity.cms.mainMenu.connections"
+                                          roles="[Authority.ROLE_ADMIN]"/>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"><g:message code="vanity.cms.locations"/><span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <nav:mainMenu controller="country" code="vanity.cms.mainMenu.countries" roles="[Authority.ROLE_ADMIN]"/>
+                        </ul>
+                    </li>
+                    <nav:mainMenu controller="message" code="vanity.cms.mainMenu.messages" roles="[Authority.ROLE_ADMIN]"/>
                     <nav:mainMenu controller="search" code="vanity.cms.mainMenu.search" roles="[Authority.ROLE_ADMIN]"/>
                 </ul>
             </div><!--/.nav-collapse -->
