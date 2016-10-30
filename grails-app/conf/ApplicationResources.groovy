@@ -1,6 +1,6 @@
 modules = {
     base {
-        resource url: 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
+        resource url: 'js/jquery-1.12.0.min.js'
         resource url: 'js/bootstrap.min.js'
         resource url: 'js/cms.js'
         resource url: 'css/bootstrap.min.css'
@@ -62,13 +62,6 @@ modules = {
 
     countryForm {
         dependsOn 'base'
-    }
-
-    connections {
-        dependsOn 'base'
-        resource url: 'css/connections.css'
-        resource url: 'connections-app/app.js', disposition: 'head'
-        defaultBundle false
     }
 
 }

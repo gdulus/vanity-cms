@@ -2,7 +2,7 @@
 <head>
     <title></title>
     <meta name="layout" content="cms"/>
-    <r:require module="celebrityList"/>
+    <r:require module="celebrityJobList"/>
 </head>
 
 <body>
@@ -18,8 +18,7 @@
         <message:flashBased/>
 
         <g:form class="form-inline" method="GET">
-            <input type="text" value="${params.query}" name="query" class="input-xxlarge"
-                   placeholder="${g.message(code: 'vanity.cms.search')}">
+            <g:select class="input-xxlarge" value="${params.celebrityId}" noSelection="${[0: '']}" optionKey="id" optionValue="fullName" name="celebrityId" from="${celebrities}"/>
             <button type="submit" class="btn btn-success"><g:message code="default.button.search.label"/></button>
             <g:link class="btn btn-success"><g:message code="default.button.clean.label"/></g:link>
         </g:form>
@@ -30,42 +29,26 @@
         <g:else>
             <table class="table table-striped">
                 <tr>
-
                     <th style="width:20%"><g:message code="vanity.cms.celebrity.name"/></th>
-                    <th><g:message code="vanity.cms.celebrity.tag"/></th>
-                    <th><g:message code="vanity.cms.celebrity.country"/></th>
-                    <th><g:message code="vanity.cms.celebrity.job"/></th>
-                    <th><g:message code="vanity.cms.celebrity.quotations"/></th>
+                    <th style="width:20%"><g:message code="vanity.cms.celebrity.user.name"/></th>
+                    <th style="width:30%"><g:message code="vanity.cms.celebrity.image"/></th>
                     <th></th>
                 </tr>
 
                 <g:each in="${paginationBean.elements}" var="element" status="i">
                     <tr>
-                        <td class="name">${element.firstName} ${element.lastName}</td>
-                        <td class="tag"><g:link controller="tag" action="edit" id="${element.tag.id}">${element.tag.name}</g:link></td>
                         <td>
-                            <g:if test="${element.countries}">
-                                <ul>
-                                    <g:each in="${element.countries}" var="country">
-                                        <li>${country.name}</li>
-                                    </g:each>
-                                </ul>
-                            </g:if>
+                            <g:link controller="celebrity" action="edit" id="${element.celebrity.id}">${element.celebrity.fullName}</g:link>
                         </td>
                         <td>
-                            <g:if test="${element.jobs}">
-                                <ul>
-                                    <g:each in="${element.jobs}" var="job">
-                                        <li>${job.name}</li>
-                                    </g:each>
-                                </ul>
-                            </g:if>
+                            <g:link controller="user" params="${[username: element.author.username]}">${element.author.username}</g:link>
                         </td>
-                        <td>${element.quotations.size()}</td>
+                        <td><image:celebrity src="${element}"/></td>
                         <td class="options">
                             <g:link action="delete" id="${element.id}" class="btn btn-danger confirm"><g:message code="vanity.cms.delete"/></g:link>
-                            <g:link controller="celebrityImage" params="${[celebrityId: element.id]}" id="${element.id}" class="btn btn-success"><g:message code="vanity.cms.pics"/></g:link>
-                            <g:link action="edit" id="${element.id}" class="btn btn-success"><g:message code="vanity.cms.edit"/></g:link>
+                            <g:if test="${element.state != vanity.celebrity.CelebrityImageStatus.REVIEWED}">
+                                <g:link action="approve" id="${element.id}" class="btn btn-warning confirm"><g:message code="vanity.cms.approve"/></g:link>
+                            </g:if>
                             <div class="clearfix"></div>
                         </td>
                     </tr>
@@ -77,6 +60,7 @@
                             prev="&laquo;"
                             maxsteps="0"
                             action="index"
+                            params="${params}"
                             max="${grailsApplication.config.cms.celebrity.pagination.max}"
                             total="${paginationBean.totalCount}"/>
             </div>

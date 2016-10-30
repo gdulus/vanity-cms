@@ -59,7 +59,7 @@ class CelebrityController {
         }
 
         try {
-            Celebrity celebrity = celebrityAdminService.save(cmd.avatar) { Celebrity celebrity ->
+            Celebrity celebrity = celebrityAdminService.save { Celebrity celebrity ->
                 bindData(celebrity, cmd.properties, [exclude: ['class', 'avatar', 'jobs', 'countries']])
                 cmd.jobs.each { celebrity.addToJobs(it) }
                 cmd.countries.each { celebrity.addToCountries(it) }
@@ -103,7 +103,7 @@ class CelebrityController {
 
     def update(final CelebrityCmd cmd) {
         try {
-            Celebrity celebrity = celebrityAdminService.update(cmd.id, cmd.deleteAvatar, cmd.avatar) { Celebrity celebrity ->
+            Celebrity celebrity = celebrityAdminService.update(cmd.id) { Celebrity celebrity ->
                 bindData(celebrity, cmd.properties, [exclude: ['class', 'avatar', 'jobs', 'countries']])
                 celebrity.jobs?.clear()
                 cmd.jobs.each { celebrity.addToJobs(it) }

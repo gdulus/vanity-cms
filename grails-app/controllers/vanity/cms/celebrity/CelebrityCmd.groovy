@@ -1,17 +1,13 @@
 package vanity.cms.celebrity
 
 import grails.validation.Validateable
-import org.apache.commons.lang.StringUtils
-import org.codehaus.groovy.grails.commons.GrailsApplication
-import org.springframework.web.multipart.MultipartFile
 import vanity.article.Tag
 import vanity.celebrity.Job
-import vanity.image.gorm.ImageContainer
 import vanity.location.Country
 import vanity.user.Gender
 
 @Validateable
-class CelebrityCmd implements ImageContainer {
+class CelebrityCmd {
 
     Long id
 
@@ -43,22 +39,8 @@ class CelebrityCmd implements ImageContainer {
 
     String countries
 
-    Boolean deleteAvatar
-
-    MultipartFile avatar
-
     static constraints = {
         tag(nullable: false, unique: true, validator: { it?.root })
-    }
-
-    @Override
-    String getImagePath(GrailsApplication grailsApplication) {
-        return StringUtils.EMPTY
-    }
-
-    @Override
-    boolean hasImage() {
-        return false
     }
 
     List<Job> getJobs() {

@@ -91,7 +91,7 @@ V.CMS.I18n = (function () {
 
 V.CMS.Prompt = {
     init: function () {
-        $('.btn.btn-danger.confirm').click(function (event) {
+        $('.btn.confirm').click(function (event) {
             if (!confirm(V.CMS.I18n.get('vanity.cms.confirm'))) {
                 event.stopPropagation();
                 event.preventDefault();

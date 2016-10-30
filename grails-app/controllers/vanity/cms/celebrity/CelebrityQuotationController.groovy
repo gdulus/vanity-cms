@@ -18,6 +18,7 @@ class CelebrityQuotationController {
             return redirect(controller: 'celebrity', action: 'edit', id: celebrityId)
         } catch (ValidationException exp) {
             flash.error = 'vanity.cms.celebrity.quotation.savingDomainError'
+            return redirect(controller: 'celebrity', action: 'edit', id: celebrityId)
         }
     }
 
@@ -28,6 +29,7 @@ class CelebrityQuotationController {
             return redirect(controller: 'celebrity', action: 'edit', id: quotation.celebrity.id)
         } catch (ValidationException exp) {
             flash.error = 'vanity.cms.celebrity.quotation.savingDomainError'
+            return redirect(controller: 'celebrity', action: 'edit', id: celebrityId)
         }
     }
 
