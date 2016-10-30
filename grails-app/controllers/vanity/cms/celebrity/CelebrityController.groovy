@@ -8,7 +8,6 @@ import vanity.celebrity.Celebrity
 import vanity.celebrity.CelebrityJobService
 import vanity.celebrity.CelebrityQuotationsService
 import vanity.celebrity.CelebrityService
-import vanity.cms.image.handler.ImageHandlingException
 import vanity.location.CountryService
 import vanity.pagination.PaginationParams
 import vanity.user.Authority
@@ -41,9 +40,9 @@ class CelebrityController {
 
     def create() {
         [
-            tags: tagService.findAllValidRootTags(),
-            jobs: celebrityJobService.listAll(),
-            countries: countryService.listAll()
+                tags     : tagService.findAllValidRootTags(),
+                jobs     : celebrityJobService.listAll(),
+                countries: countryService.listAll()
         ]
     }
 
@@ -51,40 +50,31 @@ class CelebrityController {
         if (!cmd.validate()) {
             flash.error = 'vanity.cms.celebrity.savingDomainError'
             return render(view: 'create', model: [
-                tags: tagService.findAllValidRootTags(),
-                jobs: celebrityJobService.listAll(),
-                countries: countryService.listAll(),
-                celebrity: cmd
+                    tags     : tagService.findAllValidRootTags(),
+                    jobs     : celebrityJobService.listAll(),
+                    countries: countryService.listAll(),
+                    celebrity: cmd
             ])
         }
 
-        try {
-            Celebrity celebrity = celebrityAdminService.save(cmd.avatar) { Celebrity celebrity ->
-                bindData(celebrity, cmd.properties, [exclude: ['class', 'avatar', 'jobs', 'countries']])
-                cmd.jobs.each { celebrity.addToJobs(it) }
-                cmd.countries.each { celebrity.addToCountries(it) }
-            }
 
-            if (celebrity.hasErrors()) {
-                flash.error = 'vanity.cms.celebrity.savingDomainError'
-                return render(view: 'create', model: [
+        Celebrity celebrity = celebrityAdminService.save { Celebrity celebrity ->
+            bindData(celebrity, cmd.properties, [exclude: ['class', 'avatar', 'jobs', 'countries']])
+            cmd.jobs.each { celebrity.addToJobs(it) }
+            cmd.countries.each { celebrity.addToCountries(it) }
+        }
+
+        if (celebrity.hasErrors()) {
+            flash.error = 'vanity.cms.celebrity.savingDomainError'
+            return render(view: 'create', model: [
                     tags: tagService.findAllValidRootTags(),
                     jobs: celebrityJobService.listAll(),
                     countries: countryService.listAll(),
                     celebrity: celebrity
-                ])
-            } else {
-                flash.info = 'vanity.cms.celebrity.saved'
-                return redirect(action: 'edit', id: celebrity.id)
-            }
-        } catch (ImageHandlingException e) {
-            flash.error = 'vanity.cms.celebrity.savingImageError'
-            return render(view: 'create', model: [
-                tags: tagService.findAllValidRootTags(),
-                jobs: celebrityJobService.listAll(),
-                countries: countryService.listAll(),
-                celebrity: cmd
             ])
+        } else {
+            flash.info = 'vanity.cms.celebrity.saved'
+            return redirect(action: 'edit', id: celebrity.id)
         }
     }
 
@@ -92,53 +82,41 @@ class CelebrityController {
         Celebrity celebrity = celebrityService.read(id)
 
         return [
-            tags: tagService.findAllValidRootTags(),
-            jobs: celebrityJobService.listAll(),
-            countries: countryService.listAll(),
-            celebrity: celebrity,
-            quotations: celebrity.quotations,
-            quotation: (qId ? celebrityQuotationsService.read(qId) : null)
+                tags      : tagService.findAllValidRootTags(),
+                jobs      : celebrityJobService.listAll(),
+                countries : countryService.listAll(),
+                celebrity : celebrity,
+                quotations: celebrity.quotations,
+                quotation : (qId ? celebrityQuotationsService.read(qId) : null)
         ]
     }
 
     def update(final CelebrityCmd cmd) {
-        try {
-            Celebrity celebrity = celebrityAdminService.update(cmd.id, cmd.deleteAvatar, cmd.avatar) { Celebrity celebrity ->
-                bindData(celebrity, cmd.properties, [exclude: ['class', 'avatar', 'jobs', 'countries']])
-                celebrity.jobs?.clear()
-                cmd.jobs.each { celebrity.addToJobs(it) }
-                celebrity.countries?.clear()
-                cmd.countries.each { celebrity.addToCountries(it) }
-            }
+        Celebrity celebrity = celebrityAdminService.update(cmd.id) { Celebrity celebrity ->
+            bindData(celebrity, cmd.properties, [exclude: ['class', 'avatar', 'jobs', 'countries']])
+            celebrity.jobs?.clear()
+            cmd.jobs.each { celebrity.addToJobs(it) }
+            celebrity.countries?.clear()
+            cmd.countries.each { celebrity.addToCountries(it) }
+        }
 
-            if (!celebrity) {
-                flash.error = 'vanity.cms.entity.notFound'
-                return redirect(action: 'index')
-            }
+        if (!celebrity) {
+            flash.error = 'vanity.cms.entity.notFound'
+            return redirect(action: 'index')
+        }
 
-            if (celebrity.hasErrors()) {
-                flash.error = 'vanity.cms.celebrity.savingDomainError'
-                return render(view: 'edit', model: [
-                    tags: tagService.findAllValidRootTags(),
-                    jobs: celebrityJobService.listAll(),
+        if (celebrity.hasErrors()) {
+            flash.error = 'vanity.cms.celebrity.savingDomainError'
+            return render(view: 'edit', model: [
+                    tags     : tagService.findAllValidRootTags(),
+                    jobs     : celebrityJobService.listAll(),
                     countries: countryService.listAll(),
                     celebrity: celebrity,
                     quotations: celebrity.quotations
-                ])
-            } else {
-                flash.info = 'vanity.cms.celebrity.saved'
-                return redirect(action: 'edit', id: celebrity.id)
-            }
-        } catch (ImageHandlingException e) {
-            flash.error = 'vanity.cms.celebrity.savingImageError'
-            log.error(e)
-            return render(view: 'edit', model: [
-                tags: tagService.findAllValidRootTags(),
-                jobs: celebrityJobService.listAll(),
-                countries: countryService.listAll(),
-                celebrity: cmd,
-                quotations: []
             ])
+        } else {
+            flash.info = 'vanity.cms.celebrity.saved'
+            return redirect(action: 'edit', id: celebrity.id)
         }
     }
 

@@ -1,1 +1,0 @@
-(ns connections-app.core)

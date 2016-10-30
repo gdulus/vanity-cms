@@ -32,8 +32,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <nav:mainMenu controller="celebrity" code="vanity.cms.mainMenu.celebrities" roles="[Authority.ROLE_ADMIN]"/>
                             <nav:mainMenu controller="celebrityJob" code="vanity.cms.mainMenu.celebrities.jobs" roles="[Authority.ROLE_ADMIN]"/>
-                            <nav:mainMenu controller="connections" code="vanity.cms.mainMenu.connections"
-                                          roles="[Authority.ROLE_ADMIN]"/>
+                            <nav:mainMenu controller="celebrityImage" code="vanity.cms.mainMenu.celebrities.images" roles="[Authority.ROLE_ADMIN]"/>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -42,6 +41,7 @@
                             <nav:mainMenu controller="country" code="vanity.cms.mainMenu.countries" roles="[Authority.ROLE_ADMIN]"/>
                         </ul>
                     </li>
+                    <nav:mainMenu controller="user" code="vanity.cms.mainMenu.users" roles="[Authority.ROLE_ADMIN]"/>
                     <nav:mainMenu controller="message" code="vanity.cms.mainMenu.messages" roles="[Authority.ROLE_ADMIN]"/>
                     <nav:mainMenu controller="search" code="vanity.cms.mainMenu.search" roles="[Authority.ROLE_ADMIN]"/>
                 </ul>
