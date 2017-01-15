@@ -17,8 +17,8 @@
         <label class="control-label" for="code"><g:message code="vanity.cms.message.code"/></label>
         <g:field class="input-xxlarge" type="text" name="code" value="${i18nMessage?.code}"/>
 
-        <label class="control-label" for="code"><g:message code="vanity.cms.message.code"/></label>
-        <g:textArea class="input-xxlarge" name="text" value="${i18nMessage?.text}"/>
+        <label class="control-label" for="code"><g:message code="vanity.cms.message.text"/></label>
+        <g:textArea class="input-xxlarge" style="width: 70%; height: 500px" name="text" value="${i18nMessage?.text}"/>
 
         <div class="form-actions">
             <button type="submit" class="btn btn-primary"><g:message code="vanity.cms.save"/></button>
